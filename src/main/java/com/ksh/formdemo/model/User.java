@@ -8,6 +8,9 @@ public class User {
     private int enabled;
     private UserRole role = UserRole.ROLE_USER;
 
+    public User(String name) {
+        this.name = name;
+    }
 
     public User() {
     }

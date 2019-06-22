@@ -26,7 +26,7 @@ public class UserController {
     @RequestMapping("/api/user")
     public User getUser(Authentication authentication){
         if(authentication == null) {
-            return null;
+            return new User("GUEST");
         } else {
             UserDetails userDetails = (UserDetails) authentication.getPrincipal();
             String name = userDetails.getUsername();

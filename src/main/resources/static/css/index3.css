@@ -1,0 +1,22 @@
+.section-skeleton-header {
+    margin-right : 0;
+    font-family : serif;
+    max-height : 173px;
+}
+
+.section-skeleton-header .card-body {
+    padding : 0;
+    vertical-align: text-bottom;
+    position: relative;
+    top: 30px;
+    }
+
+.sectionnum {
+    position: relative;
+    top: -35px;
+}
+
+.section-name {
+    position: relative;
+        top: -40px;
+    }

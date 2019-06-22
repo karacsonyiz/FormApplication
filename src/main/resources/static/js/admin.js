@@ -6,7 +6,13 @@ window.onload = function() {
     console.log(window.sessionStorage);
     updateTable();
     console.log("itt")
+    let storage = window.sessionStorage;
+    getStorage(storage);
 }
+
+function getStorage(storage){
+    console.log(storage);
+    }
 
 var d = {
                                        "name": "D. AZ ÖNELLÁTÁSSAL KAPCSOLATOS TEVÉKENYSÉGEK",
