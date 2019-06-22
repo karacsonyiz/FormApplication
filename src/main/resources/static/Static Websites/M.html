@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="bootstrap-4.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/C.css">
+    <title>Section-Skeleton</title>
+</head>
+
+<body id='M'>
+    <div class="container-fluid">
+        <nav class="navbar main-nav navbar-light sticky-top">
+            <a class="navbar-brand" href="/index.html">
+                Főoldal
+            </a>
+        </nav>
+        <section class="section section-skeleton row">
+            <div class="col-1 backbutton">
+                <i class="fa fa-chevron-left fa-5x btn-prev" id="question-back-button"></i>
+            </div>
+            <div class="main col">
+                <h1 class="section-header section-skeleton-header text-center rounded"
+                    onclick="window.location.href = 'index.html';">MAGASSÁG, TESTSÚLY</h1>
+                <div class="meta-div text-center">
+                    <h4><em>Most a magasságáról és a testsúlyáról fogom kérdezni.</em></h4>
+                </div>
+                <div class="card question-card border-0">
+                    <div class="row">
+                        <div class="card-body">
+
+
+                            <div class="question-card-body" data-order="1" style="display:block">
+                                <div class="card-item M1-body">
+                                    <div class="question-header M1-question-header mb-5">
+                                        <h2>Milyen magas Ön cipő nélkül?</h2>
+                                    </div>
+                                    <div class="M1-answer-div answerdiv">
+                                        <div class="radio-container" id="BMI1">
+                                            <div class="radio-label-div">
+                                                <input type="radio" class="text-radio" name="BMI1" id="BMI1_NUM"
+                                                    value="">
+                                                <input type="text" class="radio-text-field" id="">
+                                                <label for="BMI1_NUM">cm</label>
+                                            </div>
+
+                                            <div class="radio-label-div"><input type="radio" class="non-text-radio"
+                                                    name="BMI1" value="888" id="BMI1_8"><label for="BMI1_8">nem
+                                                    tudom</label></div>
+                                            <div class="radio-label-div"><input type="radio" class="non-text-radio"
+                                                    name="BMI1" value="999" id="BMI1_9"><label for="BMI1_9">nem
+                                                    kívánok válaszolni</label></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="question-card-body" data-order="1" style="display:none">
+                                <div class="card-item M2-body">
+                                    <div class="question-header M2-question-header mb-5">
+                                        <h2>Mekkora a testsúlya ruha és cipő nélkül?</h2>
+                                    </div>
+                                    <div class="M2-answer-div answerdiv">
+                                        <div class="radio-container" id="BMI2">
+                                            <div class="radio-label-div">
+                                                <input type="radio" class="text-radio" name="BMI2" id="BMI2_NUM"
+                                                    value="">
+                                                <input type="text" class="radio-text-field" id="">
+                                                <label for="BMI2_NUM">kg</label>
+                                            </div>
+
+                                            <div class="radio-label-div"><input type="radio" class="non-text-radio"
+                                                    name="BMI2" value="888" id="BMI2_8"><label for="BMI2_8">nem
+                                                    tudom</label></div>
+                                            <div class="radio-label-div"><input type="radio" class="non-text-radio"
+                                                    name="BMI2" value="999" id="BMI2_9"><label for="BMI2_9">nem
+                                                    kívánok válaszolni</label></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-1 fwdbutton">
+                <i class="fa fa-chevron-right fa-5x btn-next" id="question-fwd-button"></i>
+            </div>
+        </section>
+    </div>
+    <footer class="page-footer fixed-bottom border-top">
+        <div class="footer-copyright text-center">© 2019 Copyright:
+            <a href="#"> Ksh.hu</a>
+        </div>
+    </footer>
+    <script src="jquery-3.4.1/jquery-3.4.1.min.js"></script>
+    <script src="popper-1.15.0/popper.min.js"></script>
+    <script src="bootstrap-4.3.1/dist/js/bootstrap.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+
+</html>

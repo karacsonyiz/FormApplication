@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="bootstrap-4.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/C.css">
+    <title>Section-Skeleton</title>
+</head>
+
+<body id='J'>
+    <div class="container-fluid">
+        <nav class="navbar main-nav navbar-light sticky-top">
+            <a class="navbar-brand" href="/index.html">
+                Főoldal
+            </a>
+        </nav>
+        <section class="section section-skeleton row">
+            <div class="col-1 backbutton">
+                <i class="fa fa-chevron-left fa-5x btn-prev" id="question-back-button"></i>
+            </div>
+            <div class="main col">
+                <h1 class="section-header section-skeleton-header text-center rounded"
+                    onclick="window.location.href = 'index.html';">KI NEM ELÉGÍTETT EGÉSZSÉGÜGYI ELLÁTÁSI
+                    SZÜKSÉGLETEK</h1>
+                <div class="meta-div text-center">
+                    <h4><em>Számos oka lehet annak, ha azt tapasztaljuk, hogy késve vagy egyáltalán nem kapjuk meg azt
+                            az egészségügyi ellátást, amire szükségünk volna.</em></h4>
+                </div>
+                <div class="card question-card border-0">
+                    <div class="row">
+                        <div class="card-body">
+                            <div class="question-card-body" data-order="1" style="display:block">
+                                <div class="card-item J1-body">
+                                    <div class="question-header J1-question-header mb-5">
+                                        <h2>Előfordult-e Önnel az elmúlt 12 hónapban, hogy a szükségesnél később vagy
+                                            egyáltalán nem jutott hozzá valamely egészségügyi ellátáshoz azért, mert túl
+                                            sokat kellett várnia vizsgálati időpontra, kezelésre, műtétre vagy
+                                            gyógyszerre?</h2>
+                                    </div>
+                                    <div class="J1-answer-div answerdiv">
+                                        <select name="" id="" data-id="UN1A">
+                                            <option selected disabled hidden style="display: none">válasszon</option>
+                                            <option value="1">igen</option>
+                                            <option value="2">nem</option>
+                                            <option value="3">az elmúlt 12 hónapban nem volt szüksége egészségügyi
+                                                ellátásra</option>
+                                            <option value="8">nem tudom</option>
+                                            <option value="9">nem kívánok válaszolni</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+
+                                <div class="card-item J2-body">
+                                    <div class="question-header J2-question-header mb-5">
+                                        <h2>Előfordult-e Önnel az elmúlt 12 HÓNAPBAN, hogy későn vagy egyáltalán nem
+                                            kapta meg a szükséges egészségügyi ellátást a lakóhelye és az egészségügyi
+                                            intézmény közti nagy távolság vagy nehézkes közlekedés miatt?</h2>
+                                    </div>
+                                    <div class="J2-answer-div answerdiv">
+                                        <select name="" id="" data-id="UN1B">
+                                            <option selected disabled hidden style="display: none">válasszon</option>
+                                            <option value="1">igen</option>
+                                            <option value="2">nem</option>
+                                            <option value="3">az elmúlt 12 hónapban nem volt szüksége egészségügyi
+                                                ellátásra</option>
+                                            <option value="8">nem tudom</option>
+                                            <option value="9">nem kívánok válaszolni</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="question-card-body" data-order="2" style="display:none">
+
+
+                                <div class="card-item">
+                                    <h2>Az elmúlt 12 HÓNAPBAN előfordult-e Önnel az, hogy az alább felsorolt
+                                        egészségügyi ellátásokra szüksége lett volna, de anyagi okok miatt nem
+                                        engedhette meg magának?</h2>
+                                </div>
+                                <div class="card-item J3a-body">
+                                    <div class="question-header J3a-question-header mb-5">
+                                        <h2>orvosi ellátás (a fogorvosi ellátás kivételével)</h2>
+                                    </div>
+                                    <div class="J3a-answer-div answerdiv">
+                                        <select name="" id="" data-id="UN2A">
+                                            <option selected disabled hidden style="display: none">válasszon</option>
+                                            <option value="1">igen</option>
+                                            <option value="2">nem</option>
+                                            <option value="3">az elmúlt 12 hónapban nem volt szüksége orvosi
+                                                ellátásra</option>
+                                            <option value="8">nem tudom</option>
+                                            <option value="9">nem kívánok válaszolni</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+
+                                <div class="card-item J3b-body">
+                                    <div class="question-header J3b-question-header mb-5">
+                                        <h2>fogorvosi ellátás</h2>
+                                    </div>
+                                    <div class="J3b-answer-div answerdiv">
+                                        <select name="" id="" data-id="UN2B">
+                                            <option selected disabled hidden style="display: none">válasszon</option>
+                                            <option value="1">igen</option>
+                                            <option value="2">nem</option>
+                                            <option value="3">az elmúlt 12 hónapban nem volt szüksége fogorvosi
+                                                ellátásra</option>
+                                            <option value="8">nem tudom</option>
+                                            <option value="9">nem kívánok válaszolni</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="card-item J3c-body">
+                                    <div class="question-header J3c-question-header mb-5">
+                                        <h2>receptköteles gyógyszer felíratása, kiváltása</h2>
+                                    </div>
+                                    <div class="J3c-answer-div answerdiv">
+                                        <select name="" id="" data-id="UN2C">
+                                            <option selected disabled hidden style="display: none">válasszon</option>
+                                            <option value="1">igen</option>
+                                            <option value="2">nem</option>
+                                            <option value="3">az elmúlt 12 hónapban nem volt szüksége receptköteles
+                                                gyógyszerre</option>
+                                            <option value="8">nem tudom</option>
+                                            <option value="9">nem kívánok válaszolni</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="card-item J3d-body">
+                                    <div class="question-header J3d-question-header mb-5">
+                                        <h2>mentálhigiéniés ellátás (például pszichológus, pszichiáter)</h2>
+                                    </div>
+                                    <div class="J3d-answer-div answerdiv">
+                                        <select name="" id="" data-id="UN2D">
+                                            <option selected disabled hidden style="display: none">válasszon</option>
+                                            <option value="1">igen</option>
+                                            <option value="2">nem</option>
+                                            <option value="3">az elmúlt 12 hónapban nem volt szüksége mentálhigiéniés
+                                                ellátásra</option>
+                                            <option value="8">nem tudom</option>
+                                            <option value="9">nem kívánok válaszolni</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1 fwdbutton">
+                <i class="fa fa-chevron-right fa-5x btn-next" id="question-fwd-button"></i>
+            </div>
+        </section>
+    </div>
+    <footer class="page-footer fixed-bottom border-top">
+        <div class="footer-copyright text-center">© 2019 Copyright:
+            <a href="#"> Ksh.hu</a>
+        </div>
+    </footer>
+    <script src="jquery-3.4.1/jquery-3.4.1.min.js"></script>
+    <script src="popper-1.15.0/popper.min.js"></script>
+    <script src="bootstrap-4.3.1/dist/js/bootstrap.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+
+</html>

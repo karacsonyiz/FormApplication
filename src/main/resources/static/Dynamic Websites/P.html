@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="bootstrap-4.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/P.css">
+    <title>Dohányzás</title>
+</head>
+
+<body id="P">
+    <div class="container-fluid">
+        <nav class="navbar main-nav navbar-light sticky-top py-0">
+            <a class="navbar-brand" href="/index.html" style="color:white">
+                Főoldal
+            </a>
+        </nav>
+        <section class="section section-P row">
+            <div class="col-1 backbutton">
+                <i class="fa fa-chevron-left fa-5x btn-prev" id="question-back-button"></i>
+            </div>
+            <div class="main col">
+                <h1 class="section-header section-skeleton-header text-center rounded"
+                    onclick="window.location.href = 'index.html';">DOHÁNYZÁS</h1>
+                <div class="meta-div text-center">
+                    <h4><em>Most a dohányzásról, illetve arról fogom kérdezni, hogy dohányoznak-e az Ön
+                            környezetében.</em></h4>
+                </div>
+                <div class="card question-card border-0">
+                    <div class="row">
+                        <div class="card-body py-1">
+                            <div class="question-card-body P1-body" data-order="1">
+                                <div class="border p-3 m-3">
+                                    <div class="question-header P1-question-header mb-5">
+                                        <h2>P1. Kérem, mondja meg, melyik állítás illik Önre legjobban a dohányzással
+                                            kapcsolatban!</h2>
+                                    </div>
+                                    <div class="P1-answer-div answerdiv">
+                                        <select name="SK1M_A" data-id="SK1M_A" class="form-control">
+                                            <option value="" selected="selected" hidden="hidden">Kérem válasszon!
+                                            </option>
+                                            <option value="1">jelenleg dohányzom(rendszeresen vagy alkalmanként)
+                                            </option>
+                                            <option value="2">kevesebb mint egy éve abbahagytam a dohányzást</option>
+                                            <option value="3">már több mint egy éve leszoktam a dohányzásról</option>
+                                            <option value="4">sohasem dohányoztam</option>
+                                            <option value="8">nem tudom</option>
+                                            <option value="9">nem kívánok válaszolni</option>
+                                        </select>
+                                    </div>
+                                    <div class="P1-card-footer my-5 rounded p-3">
+                                        <h3 class="question-hint" id="hint-P1">
+                                            Minden dohányterméket vegyen figyelembe, az elektronikus eszközök
+                                            kivételével!A kipróbálást ne számítsa dohányzásnak!
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="question-card-body P2-body" data-order="2">
+                                <div class="border p-3 m-3">
+                                    <div class="question-header P2-question-header mb-5">
+                                        <h2>P2. Milyen gyakran fogyaszt Ön valamilyen dohányterméket?</h2>
+                                    </div>
+                                    <div class="P2-answer-div answerdiv">
+                                        <select name="SK1M_B" data-id="SK1M_B" class="form-control">
+                                            <option value="" selected="selected" hidden="hidden">Kérem válasszon!
+                                            </option>
+                                            <option value="1">naponta</option>
+                                            <option value="2">hetente</option>
+                                            <option value="3">ritkábban mint hetente</option>
+                                            <option value="8">nem tudom</option>
+                                            <option value="9">nem kívánok válaszolni</option>
+                                        </select>
+                                        <div class="subtitle-h4-div">
+                                            <h4 class="subtitle-h4">Milyen gyakran fogyaszt Ön...?</h4>
+                                        </div>
+                                        <table class="table mb-0 table-hover" data-id="DOH_2">
+                                            <tbody>
+                                                <tr>
+                                                    <td>készen vett cigarettát</td>
+                                                    <td>
+                                                        <select name="DOH_2_A" data-id="DOH_2_A" class="form-control">
+                                                            <option value="" selected="selected" hidden="hidden">Kérem
+                                                                válasszon!</option>
+                                                            <option value="1">naponta</option>
+                                                            <option value="2">hetente</option>
+                                                            <option value="3">ritkábban mint hetente</option>
+                                                            <option value="4">soha</option>
+                                                            <option value="8">nem tudom</option>
+                                                            <option value="9">nem kívánok válaszolni</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>kézzel sodort cigarettát</td>
+                                                    <td>
+                                                        <select name="DOH_2_B" data-id="DOH_2_B" class="form-control">
+                                                            <option value="" selected="selected" hidden="hidden">Kérem
+                                                                válasszon!</option>
+                                                            <option value="1">naponta</option>
+                                                            <option value="2">hetente</option>
+                                                            <option value="3">ritkábban mint hetente</option>
+                                                            <option value="4">soha</option>
+                                                            <option value="8">nem tudom</option>
+                                                            <option value="9">nem kívánok válaszolni</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>szivart</td>
+                                                    <td>
+                                                        <select name="DOH_2_C" data-id="DOH_2_C" class="form-control">
+                                                            <option value="" selected="selected" hidden="hidden">Kérem
+                                                                válasszon!</option>
+                                                            <option value="1">naponta</option>
+                                                            <option value="2">hetente</option>
+                                                            <option value="3">ritkábban mint hetente</option>
+                                                            <option value="4">soha</option>
+                                                            <option value="8">nem tudom</option>
+                                                            <option value="9">nem kívánok válaszolni</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>szivarkát</td>
+                                                    <td>
+                                                        <select name="DOH_2_D" data-id="DOH_2_D" class="form-control">
+                                                            <option value="" selected="selected" hidden="hidden">Kérem
+                                                                válasszon!</option>
+                                                            <option value="1">naponta</option>
+                                                            <option value="2">hetente</option>
+                                                            <option value="3">ritkábban mint hetente</option>
+                                                            <option value="4">soha</option>
+                                                            <option value="8">nem tudom</option>
+                                                            <option value="9">nem kívánok válaszolni</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>pipát</td>
+                                                    <td>
+                                                        <select name="DOH_2_E" data-id="DOH_2_E" class="form-control">
+                                                            <option value="" selected="selected" hidden="hidden">Kérem
+                                                                válasszon!</option>
+                                                            <option value="1">naponta</option>
+                                                            <option value="2">hetente</option>
+                                                            <option value="3">ritkábban mint hetente</option>
+                                                            <option value="4">soha</option>
+                                                            <option value="8">nem tudom</option>
+                                                            <option value="9">nem kívánok válaszolni</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>vízipipát</td>
+                                                    <td>
+                                                        <select name="DOH_2_F" data-id="DOH_2_F" class="form-control">
+                                                            <option value="" selected="selected" hidden="hidden">Kérem
+                                                                válasszon!</option>
+                                                            <option value="1">naponta</option>
+                                                            <option value="2">hetente</option>
+                                                            <option value="3">ritkábban mint hetente</option>
+                                                            <option value="4">soha</option>
+                                                            <option value="8">nem tudom</option>
+                                                            <option value="9">nem kívánok válaszolni</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>tubákot</td>
+                                                    <td>
+                                                        <select name="DOH_2_G" data-id="DOH_2_G" class="form-control">
+                                                            <option value="" selected="selected" hidden="hidden">Kérem
+                                                                válasszon!</option>
+                                                            <option value="1">naponta</option>
+                                                            <option value="2">hetente</option>
+                                                            <option value="3">ritkábban mint hetente</option>
+                                                            <option value="4">soha</option>
+                                                            <option value="8">nem tudom</option>
+                                                            <option value="9">nem kívánok válaszolni</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>rágódohányt</td>
+                                                    <td>
+                                                        <select name="DOH_2_H" data-id="DOH_2_H" class="form-control">
+                                                            <option value="" selected="selected" hidden="hidden">Kérem
+                                                                válasszon!</option>
+                                                            <option value="1">naponta</option>
+                                                            <option value="2">hetente</option>
+                                                            <option value="3">ritkábban mint hetente</option>
+                                                            <option value="4">soha</option>
+                                                            <option value="8">nem tudom</option>
+                                                            <option value="9">nem kívánok válaszolni</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="P2-card-footer my-5 rounded p-3">
+                                        <h3 class="question-hint" id="hint-P2">E-cigaretta vagy más, hasonló
+                                            elektronikus eszköz kivételével.</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="question-card-body P3-body" data-order="3">
+                                <div class="border p-3 m-3">
+                                    <div class="question-header P3-question-header mb-5">
+                                        <h2>P3. Fogyaszt-e Ön naponta gyári vagy kézzel sodort cigarettát?</h2>
+                                    </div>
+                                    <div class="P3-answer-div answerdiv">
+                                        <select name="SK2A" data-id="SK2A" class="form-control">
+                                            <option value="" selected="selected" hidden="hidden">Kérem válasszon!
+                                            </option>
+                                            <option value="1">igen</option>
+                                            <option value="2">nem</option>
+                                            <option value="8">nem tudom</option>
+                                            <option value="9">nem kívánok válaszolni</option>
+                                        </select>
+                                    </div>
+                                    <div class="P3-card-footer my-5 rounded p-3">
+                                        <h3 class="question-hint" id="hint-P3"></h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="question-card-body P4-body" data-order="4">
+                                <div class="border p-3 m-3">
+                                    <div class="question-header P4-question-header mb-5">
+                                        <h2>P4. Naponta átlagosan hány szál cigarettát szív?</h2>
+                                    </div>
+                                    <div class="P4-answer-div answerdiv">
+                                        <div class="radio-container" data-id="SK2B">
+                                            <div class="radio-label-div">
+                                                <input type="radio" class="text-radio" name="SK2B" id="SK2B_NUM"
+                                                    value="">
+                                                <input type="text" class="radio-text-field" id="">
+                                                <label for="SK2B_NUM">szálat</label>
+                                            </div>
+                                            <div class="radio-label-div"><input type="radio" class="non-text-radio"
+                                                    name="SK2B" value="888" id="SK2B_8">
+                                                <label for="SK2B_8">nem tudom</label>
+                                            </div>
+                                            <div class="radio-label-div"><input type="radio" class="non-text-radio"
+                                                    name="SK2B" value="999" id="SK2B_9">
+                                                <label for="SK2B_9">nem kívánokválaszolni</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="P4-card-footer my-5 rounded p-3">
+                                        <h3 class="question-hint" id="hint-P4"></h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="question-card-body P5-body" data-order="5">
+                                <div class="border p-3 m-3">
+                                    <div class="question-header P5-question-header mb-5">
+                                        <h2>P5. Korábban szívott legalább egy évig napi vagy majdnem napi
+                                            rendszerességgel dohányterméket?</h2>
+                                    </div>
+                                    <div class="P5-answer-div answerdiv">
+                                        <select name="SK3" data-id="SK3" class="form-control">
+                                            <option value="" selected="selected" hidden="hidden">Kérem válasszon!
+                                            </option>
+                                            <option value="1">igen</option>
+                                            <option value="2">nem</option>
+                                            <option value="8">nem tudom</option>
+                                            <option value="9">nem kívánok válaszolni</option>
+                                        </select>
+                                    </div>
+                                    <div class="P5-card-footer my-5 rounded p-3">
+                                        <h3 class="question-hint" id="hint-P5"></h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="question-card-body P6-body" data-order="6">
+                                <div class="border p-3 m-3">
+                                    <div class="question-header P6-question-header mb-5">
+                                        <h2>P6. Összesen hány évig dohányzott naponta?</h2>
+                                    </div>
+                                    <div class="P6-answer-div answerdiv">
+                                        <div class="radio-container" data-id="SK4">
+                                            <div class="radio-label-div">
+                                                <input type="radio" class="text-radio" name="SK4" id="SK4_NUM" value="">
+                                                <input type="text" class="radio-text-field" id="">
+                                                <label for="SK4_NUM">évig</label>
+                                            </div>
+                                            <div class="radio-label-div">
+                                                <input type="radio" class="non-text-radio" name="SK4" value="88"
+                                                    id="SK4_8">
+                                                <label for="SK4_8">nem tudom</label>
+                                            </div>
+                                            <div class="radio-label-div"><input type="radio" class="non-text-radio"
+                                                    name="SK4" value="99" id="SK4_9">
+                                                <label for="SK4_9">nem kívánok válaszolni</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="P6-card-footer my-5 rounded p-3">
+                                        <h3 class="question-hint" id="hint-P6">Az egymással össze nem függő
+                                            időszakokat is vegye figyelembe!</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="question-card-body P7-body" data-order="7">
+                                <div class="border p-3 m-3">
+                                    <div class="question-header P7-question-header mb-5">
+                                        <h2>P7. Hány éves korában kezdett dohányozni?</h2>
+                                    </div>
+                                    <div class="P7-answer-div answerdiv">
+                                        <div class="radio-container" data-id="SKU1">
+                                            <div class="radio-label-div">
+                                                <input type="radio" class="text-radio" name="SKU1" id="SKU1_NUM"
+                                                    value="">
+                                                <input type="text" class="radio-text-field" id="">
+                                                <label for="SKU1_NUM">éves korában</label>
+                                            </div>
+                                            <div class="radio-label-div"><input type="radio" class="non-text-radio"
+                                                    name="SKU1" value="88" id="SKU1_8">
+                                                <label for="SKU1_8">nem tudom</label>
+                                            </div>
+                                            <div class="radio-label-div"><input type="radio" class="non-text-radio"
+                                                    name="SKU1" value="99" id="SKU1_9">
+                                                <label for="SKU1_9">nem kívánok válaszolni</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="P7-card-footer my-5 rounded p-3">
+                                        <h3 class="question-hint" id="hint-P7">Egyaránt vegye figyelembe, ha naponta
+                                            vagy, ha alkalmanként dohányzott, függetlenül attól, hogy előfordult olyan
+                                            időszak, amikor nem dohányzott. A kipróbálást ne számítsa ide!
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="question-card-body P8-body" data-order="8">
+                                <div class="border p-3 m-3">
+                                    <div class="question-header P8-question-header mb-5">
+                                        <h2>P8. Megpróbált-e leszokni a dohányzásról az elmúlt 12 hónapban?</h2>
+                                    </div>
+                                    <div class="P8-answer-div answerdiv">
+                                        <select name="SKU2" data-id="SKU2" class="form-control">
+                                            <option value="" selected="selected" hidden="hidden">Kérem válasszon!
+                                            </option>
+                                            <option value="1">igen</option>
+                                            <option value="2">nem</option>
+                                            <option value="8">nem tudom</option>
+                                            <option value="9">nem kívánok válaszolni</option>
+                                        </select>
+                                    </div>
+                                    <div class="P8-card-footer my-5 rounded p-3">
+                                        <h3 class="question-hint" id="hint-P8"></h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="question-card-body P9-body" data-order="9">
+                                <div class="border p-3 m-3">
+                                    <div class="question-header P9-question-header mb-5">
+                                        <h2>P9. Milyen gyakran tartózkodik otthonában olyan helyiségben(zárt légtérben),
+                                            ahol mások dohányoznak?</h2>
+                                    </div>
+                                    <div class="P9-answer-div answerdiv">
+                                        <select name="SKM_5A" data-id="SKM_5A" class="form-control">
+                                            <option value="" selected="selected" hidden="hidden">Kérem válasszon!
+                                            </option>
+                                            <option value="1">naponta 1 órát vagy többet</option>
+                                            <option value="2">naponta kevesebb mint 1 órát</option>
+                                            <option value="3">hetente legalább egyszer</option>
+                                            <option value="4">ritkábban mint hetente</option>
+                                            <option value="5">soha vagy szinte soha</option>
+                                            <option value="8">nem tudom</option>
+                                            <option value="9">nem kívánok válaszolni</option>
+                                        </select>
+                                    </div>
+                                    <div class="P9-card-footer my-5 rounded p-3">
+                                        <h3 class="question-hint" id="hint-P9"></h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="question-card-body P10-body" data-order="10">
+                                <div class="border p-3 m-3">
+                                    <div class="question-header P10-question-header mb-5">
+                                        <h2>P10. Milyen gyakran tartózkodik otthonán kívül olyan helyiségben</h2>
+                                    </div>
+                                    <div class="P10-answer-div answerdiv">
+                                        <select name="SKM_5B" data-id="SKM_5B" class="form-control">
+                                            <option value="" selected="selected" hidden="hidden">Kérem válasszon!
+                                            </option>
+                                            <option value="1">naponta 1 órát vagy többet</option>
+                                            <option value="2">naponta kevesebb mint 1 órát</option>
+                                            <option value="3">hetente legalább egyszer</option>
+                                            <option value="4">ritkábban mint hetente</option>
+                                            <option value="5">soha vagy szinte soha</option>
+                                            <option value="8">nem tudom</option>
+                                            <option value="9">nem kívánok válaszolni</option>
+                                        </select>
+                                    </div>
+                                    <div class="P10-card-footer my-5 rounded p-3">
+                                        <h3 class="question-hint" id="hint-P10"></h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="question-card-body P11-body" data-order="11">
+                                <div class="border p-3 m-3">
+                                    <div class="question-header P11-question-header mb-5">
+                                        <h2>P11. Használ-e e-cigarettát vagy hasonló elektronikus eszközt?</h2>
+                                    </div>
+                                    <div class="P11-answer-div answerdiv">
+                                        <select name="SK6" data-id="SK6" class="form-control">
+                                            <option value="" selected="selected" hidden="hidden">Kérem válasszon!
+                                            </option>
+                                            <option value="1">igen, naponta</option>
+                                            <option value="2">igen, alkalmanként</option>
+                                            <option value="3">nem, de korábban használt</option>
+                                            <option value="4">nem, soha</option>
+                                            <option value="5"></option>
+                                            <option value="6"></option>
+                                            <option value="7"></option>
+                                            <option value="8">nem tudom</option>
+                                            <option value="9">nem kívánok válaszolni</option>
+                                        </select>
+                                    </div>
+                                    <div class="P11-card-footer my-5 rounded p-3">
+                                        <h3 class="question-hint" id="hint-P11"></h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1 fwdbutton">
+                <i class="fa fa-chevron-right fa-5x btn-next" id="question-fwd-button"></i>
+            </div>
+        </section>
+    </div>
+    <footer class="page-footer fixed-bottom border-top">
+        <div class="footer-copyright text-center">© 2019 Copyright:
+            <a href="#"> Ksh.hu</a>
+        </div>
+    </footer>
+    <script src="jquery-3.4.1/jquery-3.4.1.min.js"></script>
+    <script src="popper-1.15.0/popper.min.js"></script>
+    <script src="bootstrap-4.3.1/dist/js/bootstrap.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+
+</html>

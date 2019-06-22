@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="bootstrap-4.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <title>L részleg</title>
+</head>
+
+<body id="L">
+    <div class="container-fluid">
+        <nav class="navbar main-nav navbar-light sticky-top">
+            <a class="navbar-brand" href="/index.html">
+                Főoldal
+            </a>
+        </nav>
+        <section class="section section-L row">
+            <div class="col-1 backbutton">
+                <i class="fa fa-chevron-left fa-5x btn-prev" id="question-back-button"></i>
+            </div>
+            <div class="main col">
+                <h1 class="section-header section-L-header text-center rounded" onclick="window.location.href = 'index.html';">Jólléti index</h1>
+                <div class="meta-div text-center">
+                    <h4><em>empty</em></h4>
+                </div>
+                <div class="card question-card border-0">
+                    <div class="row">
+                        <div class="card-body">
+                            <div class="L1-body question-card-body border rounded p-5" data-order="1">
+                                <div class="question-header L1-question-header mb-5">
+                                    <h2>Összességében mennyire elégedett Ön az életével mostanában? Kérjük, értékelje 0-tól 10-ig!</h2>
+                                </div>
+                                <div class="L1-answer-div answerdiv row p-3">
+                                        <div class="tooltip-low col">
+                                            egyáltalán nem elégedett(0)
+                                        </div>
+                                        <div class="radio-label-div col">
+                                            <input type="radio" name="JIU1" id="0" class="form-check-input" data-id="JIU1" value="0">
+                                            <label for="0" class="form-check-label mt-4">0</label>
+                                        </div>
+                                        <div class="radio-label-div col">
+                                            <input type="radio" name="JIU1" id="1" class="form-check-input" data-id="JIU1" value="1">
+                                            <label for="1" class="form-check-label mt-4">1</label>
+                                        </div>
+                                        <div class="radio-label-div col">
+                                            <input type="radio" name="JIU1" id="2" class="form-check-input" data-id="JIU1" value="2">
+                                            <label for="2" class="form-check-label mt-4">2</label>
+                                        </div>
+                                        <div class="radio-label-div col">
+                                            <input type="radio" name="JIU1" id="3" class="form-check-input" data-id="JIU1" value="3">
+                                            <label for="3" class="form-check-label mt-4">3</label>
+                                        </div>
+                                        <div class="radio-label-div col">
+                                            <input type="radio" name="JIU1" id="4" class="form-check-input" data-id="JIU1" value="4">
+                                            <label for="4" class="form-check-label mt-4">4</label>
+                                        </div>
+                                        <div class="radio-label-div col">
+                                            <input type="radio" name="JIU1" id="5" class="form-check-input" data-id="JIU1" value="5">
+                                            <label for="5" class="form-check-label mt-4">5</label>
+                                        </div>
+                                        <div class="radio-label-div col">
+                                            <input type="radio" name="JIU1" id="6" class="form-check-input" data-id="JIU1" value="6">
+                                            <label for="6" class="form-check-label mt-4">6</label>
+                                        </div>
+                                        <div class="radio-label-div col">
+                                            <input type="radio" name="JIU1" id="7" class="form-check-input" data-id="JIU1" value="7">
+                                            <label for="7" class="form-check-label mt-4">7</label>
+                                        </div>
+                                        <div class="radio-label-div col">
+                                            <input type="radio" name="JIU1" id="8" class="form-check-input" data-id="JIU1" value="8">
+                                            <label for="8" class="form-check-label mt-4">8</label>
+                                        </div>
+                                        <div class="radio-label-div col">
+                                            <input type="radio" name="JIU1" id="9" class="form-check-input" data-id="JIU1" value="9">
+                                            <label for="9" class="form-check-label mt-4">9</label>
+                                        </div>
+                                        <div class="radio-label-div col">
+                                            <input type="radio" name="JIU1" id="10" class="form-check-input" data-id="JIU1" value="10">
+                                            <label for="10" class="form-check-label mt-4">10</label>
+                                        </div>
+                                        <div class="tooltip-hight col">
+                                                teljes mértékben elégedett(10)
+                                        </div>
+                                        <div class="w-100 mt-5"></div>
+                                            <div class="radio-label-div col-6 justify-content-end">
+                                                    <input type="radio" name="JIU1" id="NT" class="form-check-input" style="margin-right: 55px">
+                                                    <label for="NT" class="form-check-label mt-4">Nem tudom</label>
+                                            </div>
+                                            <div class="radio-label-div col-6 justify-content-start">
+                                                    <input type="radio" name="JIU1" id="NK" class="form-check-input" style="margin-left: 115px">
+                                                    <label for="NK" class="form-check-label mt-4">Nem kívánok válaszolni</label>
+                                            </div>
+                                    </div>
+                            </div>
+                            <div class="L2-body question-card-body border rounded" data-order="2">
+                                <div class="question-header L2-question-header m-5">
+                                    <h2>A következő kérdésnél, kérem, azt a válaszlehetőséget válassza, amely legjobban leírja, hogyan érezte magát az elmúlt 2 HÉT során. A magasabb számok nagyobb jóllétet jelentenek.</h2>
+                                </div>
+                                <div class="L2-answer-div answerdiv m-5">
+                                    <table class="table mb-0 table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    Az elmúlt 2 HÉT során...
+                                                </th>
+                                                <th>
+                                                    Válasszon az alábbi lehetőségek közül!
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <p ><span class="mr-3">a.</span>Vidámnak és jókedvűnek éreztem magam.</p>
+                                                </td>
+                                                <td>
+                                                    <select data-id="WHO5-a">
+                                                            <option value="" selected disabled hidden>Kérem válasszon</option>
+                                                            <option value="5">5 - Mindig</option>
+                                                            <option value="4">4 - Az idő legnagyobb részében</option>
+                                                            <option value="3">3 - Az időnek több mint a felében</option>
+                                                            <option value="2">2 - Az időnek kevesebb mint a felében</option>
+                                                            <option value="1">1 - Néha</option>
+                                                            <option value="0">0 - Soha</option>
+                                                            <option value="8">Nem tudom</option>
+                                                            <option value="9">Nem kívánok válaszolni</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p ><span class="mr-3">b.</span>Nyugodtnak és ellazultnak éreztem magam.</p>
+                                                </td>
+                                                <td>
+                                                    <select data-id="WHO5-b">
+                                                            <option value="" selected disabled hidden>Kérem válasszon</option>
+                                                            <option value="5">5 - Mindig</option>
+                                                            <option value="4">4 - Az idő legnagyobb részében</option>
+                                                            <option value="3">3 - Az időnek több mint a felében</option>
+                                                            <option value="2">2 - Az időnek kevesebb mint a felében</option>
+                                                            <option value="1">1 - Néha</option>
+                                                            <option value="0">0 - Soha</option>
+                                                            <option value="8">Nem tudom</option>
+                                                            <option value="9">Nem kívánok válaszolni</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p ><span class="mr-3">c.</span>Aktívnak és élénknek éreztem magam.</p>
+                                                </td>
+                                                <td>
+                                                    <select data-id="WHO5-c">
+                                                            <option value="" selected disabled hidden>Kérem válasszon</option>
+                                                            <option value="5">5 - Mindig</option>
+                                                            <option value="4">4 - Az idő legnagyobb részében</option>
+                                                            <option value="3">3 - Az időnek több mint a felében</option>
+                                                            <option value="2">2 - Az időnek kevesebb mint a felében</option>
+                                                            <option value="1">1 - Néha</option>
+                                                            <option value="0">0 - Soha</option>
+                                                            <option value="8">Nem tudom</option>
+                                                            <option value="9">Nem kívánok válaszolni</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p ><span class="mr-3">d.</span>Ébredéskor frissnek és kipihentnek éreztem magam.</p>
+                                                </td>
+                                                <td>
+                                                    <select data-id="WHO5-d">
+                                                            <option value="" selected disabled hidden>Kérem válasszon</option>
+                                                            <option value="5">5 - Mindig</option>
+                                                            <option value="4">4 - Az idő legnagyobb részében</option>
+                                                            <option value="3">3 - Az időnek több mint a felében</option>
+                                                            <option value="2">2 - Az időnek kevesebb mint a felében</option>
+                                                            <option value="1">1 - Néha</option>
+                                                            <option value="0">0 - Soha</option>
+                                                            <option value="8">Nem tudom</option>
+                                                            <option value="9">Nem kívánok válaszolni</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p ><span class="mr-3">e.</span> A napjaim tele voltak számomra érdekes dolgokkal</p>
+                                                </td>
+                                                <td>
+                                                    <select data-id="WHO5-e">
+                                                            <option value="" selected disabled hidden>Kérem válasszon</option>
+                                                            <option value="5">5 - Mindig</option>
+                                                            <option value="4">4 - Az idő legnagyobb részében</option>
+                                                            <option value="3">3 - Az időnek több mint a felében</option>
+                                                            <option value="2">2 - Az időnek kevesebb mint a felében</option>
+                                                            <option value="1">1 - Néha</option>
+                                                            <option value="0">0 - Soha</option>
+                                                            <option value="8">Nem tudom</option>
+                                                            <option value="9">Nem kívánok válaszolni</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1 fwdbutton">
+                <i class="fa fa-chevron-right fa-5x btn-next" id="question-fwd-button"></i>
+            </div>
+        </section>
+    </div>
+    <footer class="page-footer fixed-bottom border-top">
+        <div class="footer-copyright text-center">© 2019 Copyright:
+            <a href="#"> Ksh.hu</a>
+        </div>
+    </footer>
+    <script src="jquery-3.4.1/jquery-3.4.1.min.js"></script>
+    <script src="popper-1.15.0/popper.min.js"></script>
+    <script src="bootstrap-4.3.1/dist/js/bootstrap.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+
+</html>

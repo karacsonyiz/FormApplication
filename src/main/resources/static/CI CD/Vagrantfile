@@ -1,0 +1,33 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+Vagrant.configure("2") do |config|
+  config.vm.provider :virtualbox do |v|
+      v.name = "elefPHP"
+      v.customize [
+          "modifyvm", :id,
+          "--name", "elefPHP",
+          "--memory", 1024,
+          "--natdnshostresolver1", "on",
+          "--cpus", 1,
+      ]
+  end 
+  config.vm.box = "ubuntu/bionic64"
+  config.vm.network "private_network", ip: "192.168.33.99"
+  config.vm.synced_folder "./", "/vagrant", type: "nfs"
+  config.vm.provision "shell", inline: <<-SHELL
+    sudo echo 'Acquire::http::Proxy "http://proxy.ksh.hu:8080/";' > /etc/apt/apt.conf
+    sudo apt-get update
+    sudo apt install docker.io mc -y
+    sudo mkdir -p /etc/systemd/system/docker.service.d
+    sudo echo '[Service]' > /etc/systemd/system/docker.service.d/http-proxy.conf
+    sudo echo 'Environment="HTTP_PROXY=http://proxy.ksh.hu:8080/"' >> /etc/systemd/system/docker.service.d/http-proxy.conf 
+    sudo echo '[Service]' > /etc/systemd/system/docker.service.d/https-proxy.conf
+    sudo echo 'Environment="HTTPS_PROXY=http://proxy.ksh.hu:8080/"' >> /etc/systemd/system/docker.service.d/http-proxy.conf
+    sudo systemctl daemon-reload
+    sudo systemctl restart docker 
+    sudo docker run -itd -p 80:80 -v /vagrant:/var/www/html --name php php:7-apache
+  SHELL
+  if File.exists?(File.join(Dir.home, ".ssh/id_rsa.pub"))
+    config.vm.provision "file", source: "~/.ssh/id_rsa.pub", destination: "~/.ssh/authorized_keys"
+  end
+end

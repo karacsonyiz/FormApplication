@@ -1,0 +1,15 @@
+.question-card-body:first-of-type {
+    display: block;
+}
+
+.question-card-body {
+    display: none;
+}
+
+.meta-div h4 {
+    display: none;
+}
+
+.meta-div h4:first-of-type {
+    display: block;
+}

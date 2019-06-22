@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Betegségek elleni védekezés, szűrések</title>
+	<link rel="stylesheet" href="bootstrap-4.3.1/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/I.css">
+</head>
+
+<body id="I">
+	<div class="container-fluid">
+		<nav class="navbar main-nav navbar-light sticky-top py-0">
+			<a class="navbar-brand" href="/index.html" style="color:white">
+				Főoldal
+			</a>
+		</nav>
+		<section class="section section-I row">
+			<div class="col-1 backbutton" style="display: flex;align-items: center;height:845px;">
+				<i class="fa fa-chevron-left fa-5x btn-prev" id="question-back-button"></i>
+			</div>
+			<div class="main col">
+				<h1 class="section-header section-skeleton-header text-center rounded"
+					onclick="window.location.href = 'index.html';">BETEGSÉGEK ELLENI VÉDEKEZÉS, SZŰRÉSEK</h1>
+				<div class="meta-div text-center"></div>
+				<div class="card question-card border-0">
+					<div class="row">
+						<div class="card-body py-1">
+							<div class="question-card-body I1-body" data-order="1">
+								<div class="border p-3 m-3">
+									<div class="question-header I1-question-header mb-5">
+										<h2>I1. Kapott-e Ön valaha influenza elleni védőoltást?</h2>
+									</div>
+									<div class="I1-answer-div answerdiv">
+										<select name="PAM1" id="PAM1" class="form-control">
+											<option value="" selected="selected" hidden="hidden">Kérem válasszon!
+											</option>
+											<option value="1">igen</option>
+											<option value="2">nem</option>
+											<option value="8">nem tudom</option>
+											<option value="9">nem kívánok válaszolni</option>
+										</select>
+									</div>
+									<div class="I1-card-footer my-5 rounded p-3">
+										<h3 class="question-hint" id="hint-I1"></h3>
+									</div>
+								</div>
+							</div>
+							<div class="question-card-body I2-body" data-order="2">
+								<div class="border p-3 m-3">
+									<div class="question-header I2-question-header mb-5">
+										<h2>I2. Mikor kapott Ön utoljára influenza elleni védőoltást?</h2>
+									</div>
+									<div class="I2-answer-div answerdiv">
+										<div class="radio-container">
+											<div class="radio-label-div">
+												<input type="radio" class="text-radio" name="PA1" value="" id="">
+												<select id="i2_year" class="form-control">
+													<option value="" selected="selected" hidden="hidden">ÉV</option>
+													<option value="thisYear"></option>
+													<option value="lastYear"></option>
+												</select>
+												<select id="i2_month" class="form-control">
+													<option value="" selected="selected" hidden="hidden">HÓNAP</option>
+													<option value="01">január</option>
+													<option value="02">február</option>
+													<option value="03">március</option>
+													<option value="04">április</option>
+													<option value="05">május</option>
+													<option value="06">június</option>
+													<option value="07">július</option>
+													<option value="08">augusztus</option>
+													<option value="09">szeptember</option>
+													<option value="10">október</option>
+													<option value="11">november</option>
+													<option value="12">december</option>
+												</select>
+											</div>
+											<div class="radio-label-div">
+												<input type="radio" class="non-text-radio" name="PA1" value="7777"
+													id="PA1_8">
+												<label for="PA1_8">a tavalyi évnél régebben</label>
+											</div>
+											<div class="radio-label-div">
+												<input type="radio" class="non-text-radio" name="PA1" value="8888"
+													id="PA1_9">
+												<label for="PA1_9">nem tudom</label>
+											</div>
+											<div class="radio-label-div"><input type="radio" class="non-text-radio"
+													name="PA1" value="9999" id="">
+												<label for="">nem kívánok válaszolni</label>
+											</div>
+										</div>
+									</div>
+									<div class="I2-card-footer my-5 rounded p-3">
+										<h3 class="question-hint" id="hint-I2"></h3>
+									</div>
+								</div>
+							</div>
+							<div class="question-card-body I3-body" data-order="3">
+								<div class="question-header I3-question-header mb-5">
+									<h2>I3. Mikor mérte meg a vérnyomását utoljára egészségügyi dolgozó?</h2>
+								</div>
+								<div class="I3-answer-div answerdiv">
+									<select name="PA_2" id="PA_2" class="form-control">
+										<option value="" selected="selected" hidden="hidden">Kérem válasszon!
+										</option>
+										<option value="1">az elmúlt 12 hónapban</option>
+										<option value="2">több mint 1 éve, de 3 éven belül</option>
+										<option value="3">több mint 3 éve, de 5 éven belül</option>
+										<option value="4">több mint 5 éve</option>
+										<option value="5">soha nem mérte még</option>
+										<option value="8">nem tudom</option>
+										<option value="9">nem kívánok válaszolni</option>
+									</select>
+								</div>
+								<div class="I3-card-footer my-5 rounded p-3">
+									<h3 class="question-hint" id="hint-I3"></h3>
+								</div>
+							</div>
+							<div class="question-card-body I4-body" data-order="4">
+								<div class="border p-3 m-3">
+									<div class="question-header I4-question-header mb-5">
+										<h2>I4. Mikor mérte meg a koleszterin-/vérzsírszintjét utoljára
+											egészségügyidolgozó?
+										</h2>
+									</div>
+									<div class="I4-answer-div answerdiv">
+										<div class="I3-answer-div answerdiv">
+											<select name="PA3" id="PA3" class="form-control">
+												<option value="" selected="selected" hidden="hidden">Kérem válasszon!
+												</option>
+												<option value="1">az elmúlt 12 hónapban</option>
+												<option value="2">több mint 1 éve, de 3 éven belül</option>
+												<option value="3">több mint 3 éve, de 5 éven belül</option>
+												<option value="4">több mint 5 éve</option>
+												<option value="5">soha nem mérte még</option>
+												<option value="8">nem tudom</option>
+												<option value="9">nem kívánok válaszolni</option>
+											</select>
+										</div>
+									</div>
+									<div class="I4-card-footer my-5 rounded p-3">
+										<h3 class="question-hint" id="hint-I4"></h3>
+									</div>
+								</div>
+							</div>
+							<div class="question-card-body I5-body" data-order="5">
+								<div class="border p-3 m-3">
+									<div class="question-header I5-question-header mb-5">
+										<h2>I5. Mikor mérte meg a vércukorszintjét utoljára egészségügyi dolgozó?</h2>
+									</div>
+									<div class="I5-answer-div answerdiv">
+										<select name="PA4" id="PA4" class="form-control">
+											<option value="" selected="selected" hidden="hidden">Kérem válasszon!
+											</option>
+											<option value="1">az elmúlt 12 hónapban</option>
+											<option value="2">több mint 1 éve, de 3 éven belül</option>
+											<option value="3">több mint 3 éve, de 5 éven belül</option>
+											<option value="4">több mint 5 éve</option>
+											<option value="5">soha nem mérte még</option>
+											<option value="8">nem tudom</option>
+											<option value="9">nem kívánok válaszolni</option>
+										</select>
+									</div>
+									<div class="I5-card-footer my-5 rounded p-3">
+										<h3 class="question-hint" id="hint-I5"></h3>
+									</div>
+								</div>
+							</div>
+							<div class="question-card-body I6-body" data-order="6">
+								<div class="border p-3 m-3">
+									<div class="question-header I6-question-header mb-5">
+										<h2>I6. Mikor volt Önnek utoljára székletvérvizsgálata?</h2>
+									</div>
+									<div class="I6-answer-div answerdiv">
+										<select name="PA5" id="PA5" class="form-control">
+											<option value="" selected="selected" hidden="hidden">Kérem válasszon!
+											</option>
+											<option value="1">az elmúlt 12 hónapban</option>
+											<option value="2">több mint 1 éve, de 2 éven belül</option>
+											<option value="3">több mint 2 éve, de 3 éven belül</option>
+											<option value="4">több mint 3 éve</option>
+											<option value="5">soha nem volt még</option>
+											<option value="8">nem tudom</option>
+											<option value="9">nem kívánok válaszolni</option>
+										</select>
+									</div>
+									<div class="I6-card-footer my-5 rounded p-3">
+										<h3 class="question-hint" id="hint-I6"></h3>
+									</div>
+								</div>
+							</div>
+							<div class="question-card-body I7-body" data-order="7">
+								<div class="border p-3 m-3">
+									<div class="question-header I7-question-header mb-5">
+										<h2>I7. Mikor volt Ön utoljára vastagbéltükrözésen?</h2>
+									</div>
+									<div class="I7-answer-div answerdiv">
+										<select name="PA6" id="PA6" class="form-control">
+											<option value="" selected="selected" hidden="hidden">Kérem válasszon!
+											</option>
+											<option value="1">az elmúlt 12 hónapban</option>
+											<option value="2">több mint 1 éve, de 5 éven belül</option>
+											<option value="3">több mint 5 éve, de 10 éven belül</option>
+											<option value="4">több mint 10 éve</option>
+											<option value="5">soha nem volt még</option>
+											<option value="8">nem tudom</option>
+											<option value="9">nem kívánok válaszolni</option>
+										</select>
+									</div>
+									<div class="I7-card-footer my-5 rounded p-3">
+										<h3 class="question-hint" id="hint-I7"></h3>
+									</div>
+								</div>
+							</div>
+							<div class="question-card-body I8-body" data-order="8">
+								<div class="border p-3 m-3">
+									<div class="question-header I8-question-header mb-5">
+										<h2>I8. Mikor végeztek Önnél utoljára emlőröntgent vagy más szóval mammográfiás
+											vizsgálatot?
+										</h2>
+									</div>
+									<div class="I8-answer-div answerdiv">
+										<select name="PA7" id="PA7" class="form-control">
+											<option value="" selected="selected" hidden="hidden">Kérem válasszon!
+											</option>
+											<option value="1">az elmúlt 12 hónapban</option>
+											<option value="2">több mint 1 éve, de 2 éven belül</option>
+											<option value="3">több mint 2 éve, de 3 éven belül</option>
+											<option value="4">több mint 3 éve</option>
+											<option value="5">soha nem végeztek</option>
+											<option value="8">nem tudom</option>
+											<option value="9">nem kívánok válaszolni</option>
+										</select>
+									</div>
+									<div class="I8-card-footer my-5 rounded p-3">
+										<h3 class="question-hint" id="hint-I8"></h3>
+									</div>
+								</div>
+							</div>
+							<div class="question-card-body I9-body" data-order="9">
+								<div class="border p-3 m-3">
+									<div class="question-header I9-question-header mb-5">
+										<h2>I9. Mikor vettek Öntől utoljára kenetet citológiai vizsgálatra, méhnyakrák
+											szűrése céljából?</h2>
+									</div>
+									<div class="I9-answer-div answerdiv">
+										<select name="PA8" id="PA8" class="form-control">
+											<option value="" selected="selected" hidden="hidden">Kérem válasszon!
+											</option>
+											<option value="1">az elmúlt 12 hónapban</option>
+											<option value="2">több mint 1 éve, de 2 éven belül</option>
+											<option value="3">több mint 2 éve, de 3 éven belül</option>
+											<option value="4">több mint 3 éve</option>
+											<option value="5">soha nem vettek még</option>
+											<option value="8">nem tudom</option>
+											<option value="9">nem kívánok válaszolni</option>
+										</select>
+									</div>
+									<div class="I9-card-footer my-5 rounded p-3">
+										<h3 class="question-hint" id="hint-I9"></h3>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-1 fwdbutton" style="display: flex;align-items: center;">
+				<i class="fa fa-chevron-right fa-5x btn-next" id="question-fwd-button"></i>
+			</div>
+		</section>
+	</div>
+	<footer class="page-footer fixed-bottom border-top">
+		<div class="footer-copyright text-center">© 2019 Copyright:
+			<a href="#">ksh.hu</a>
+		</div>
+	</footer>
+	<script src="jquery-3.4.1/jquery-3.4.1.min.js"></script>
+	<script src="popper-1.15.0/popper.min.js"></script>
+	<script src="bootstrap-4.3.1/dist/js/bootstrap.min.js"></script>
+	<script src="js/common.js"></script>
+	<script src="js/I.js"></script>
+</body>
+
+</html>

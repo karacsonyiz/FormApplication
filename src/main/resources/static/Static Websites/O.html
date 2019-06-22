@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="bootstrap-4.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/O.css?version=3.2">
+    <title>O</title>
+</head>
+
+<body id="O">
+    <div class="container-fluid">
+        <nav class="navbar main-nav navbar-light sticky-top py-0">
+            <a class="navbar-brand" href="/index.html" style="color:white">
+				Főoldal
+			</a>
+        </nav>
+        <section class="section section-skeleton row">
+            <div class="col-1" style="display: flex;align-items:
+					center;height:845px;">
+                <i class="fa fa-chevron-left fa-5x btn-prev" id="question-back-button"></i>
+            </div>
+            <div class="main col">
+                <h1 class="section-header section-skeleton-header text-center rounded p-3" onclick="window.location.href='index.html';">TÁPLÁLKOZÁSI SZOKÁSOK</h1>
+                <div class="meta-div text-center pt-3">
+                    <h4>
+                        <em>
+							A következő kérdések a táplálkozási szokásaira vonatkoznak.
+						</em>
+                    </h4>
+                </div>
+                <div class="card question-card border-0">
+                    <div class="row">
+                        <div class="card-body py-4">
+                            <div class="O1-body question-card-body pt-3 pb-5 mt-4" data-order="1" style="display:block">
+                                <!--Ez a lapozható kártya első kérdése,ezeket kell egymás alá rakni a card-bodyn belül.-->
+                                <div class="border p-3 m-3">
+                                    <div class="question-header O1-question-header mb-5 pt-4">
+                                        <h2 style="text-align: center">Milyen gyakran fogyaszt Ön friss, fagyasztott, szárított vagy konzerv gyümölcsöt? Kérem, gyümölcslevek fogyasztását ne vegye figyelembe!</h2>
+                                    </div>
+                                    <div class="O1-answer-div answerdiv" style="text-align: center">
+                                        <select name="DH1" id="DH1" onkeydown="focusnext(event, '');">
+											<option selected disabled hidden style="display:none">válasszon</option>
+											<option value="1">naponta többször</option>
+											<option value="2">naponta egyszer</option>
+											<option value="3">hetente 4-6 alkalommal</option>
+											<option value="4">hetente 1-3 alkalommal</option>
+											<option value="5">ritkábban mint hetente egyszer</option>
+											<option value="6">soha</option>
+											<option value="8">nem tudom</option>
+											<option value="9">nem kívánok válaszolni</option>
+										</select>
+                                    </div>
+                                </div>
+
+                                <div class="border p-3 m-3">
+                                    <div class="question-header O2-question-header mb-5 pt-4">
+                                        <h2 style="text-align: center">Hány adag gyümölcsöt eszik naponta? Kérem, gyümölcslevek fogyasztását ne vegye figyelembe!</h2>
+                                    </div>
+                                    <div class="O2-answer-div answerdiv" style="text-align: center">
+                                        <div class="radio-container" id="DH2">
+                                            <div class="radio-label-div">
+                                                <input type="radio" class="text-radio" name="DH2" id="DH2" value="">
+                                                <input type="text" class="radio-text-field" id="DH2">
+                                                <label for="DH2">adagot</label>
+                                            </div>
+                                            <div class="radio-label-div"><input type="radio" class="non-text-radio" name="DH2" value="88" id="DH2_8">
+                                                <label for="DH2_8">nem tudom</label>
+                                            </div>
+                                            <div class="radio-label-div"><input type="radio" class="non-text-radio" name="DH2" value="99" id="DH2_9">
+                                                <label for="DH2_9">nem kívánok válaszolni</label>
+                                            </div>
+                                            <h5 class="question-hint" id="hint-O4" title="1 adag gyümölcs (kb. 10 dkg): - 1 db (közepes) alma, körte, narancs, banán, őszibarack, nektarin; - 1 közepes fürt szőlő; - 1 maréknyi meggy/cseresznye/áfonya/ribizli/málna; - 3 db szilva, 2 db mandarin, 3 db sárgabarack, 2 db kiwi, 7 db eper; - 1/2 grapefruit, 1/2 avokádó, 1 nagy szelet ananász, 1 szelet sárgadinnye, 1 kis szelet görögdinnye, 2 szelet mangó; - 3 púpozott evőkanálnyi gyümölcssaláta">
+                                                Segítség az egy adag meghatározásához. Kérem, húzza az egeret a szöveg fölé!
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Itt van vége az első kérdésnek, ez alá kell rakni a többi kérdést ugyanígy a fenti formában,style="display:none"-nal.-->
+
+                            <div class="O3-body question-card-body pt-3 pb-5 mt-4" data-order="2" style="display:none">
+                                <!--Ez a lapozható kártya 2. kérdése,ezeket kell egymás alá rakni a card-bodyn belül.-->
+                                <div class="border p-3 m-3">
+                                    <div class="question-header O3-question-header mb-5 pt-4">
+                                        <h2 style="text-align: center">Milyen gyakran fogyaszt Ön friss, fagyasztott, szárított vagy konzerv zöldséget vagy salátát (burgonyát nem számítva)? Kérem, zöldséglevek, hideg vagy meleg levesek fogyasztását ne vegye figyelembe!
+                                        </h2>
+                                    </div>
+                                    <div class="O3-answer-div answerdiv" style="text-align: center">
+                                        <select name="DH3" id="DH3" onkeydown="focusnext(event, '');">
+											<option selected disabled hidden style="display:none">válasszon</option>
+											<option value="1">naponta többször</option>
+											<option value="2">naponta egyszer</option>
+											<option value="3">hetente 4-6 alkalommal</option>
+											<option value="4">hetente 1-3 alkalommal</option>
+											<option value="5">ritkábban mint hetente egyszer</option>
+											<option value="6">soha</option>
+											<option value="8">nem tudom</option>
+											<option value="9">nem kívánok válaszolni</option>
+										</select>
+                                    </div>
+                                </div>
+
+                                <div class="border p-3 m-3">
+                                    <div class="question-header O4-question-header mb-5 pt-4">
+                                        <h2 style="text-align: center">Hány adag zöldséget, salátát eszik naponta (burgonyát nem számítva)? Kérem, zöldséglevek, hideg vagy meleg levesek fogyasztását ne vegye figyelembe!
+                                        </h2>
+                                    </div>
+                                    <div class="O4-answer-div answerdiv" style="text-align: center">
+                                        <div class="radio-container" id="DH2">
+                                            <div class="radio-label-div">
+                                                <input type="radio" class="text-radio" name="DH4" id="DH4" value="">
+                                                <input type="text" class="radio-text-field" id="DH4">
+                                                <label for="DH2">adagot</label>
+                                            </div>
+                                            <div class="radio-label-div"><input type="radio" class="non-text-radio" name="DH4" value="88" id="DH4_8">
+                                                <label for="DH4_8">nem tudom</label>
+                                            </div>
+                                            <div class="radio-label-div"><input type="radio" class="non-text-radio" name="DH4" value="99" id="DH4_9">
+                                                <label for="DH4_9">nem kívánok válaszolni</label>
+                                            </div>
+                                            <div class="O4-card-footer my-3 rounded p-1">
+                                                <h5 class="question-hint" id="hint-O4" title="1 adag zöldség (kb. 10 dkg): - 1 db (nagyobb) paradicsom, zöldpaprika, sárgarépa, uborka; - 6-8 cm kígyóuborka; - 6-8 db kisebb retek; - 2 db nagyobb brokkoli rózsa, 8 db karfiol rózsa; - 4 púpozott evőkanál káposzta, spenót, sóska, zöldbab; - 3 púpozott evőkanál cukkini, kelbimbó; - 3 púpozott evőkanál bab, borsó, csicseriborsó; 3 evőkanálnál több bab, borsó, csicseriborsó is csak egy adagnak számít!">
+                                                    Segítség az egy adag meghatározásához. Kérem, húzza az egeret a szöveg fölé!
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Itt van vége az 4. kérdésnek, ez alá kell rakni a többi kérdést ugyanígy a fenti formában,style="display:none"-nal.-->
+
+                            <div class="O5-body question-card-body pt-3 pb-5 mt-4" data-order="3" style="display:none">
+                                <!--Ez a lapozható kártya 5. kérdése,ezeket kell egymás alá rakni a card-bodyn belül.-->
+                                <div class="border p-3 m-3">
+                                    <div class="question-header O5-question-header mb-5 pt-4">
+                                        <h2 style="text-align: center">Mennyi vizet fogyaszt Ön általában naponta? Az ízesített ásványvíz kivételével mindenfajta víz – csapvíz, tisztított víz, forrásvíz, ásványvíz, szódavíz – fogyasztását vegye figyelembe!
+                                        </h2>
+                                    </div>
+                                    <div class="O5-answer-div answerdiv" style="text-align: center">
+                                        <select name="DH5W" id="DH5W" onkeydown="focusnext(event, '');">
+											<option selected disabled hidden style="display:none">válasszon</option>
+											<option value="1">legalább 2 litert</option>
+											<option value="2">másfél litert vagy annál többet, de 2 liternél
+												kevesebbet</option>
+											<option value="3">1 litert vagy annál többet, de másfél liternél
+												kevesebbet</option>
+											<option value="4">fél litert vagy annál többet, de 1 liternél kevesebbet
+											</option>
+											<option value="5">fél liternél kevesebbet</option>
+											<option value="6">nem iszom napi rendszerességgel vizet/egyáltalán nem
+												iszom vizet</option>
+											<option value="8">nem tudom</option>
+											<option value="9">nem kívánok válaszolni</option>
+										</select>
+                                    </div>
+                                </div>
+
+                                
+                            </div>
+							<!--Itt van vége az 4. kérdésnek, ez alá kell rakni a többi kérdést ugyanígy a fenti formában,style="display:none"-nal.-->
+
+							<div class="O5-body question-card-body pt-3 pb-5 mt-4" data-order="4" style="display:none">
+								<!--Ez a lapozható kártya 5. kérdése,ezeket kell egymás alá rakni a card-bodyn belül.-->
+								<div class="border p-3 m-3">
+                                    <div class="question-header 65-question-header mb-5 pt-4">
+                                        <h2 style="text-align: center">Milyen gyakran fogyasztja Ön a következő italokat?
+                                        </h2>
+                                    </div>
+                                    <div class="O6-answer-div answerdiv" style="text-align: center">
+                                        <table id="table-a">
+                                            <tr>
+                                                <td>
+                                                    A. 100%-os gyümölcslé vagy zöldséglé, a koncentrátumból készült vagy édesített levek, valamint a levesek kivételével
+                                                </td>
+                                                <td width="10%">
+                                                    <select name="DH5" id="DH5" class="masodik">
+														<option selected disabled hidden style="display: none">válasszon
+														</option>
+														<option value="1">naponta egyszer vagy többször</option>
+														<option value="2">hetente 4-6 alkalommal</option>
+														<option value="3">hetente 1-3 alkalommal</option>
+														<option value="4">ritkábban mint hetente egyszer</option>
+														<option value="5">soha</option>
+														<option value="8">nem tudom</option>
+														<option value="9">nem kívánok válaszolni</option>
+													</select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    B. Cukros üdítőital (pl. limonádé, kóla, Sprite, Fanta, jeges tea, energiaitalok, szörpök, koncentrátumból készült vagy nem 100%-os gyümölcslevek stb.)
+                                                </td>
+                                                <td>
+                                                    <select name="DH6" id="DH6" class="masodik">
+														<option selected disabled hidden style="display: none">válasszon
+														</option>
+														<option value="1">naponta egyszer vagy többször</option>
+														<option value="2">hetente 4-6 alkalommal</option>
+														<option value="3">hetente 1-3 alkalommal</option>
+														<option value="4">ritkábban mint hetente egyszer</option>
+														<option value="5">soha</option>
+														<option value="8">nem tudom</option>
+														<option value="9">nem kívánok válaszolni</option>
+													</select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    C. Diétás vagy cukormentes üdítőital, szénsavas vagy szénsavmentes (pl. mesterséges édesítőszerrel készült italok, "light" kóla: Pepsi Max, Cola Zero, diétás szörpök, stb.)
+                                                </td>
+                                                <td>
+                                                    <select name="DH7" id="DH7" class="masodik">
+														<option selected disabled hidden style="display: none">válasszon
+														</option>
+														<option value="1">naponta egyszer vagy többször</option>
+														<option value="2">hetente 4-6 alkalommal</option>
+														<option value="3">hetente 1-3 alkalommal</option>
+														<option value="4">ritkábban mint hetente egyszer</option>
+														<option value="5">soha</option>
+														<option value="8">nem tudom</option>
+														<option value="9">nem kívánok válaszolni</option>
+													</select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    D. Energiaital (pl. Red Bull,Hell, Monster, Burn, Red Horse, stb.)
+                                                </td>
+                                                <td>
+                                                    <select name="DH8" id="DH8" class="masodik">
+														<option selected disabled hidden style="display: none">válasszon
+														</option>
+														<option value="1">naponta egyszer vagy többször</option>
+														<option value="2">hetente 4-6 alkalommal</option>
+														<option value="3">hetente 1-3 alkalommal</option>
+														<option value="4">ritkábban mint hetente egyszer</option>
+														<option value="5">soha</option>
+														<option value="8">nem tudom</option>
+														<option value="9">nem kívánok válaszolni</option>
+													</select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    E. Sportital (pl. Isostar, Powerade, Gatorade, stb.)
+                                                </td>
+                                                <td>
+                                                    <select name="DH9" id="DH9" class="masodik">
+														<option selected disabled hidden style="display: none">válasszon
+														</option>
+														<option value="1">naponta egyszer vagy többször</option>
+														<option value="2">hetente 4-6 alkalommal</option>
+														<option value="3">hetente 1-3 alkalommal</option>
+														<option value="4">ritkábban mint hetente egyszer</option>
+														<option value="5">soha</option>
+														<option value="8">nem tudom</option>
+														<option value="9">nem kívánok válaszolni</option>
+													</select>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+
+                                </div>
+							</div>
+
+							<div class="O7-body question-card-body pt-3 pb-5 mt-4" data-order="5" style="display:none">
+								<!--Ez a lapozható kártya 5. kérdése,ezeket kell egymás alá rakni a card-bodyn belül.-->
+								<div class="border p-3 m-3">
+									<div class="question-header O7-question-header mb-5 pt-4">
+										<h2 style="text-align: center">Mennyi 100%-os gyümölcs- vagy zöldséglevet fogyaszt Ön általában naponta?
+										</h2>
+									</div>
+									<div class="O7-answer-div answerdiv" style="text-align: center">
+										<select name="DH5A" id="DH5A" onkeydown="focusnext(event, '');">
+											<option selected disabled hidden style="display:none">válasszon</option>
+											<option value="1">500 ml-nél többet</option>
+											<option value="2">331 és 500 ml között</option>
+											<option value="3">251 és 330 ml között</option>
+											<option value="4">151 és 250 ml között</option>
+											<option value="5">150 ml-t vagy annál kevesebbet</option>	
+											<option value="8">nem tudom</option>
+											<option value="9">nem kívánok válaszolni</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="border p-3 m-3">
+									<div class="question-header O8-question-header mb-5 pt-4">
+										<h2 style="text-align: center">Mennyi cukros üdítőitalt fogyaszt Ön általában naponta? 
+										</h2>
+									</div>
+									<div class="O8-answer-div answerdiv" style="text-align: center">
+										<select name="DH6A" id="DH5A" onkeydown="focusnext(event, '');">
+											<option selected disabled hidden style="display:none">válasszon</option>
+											<option value="1">500 ml-nél többet</option>
+											<option value="2">331 és 500 ml között</option>
+											<option value="3">251 és 330 ml között</option>
+											<option value="4">151 és 250 ml között</option>
+											<option value="5">150 ml-t vagy annál kevesebbet</option>	
+											<option value="8">nem tudom</option>
+											<option value="9">nem kívánok válaszolni</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="border p-3 m-3">
+									<div class="question-header O9-question-header mb-5 pt-4">
+										<h2 style="text-align: center">Mennyi diétás vagy cukormentes üdítőitalt fogyaszt Ön általában naponta?
+										</h2>
+									</div>
+									<div class="O9-answer-div answerdiv" style="text-align: center">
+										<select name="DH7A" id="DH7A" onkeydown="focusnext(event, '');">
+											<option selected disabled hidden style="display:none">válasszon</option>
+											<option value="1">500 ml-nél többet</option>
+											<option value="2">331 és 500 ml között</option>
+											<option value="3">251 és 330 ml között</option>
+											<option value="4">151 és 250 ml között</option>
+											<option value="5">150 ml-t vagy annál kevesebbet</option>	
+											<option value="8">nem tudom</option>
+											<option value="9">nem kívánok válaszolni</option>
+										</select>
+									</div>
+								</div>
+								
+								<div class="border p-3 m-3">
+									<div class="question-header O10-question-header mb-5 pt-4">
+										<h2 style="text-align: center">Mennyi energiaitalt fogyaszt Ön általában naponta?
+										</h2>
+									</div>
+									<div class="10-answer-div answerdiv" style="text-align: center">
+										<select name="DH8A" id="DH8A" onkeydown="focusnext(event, '');">
+											<option selected disabled hidden style="display:none">válasszon</option>
+											<option value="1">500 ml-nél többet</option>
+											<option value="2">331 és 500 ml között</option>
+											<option value="3">251 és 330 ml között</option>
+											<option value="4">151 és 250 ml között</option>
+											<option value="5">150 ml-t vagy annál kevesebbet</option>	
+											<option value="8">nem tudom</option>
+											<option value="9">nem kívánok válaszolni</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="border p-3 m-3">
+									<div class="question-header O11-question-header mb-5 pt-4">
+										<h2 style="text-align: center">Mennyi sportitalt fogyaszt Ön általában naponta?
+										</h2>
+									</div>
+									<div class="O11-answer-div answerdiv" style="text-align: center">
+										<select name="DH9A" id="DH9A" onkeydown="focusnext(event, '');">
+											<option selected disabled hidden style="display:none">válasszon</option>
+											<option value="1">500 ml-nél többet</option>
+											<option value="2">331 és 500 ml között</option>
+											<option value="3">251 és 330 ml között</option>
+											<option value="4">151 és 250 ml között</option>
+											<option value="5">150 ml-t vagy annál kevesebbet</option>	
+											<option value="8">nem tudom</option>
+											<option value="9">nem kívánok válaszolni</option>
+										</select>
+									</div>
+								</div>
+							</div>
+
+							<!--Itt van vége az 11. kérdésnek, ez alá kell rakni a többi kérdést ugyanígy a fenti formában,style="display:none"-nal.-->
+
+							<div class="O12-body question-card-body pt-3 pb-5 mt-4" data-order="6" style="display:none">
+								<!--Ez a lapozható kártya 12. kérdése,ezeket kell egymás alá rakni a card-bodyn belül.-->
+								<div class="border p-3 m-3">
+									<div class="question-header O12-question-header mb-5 pt-1">
+										<h2 style="text-align: center">Milyen gyakran fogyaszt Ön meleg italokat (pl. kávét, teát vagy kakaót)?
+										</h2>
+									</div>
+									<div class="O12-answer-div answerdiv" style="text-align: center">
+										<select name="DH10" id="DH10" onkeydown="focusnext(event, '');">
+											<option selected disabled hidden style="display:none">válasszon</option>
+											<option value="1">naponta legalább háromszor</option>
+											<option value="2">naponta 1-2 alkalommal</option>
+											<option value="3">hetente 4-6 alkalommal</option>
+											<option value="4">hetente 1-3 alkalommal</option>
+											<option value="5">ritkábban, mint hetente</option>
+											<option value="6">soha</option>	
+											<option value="8">nem tudom</option>
+											<option value="9">nem kívánok válaszolni</option>
+										</select>										
+									</div>
+								</div>
+
+								<div class="border p-3 m-3">
+									<div class="question-header O13-question-header mb-5 pt-1">
+										<h2 style="text-align: center">Tesz Ön a meleg italába természetes (pl. cukor, méz, sztevia, nyírfacukor) vagy mesterséges (pl. aszpartám, szacharin) édesítőszert?
+										</h2>
+									</div>
+									<div class="O13-answer-div answerdiv" style="text-align: center">
+										<select name="DH11" id="DH11" onkeydown="focusnext(event, '');">
+											<option selected disabled hidden style="display:none">válasszon</option>
+											<option value="1">ogem. főleg természetes édesítőszert</option>
+											<option value="2">igen, főleg mesterséges édesítőszert</option>
+											<option value="3">általában nem teszek bele semmilyen édesítőszert</option>											
+											<option value="8">nem tudom</option>
+											<option value="9">nem kívánok válaszolni</option>
+										</select>										
+									</div>
+								</div>								
+							</div>
+							<!--Itt van vége az 11. kérdésnek, ez alá kell rakni a többi kérdést ugyanígy a fenti formában,style="display:none"-nal.-->
+
+							<div class="O14-body question-card-body pt-3 pb-5 mt-4" data-order="7" style="display:none">
+								<!--Ez a lapozható kártya 12. kérdése,ezeket kell egymás alá rakni a card-bodyn belül.-->
+								
+								<div class="border p-3 m-3">
+									<div class="question-header O14-question-header mb-5 pt-1">
+										<h2 style="text-align: center">
+											Hány adag édességet, desszertet (pl. csokoládé, keksz, jégrém, fagylalt, sütemény, édes snack) fogyaszt Ön általában naponta?
+											Egy adag alatt egy fél tábla csokit (~5 dkg), vagy 3 darab kekszet, vagy egy gombóc fagyit, vagy egy kis darab süteményt, vagy  egy darab édes péksüteményt értünk. Az édesített, kanalazható tejes desszertek (pl. puding, túrókrém) is ide tartoznak.
+										</h2>
+									</div>
+									<div class="O14-answer-div answerdiv" style="text-align: center">
+										<select name="DH12" id="DH12" onkeydown="focusnext(event, '');">
+											<option selected disabled hidden style="display:none">válasszon</option>
+											<option value="1">legalább 5 adagot</option>
+											<option value="2">3-4 adagot</option>
+											<option value="3">1-2 adagot</option>
+											<option value="4">kevesebb mint egy adagot</option>
+											<option value="5">nem eszem naponta, csak alkalmanként</option>
+											<option value="6">soha ne meszem</option>	
+											<option value="8">nem tudom</option>
+											<option value="9">nem kívánok válaszolni</option>
+										</select>										
+									</div>
+								</div>
+							</div>
+							<!--Itt van vége az 11. kérdésnek, ez alá kell rakni a többi kérdést ugyanígy a fenti formában,style="display:none"-nal.-->
+
+							<div class="O14-body question-card-body pt-3 pb-5 mt-4" data-order="8" style="display:none">
+								<!--Ez a lapozható kártya 12. kérdése,ezeket kell egymás alá rakni a card-bodyn belül.-->
+										
+								<div class="border p-3 m-3">
+									<div class="question-header O15-question-header mb-5 pt-4">
+										<h2 style="text-align: center">Milyen gyakran fogyasztja Ön a következő húsfajtákat?
+										</h2>
+									</div>
+									<div class="O15-answer-div answerdiv" style="text-align: center">
+										<table id="table-a">
+											<tr>
+												<td>
+													A. Vörös hús (pl. sertés, marha, borjú, bárány, vadhús)																								
+												</td>
+												<td>
+													<select name="DH13A" id="DH13A" class="masodik">
+														<option selected disabled hidden style="display: none">válasszon</option>
+														<option value="1">naponta egyszer vagy többször</option>
+														<option value="2">hetente 4-6 alkalommal</option>
+														<option value="3">hetente 2-3 alkalommal</option>
+														<option value="4">hetente 1 alkalommal</option>
+														<option value="5">ritkábban, mint hetente egyszer</option>
+														<option value="6">soha</option>	
+														<option value="8">nem tudom</option>
+														<option value="9">nem kívánok válaszolni</option>
+													</select>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													B. Fehér hús (pl. csirke, pulyka)
+												</td>
+												<td>
+													<select name="DH13B" id="DH13B" class="masodik">
+														<option selected disabled hidden style="display: none">válasszon</option>
+														<option value="1">naponta egyszer vagy többször</option>
+														<option value="2">hetente 4-6 alkalommal</option>
+														<option value="3">hetente 2-3 alkalommal</option>
+														<option value="4">hetente 1 alkalommal</option>
+														<option value="5">ritkábban, mint hetente egyszer</option>
+														<option value="6">soha</option>	
+														<option value="8">nem tudom</option>
+														<option value="9">nem kívánok válaszolni</option>
+													</select>										
+												</td>
+											</tr>
+											<tr>
+												<td>
+													C. Feldolgozott húskészítmények (pl. szalámi, felvágott, sonka, kolbász, virsli)
+												</td>
+												<td>
+													<select name="DH13C" id="DH13C" class="masodik">
+														<option selected disabled hidden style="display: none">válasszon</option>
+														<option value="1">naponta egyszer vagy többször</option>
+														<option value="2">hetente 4-6 alkalommal</option>
+														<option value="3">hetente 2-3 alkalommal</option>
+														<option value="4">hetente 1 alkalommal</option>
+														<option value="5">ritkábban, mint hetente egyszer</option>
+														<option value="6">soha</option>	
+														<option value="8">nem tudom</option>
+														<option value="9">nem kívánok válaszolni</option>
+													</select>										
+												</td>
+											</tr>
+											<tr>
+												<td>
+													D. Hal vagy tenger gyümölcsei 
+												</td>
+												<td>
+													<select name="DH13D" id="DH13D" class="masodik">
+														<option selected disabled hidden style="display: none">válasszon</option>
+														<option value="1">naponta egyszer vagy többször</option>
+														<option value="2">hetente 4-6 alkalommal</option>
+														<option value="3">hetente 2-3 alkalommal</option>
+														<option value="4">hetente 1 alkalommal</option>
+														<option value="5">ritkábban, mint hetente egyszer</option>
+														<option value="6">soha</option>	
+														<option value="8">nem tudom</option>
+														<option value="9">nem kívánok válaszolni</option>
+													</select>										
+												</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+							</div>
+
+							<!--Itt van vége az 11. kérdésnek, ez alá kell rakni a többi kérdést ugyanígy a fenti formában,style="display:none"-nal.-->
+
+							<div class="O16-body question-card-body pt-3 pb-5 mt-4" data-order="9" style="display:none">
+								<!--Ez a lapozható kártya 12. kérdése,ezeket kell egymás alá rakni a card-bodyn belül.-->
+								<div class="border p-3 m-3">
+									<div class="question-header O16-question-header mb-5 pt-4">
+										<h2 style="text-align: center">Milyen gyakran fogyaszt Ön tejet és tejterméket (pl. tejes italokat, kefírt, joghurtot, tejfölt, vajat, sajtot)? Kérem, csak a természetes, hozzáadott cukrot vagy édesítőszert nem  tartalmazó tej és tejtermék fogyasztását vegye figyelembe!
+										</h2>
+									</div>
+									<div class="O16-answer-div answerdiv" style="text-align: center">
+										<select name="DH14" id="DH14" onkeydown="focusnext(event, '');">
+											<option selected disabled hidden style="display:none">válasszon</option>
+											<option value="1">naponta egyszer vagy többször</option>
+											<option value="2">hetente 4-6 alkalommal</option>
+											<option value="3">hetente 2-3 alkalommal</option>
+											<option value="4">hetente 1 alkalommal</option>
+											<option value="5">ritkábban, mint hetente egyszer</option>
+											<option value="6">soha</option>	
+											<option value="8">nem tudom</option>
+											<option value="9">nem kívánok válaszolni</option>
+										</select>										
+									</div>
+								</div>
+
+								<div class="border p-3 m-3">
+									<div class="question-header O17-question-header mb-5 pt-4">
+										<h2 style="text-align: center">Általában megsózza-e étkezéskor az ételt akkor is, ha azt már készítésekor is megsózták?
+										</h2>
+									</div>
+									<div class="O17-answer-div answerdiv" style="text-align: center">
+										<select name="DH15" id="DH15" onkeydown="focusnext(event, '');">
+											<option selected disabled hidden style="display:none">válasszon</option>
+											<option value="1">nem, általában sómentesen étkezem</option>
+											<option value="2">soha/ritkán</option>
+											<option value="3">gyakran, miután megkóstoltam az ételt</option>
+											<option value="4">igen, mindig megsózom, az étel megkóstolása nélkül</option>
+											<option value="8">nem tudom</option>
+											<option value="9">nem kívánok válaszolni</option>
+										</select>										
+									</div>
+								</div>
+							</div>
+
+							<!--Itt van vége az 17. kérdésnek, ez alá kell rakni a többi kérdést ugyanígy a fenti formában,style="display:none"-nal.-->
+
+							<div class="O18-body question-card-body pt-3 pb-5 mt-4" data-order="10" style="display:none">
+								<!--Ez a lapozható kártya 18. kérdése,ezeket kell egymás alá rakni a card-bodyn belül.-->
+								<div class="border p-3 m-3">
+									<div class="question-header O18-question-header mb-5 pt-4">
+										<h2 style="text-align: center">Hány hónapos koráig kapott anyatejet (gyermek neve), akár hozzátáplálás mellett is?
+										</h2>
+									</div>
+									<div class="O18-answer-div answerdiv" style="text-align: center">
+										<div class="radio-container" id="DH16">
+											<div class="radio-label-div">
+												<input type="radio" class="text-radio" name="DH16" id="DH16" value="">
+												<label for="DH16">még mindig kap anyatejet. A gyerek kora:.... (betöltött hónap)</label>
+												<input type="text" class="radio-text-field" id="DH16KOR">
+											</div>
+											<div class="radio-label-div">
+												<input type="radio" class="text-radio" name="DH16" id="DH16" value="">
+												<input type="text" class="radio-text-field" id="DH16KOR">
+												<label for="DH16KOR">...hónapos koráig (betötött hónap)</label>
+											</div>
+											<div class="radio-label-div">
+												<input type="radio" class="non-text-radio" name="DH16" id="DH16">
+												<label for="DH16">soha nem kapott anyatejet</label>
+											</div>
+											<div class="radio-label-div">
+												<input type="radio" class="non-text-radio" name="DH16_8" value="888" id="DH16_8">
+												<label for="DH16">nem tudom</label>
+											</div>
+											<div class="radio-label-div"><input type="radio" class="non-text-radio"
+													name="DH16" value="999" id="DH16_9">
+												<label for="DH16_9">nem kívánok válaszolni</label>
+											</div>
+										</div>									
+									</div>
+								</div>
+							</div>
+							<!--Itt van vége az 18. kérdésnek, ez alá kell rakni a többi kérdést ugyanígy a fenti formában,style="display:none"-nal.-->
+
+							<div class="O19-body question-card-body pt-3 pb-5 mt-4" data-order="11" style="display:none">
+								<!--Ez a lapozható kártya 19. kérdése,ezeket kell egymás alá rakni a card-bodyn belül.-->
+								<div class="border p-3 m-3">
+									<div class="question-header O19-question-header mb-5 pt-4">
+										<h2 style="text-align: center">Hány hónapos korától kapott (gyermek neve) rendszeresen az anyatejen kívül  más folyadékot (pl. víz, gyógytea, gyümölcslé, állati eredetű tej) vagy szilárd táplálékot?
+										</h2>
+									</div>
+									<div class="O19-answer-div answerdiv" style="text-align: center">									
+										<div class="radio-container" id="DH17">
+											<div class="radio-label-div">
+												<input type="radio" class="non-text-radio" name="DH17" id="DH17" value="1">
+												<label for="DH17">még nem kapott soha, kizárólag anyatejet kap</label>
+											</div>
+
+											<div class="radio-label-div">
+												<input type="radio" class="text-radio" name="DH17" id="DH17" value="2">
+												<input type="text" class="radio-text-field" id="DH17KOR">
+												<label for="DH17KOR">...hónapos korától (betöltött hónap)</label>												
+											</div>
+											
+											<div class="radio-label-div">
+												<input type="radio" class="non-text-radio" name="DH17_8" value="8" id="DH17_8">
+												<label for="DH17_8">nem tudom</label>
+											</div>
+
+											<div class="radio-label-div"><input type="radio" class="non-text-radio" name="DH17" value="9" id="DH16_9">
+												<label for="DH17_9">nem kívánok válaszolni</label>
+											</div>
+										</div>									
+									</div>									
+								</div>
+							</div>
+							<!--Itt van vége az 18. kérdésnek, ez alá kell rakni a többi kérdést ugyanígy a fenti formában,style="display:none"-nal.-->
+
+							<div class="O19-body question-card-body pt-3 pb-5 mt-4" data-order="12" style="display:none">
+								<!--Ez a lapozható kártya 19. kérdése,ezeket kell egymás alá rakni a card-bodyn belül.-->
+								<div class="border p-3 m-3">
+									<div class="question-header O20-question-header mb-5 pt-4">
+										<h2 style="text-align: center">Általában megsózza-e étkezéskor az ételt akkor is, ha azt már készítésekor is megsózták?
+										</h2>
+									</div>
+									<div class="O20-answer-div answerdiv" style="text-align: center">		
+										
+										<select class="salt" name="DHU_1A" id="DHU_1A" onkeydown="focusnext(event, '');">
+											<option selected disabled hidden style="display:none">válasszon</option>
+											<option value="01">diabetikus (cukorbeteg) étrend</option>
+											<option value="02">gluténmentes étrend</option>
+											<option value="03">laktózmentes étrend</option>
+											<option value="04">tejfehérjementes étrend</option>
+											<option value="05">energiaszegény étrend</option>
+											<option value="06">sószegény étrend</option>
+											<option value="07">vegetáriánus (vegán, lakto-, ovo-, szemi- vegán stb.) étrend</option>
+											<option value="08">egyéb étrend</option>
+											<option value="09">semmilyen étrendet sem követ tudatosan</option>
+											<option value="88">nem tudom</option>
+											<option value="99">nem kívánok válaszolni</option>										
+										</select>		
+<!--
+										<form action="" name="DH15" id="DH15" onkeydown="focusnext(event, '');">
+											<input type="checkbox" value="01">diabetikus (cukorbeteg) étrend<br>
+											<input type="checkbox" value="02">gluténmentes étrend<br> 
+											<input type="checkbox" value="03">laktózmentes étrend<br>
+											<input type="checkbox" value="04">tejfehérjementes étrend<br> 
+											<input type="checkbox" value="05">energiaszegény étrend<br>
+											<input type="checkbox" value="06">sószegény étrend<br> 
+											<input type="checkbox" value="07">vegetáriánus (vegán, lakto-, ovo-, szemi- vegán stb.) étrend<br>
+											<input type="checkbox" value="08">egyéb étrend<br> 
+											<input type="checkbox" value="09">semmilyen étrendet sem követ tudatosan<br> 
+											<input type="checkbox" value="88">nem tudom<br> 
+											<input type="checkbox" value="99">nem kívánok válaszolni<br> 
+										</form>	
+									-->	
+									
+										<select class="salt" name="DHU_1B" id="DHU_1B" onkeydown="focusnext(event, '');">
+											<option selected disabled hidden style="display:none">válasszon</option>
+											<option value="01">diabetikus (cukorbeteg) étrend</option>
+											<option value="02">gluténmentes étrend</option>
+											<option value="03">laktózmentes étrend</option>
+											<option value="04">tejfehérjementes étrend</option>
+											<option value="05">energiaszegény étrend</option>
+											<option value="06">sószegény étrend</option>
+											<option value="07">vegetáriánus (vegán, lakto-, ovo-, szemi- vegán stb.) étrend</option>
+											<option value="08">egyéb étrend</option>
+											<option value="09">semmilyen étrendet sem követ tudatosan</option>
+											<option value="88">nem tudom</option>
+											<option value="99">nem kívánok válaszolni</option>										
+										</select>
+											
+										<select class="salt" name="DHU_1C" id="DHU_1C" onkeydown="focusnext(event, '');">
+											<option selected disabled hidden style="display:none">válasszon</option>
+											<option value="01">diabetikus (cukorbeteg) étrend</option>
+											<option value="02">gluténmentes étrend</option>
+											<option value="03">laktózmentes étrend</option>
+											<option value="04">tejfehérjementes étrend</option>
+											<option value="05">energiaszegény étrend</option>
+											<option value="06">sószegény étrend</option>
+											<option value="07">vegetáriánus (vegán, lakto-, ovo-, szemi- vegán stb.) étrend</option>
+											<option value="08">egyéb étrend</option>
+											<option value="09">semmilyen étrendet sem követ tudatosan</option>
+											<option value="88">nem tudom</option>
+											<option value="99">nem kívánok válaszolni</option>										
+										</select>
+									</div>
+								</div>
+							</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1" style="display: flex;align-items: center;">
+                <i class="fa fa-chevron-right fa-5x btn-next" id="question-fwd-button"></i>
+            </div>
+        </section>
+    </div>
+    <footer class="page-footer fixed-bottom border-top">
+        <div class="footer-copyright text-center py-3">© 2019 Copyright:
+            <a href="#"> Ksh.hu</a>
+        </div>
+    </footer>
+    <script src="jquery-3.4.1/jquery-3.4.1.min.js"></script>
+    <script src="popper-1.15.0/popper.min.js"></script>
+    <script src="bootstrap-4.3.1/dist/js/bootstrap.min.js"></script>
+    <script src="js/common.js"></script>
+
+</body>
+
+</html>

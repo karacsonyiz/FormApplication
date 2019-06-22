@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="bootstrap-4.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/Q.css">
+    <title>Alkoholfogyasztás</title>
+</head>
+
+<body id="Q">
+    <div class="container-fluid">
+        <nav class="navbar main-nav navbar-light sticky-top py-0">
+            <a class="navbar-brand" href="/index.html" style="color:white">
+                Főoldal
+            </a>
+        </nav>
+        <section class="section section-Q row">
+            <div class="col-1 backbutton">
+                <i class="fa fa-chevron-left fa-5x btn-prev" id="question-back-button"></i>
+            </div>
+            <div class="main col">
+                <h1 class="section-header section-skeleton-header text-center rounded"
+                    onclick="window.location.href = 'index.html';">ALKOHOLFOGYASZTÁS</h1>
+                <div class="meta-div text-center">
+                    <h4><em>Most arról kérdezem, hogy az elmúlt 12 hónapban mennyi alkoholt fogyasztott.</em></h4>
+                </div>
+                <div class="card question-card border-0">
+                    <div class="row">
+                        <div class="card-body py-1">
+                            <div class="question-card-body Q1-body" data-order="1">
+                                <div class="border p-3 m-3">
+                                    <div class="question-header Q1-question-header mb-5">
+                                        <h2>Q1. Az elmúlt 12 hónapban milyen gyakran fogyasztott Ön alkoholtartalmú
+                                            italt?
+                                        </h2>
+                                    </div>
+                                    <div class="Q1-answer-div answerdiv">
+                                        <select name="AL1" class="form-control" data-id="AL1">
+                                            <option value="" selected="selected" hidden="hidden">Kérem válasszon!
+                                            </option>
+                                            <option value="01">minden nap vagy majdnem minden nap</option>
+                                            <option value="02">hetente 5-6 napon</option>
+                                            <option value="03">hetente 3-4 napon</option>
+                                            <option value="04">hetente 1-2 napon</option>
+                                            <option value="05">havonta 2-3 napon</option>
+                                            <option value="06">havonta egyszer</option>
+                                            <option value="07">ritkábban mint havonta egyszer</option>
+                                            <option value="08">az elmúlt 12 hónapban nem, mivel már nem iszom alkoholt
+                                            </option>
+                                            <option value="09">soha, vagy egész életében csak néhány kortyot</option>
+                                            <option value="88">nem tudom</option>
+                                            <option value="99">nem kívánok válaszolni</option>
+                                        </select>
+                                    </div>
+                                    <div class="Q1-card-footer my-5 rounded p-3">
+                                        <h3 class="question-hint" id="hint-Q1">Mint: sör, bor, pezsgő, pálinka, vodka,
+                                            rum, whisky, koktél, likőr, alkoholos üdítő, házilag előállított alkohol.
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="question-card-body Q2-body" data-order="2">
+                                <div class="border p-3 m-3">
+                                    <div class="question-header Q2-question-header mb-5">
+                                        <h2>Q2. Egy átlagos héten milyen, és mennyi italt fogyaszt az egyes napokon?
+                                        </h2>
+                                    </div>
+                                    <div class="Q2-answer-div answerdiv">
+                                        <table>
+                                            <thead class="q2-head">
+                                                <tr>
+                                                    <th class="q2-header"></th>
+                                                    <th class="q2-header">Sör(dl)</th>
+                                                    <th class="q2-header">Bor(dl)</th>
+                                                    <th class="q2-header">Rövidital(cl)</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="q2-row">
+                                                    <td class="q2-td">hétfő</td>
+                                                    <td class="q2-td">
+                                                        <input type="text" data-id="ALM21A">
+                                                    </td>
+                                                    <td class="q2-td">
+                                                        <input type="text" data-id="ALM21B">
+                                                    </td>
+                                                    <td class="q2-td">
+                                                        <input type="text" data-id="ALM21C">
+                                                    </td>
+                                                </tr>
+                                                <tr class="q2-row">
+                                                    <td class="q2-td">kedd</td>
+                                                    <td class="q2-td">
+                                                        <input type="text" data-id="ALM22A">
+                                                    </td>
+                                                    <td class="q2-td">
+                                                        <input type="text" data-id="ALM22B">
+                                                    </td>
+                                                    <td class="q2-td">
+                                                        <input type="text" data-id="ALM22C">
+                                                    </td>
+                                                </tr>
+                                                <tr class="q2-row">
+                                                    <td class="q2-td">szerda</td>
+                                                    <td class="q2-td">
+                                                        <input type="text" data-id="ALM23A">
+                                                    </td>
+                                                    <td class="q2-td">
+                                                        <input type="text" data-id="ALM23B">
+                                                    </td>
+                                                    <td class="q2-td">
+                                                        <input type="text" data-id="ALM23C">
+                                                    </td>
+                                                </tr>
+                                                <tr class="q2-row">
+                                                    <td class="q2-td">csütörtök</td>
+                                                    <td class="q2-td">
+                                                        <input type="text" data-id="ALM24A">
+                                                    </td>
+                                                    <td class="q2-td">
+                                                        <input type="text" data-id="ALM24B">
+                                                    </td>
+                                                    <td class="q2-td">
+                                                        <input type="text" data-id="ALM24C">
+                                                    </td>
+                                                </tr>
+                                                <tr class="q2-row">
+                                                    <td class="q2-td">péntek</td>
+                                                    <td class="q2-td">
+                                                        <input type="text" data-id="ALM25A">
+                                                    </td>
+                                                    <td class="q2-td">
+                                                        <input type="text" data-id="ALM25B">
+                                                    </td>
+                                                    <td class="q2-td">
+                                                        <input type="text" data-id="ALM25C">
+                                                    </td>
+                                                </tr>
+                                                <tr class="q2-row">
+                                                    <td class="q2-td">szombat</td>
+                                                    <td class="q2-td">
+                                                        <input type="text" data-id="ALM26A">
+                                                    </td>
+                                                    <td class="q2-td">
+                                                        <input type="text" data-id="ALM26B">
+                                                    </td>
+                                                    <td class="q2-td">
+                                                        <input type="text" data-id="ALM26C">
+                                                    </td>
+                                                </tr>
+                                                <tr class="q2-row">
+                                                    <td class="q2-td">vasárnap</td>
+                                                    <td class="q2-td">
+                                                        <input type="text" data-id="ALM27A">
+                                                    </td>
+                                                    <td class="q2-td">
+                                                        <input type="text" data-id="ALM27B">
+                                                    </td>
+                                                    <td class="q2-td">
+                                                        <input type="text" data-id="ALM27C">
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="Q2-card-footer my-5 rounded p-3">
+                                        <h3 class="question-hint" id="hint-Q2">Rövidital: pálinka, rum, vodka, gin,
+                                            whisky, konyak</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="question-card-body Q3-body" data-order="3">
+                                <div class="border p-3 m-3">
+                                    <div class="question-header Q3-question-header mb-5">
+                                        <h2>Q3. Az elmúlt 12 hónapban milyen gyakran fogyasztott Ön egy alkalommal
+                                            legalább 1 liter bort, vagy 2 dl röviditalt, 2 liter sört vagy cidert?</h2>
+                                    </div>
+                                    <div class="Q3-answer-div answerdiv">
+                                        <select name="AL1" data-id="AL1" class="form-control">
+                                            <option value="" selected="selected" hidden="hidden">Kérem válasszon!
+                                            </option>
+                                            <option value="01">minden nap vagy majdnem minden nap</option>
+                                            <option value="02">hetente 5-6 napon</option>
+                                            <option value="03">hetente 3-4 napon</option>
+                                            <option value="04">hetente 1-2 napon</option>
+                                            <option value="05">havonta 2-3 napon</option>
+                                            <option value="06">havonta egyszer</option>
+                                            <option value="07">ritkábban mint havonta egyszer</option>
+                                            <option value="08">az elmúlt 12 hónapban </option>
+                                            <option value="09">soha, nem fordult még elő</option>
+                                            <option value="88">nem tudom</option>
+                                            <option value="99">nem kívánok válaszolni</option>
+                                        </select>
+                                    </div>
+                                    <div class="Q3-card-footer my-5 rounded p-3">
+                                        <h3 class="question-hint" id="hint-Q3">Például egy buli alatt, étkezés közben,
+                                            baráti összejövetel, esti kikapcsolódás alkalmával, vagy akár egyedül
+                                            otthon.</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1 fwdbutton">
+                <i class="fa fa-chevron-right fa-5x btn-next" id="question-fwd-button"></i>
+            </div>
+        </section>
+    </div>
+    <footer class="page-footer fixed-bottom border-top">
+        <div class="footer-copyright text-center">© 2019 Copyright:
+            <a href="#"> ksh.hu</a>
+        </div>
+    </footer>
+    <script src="jquery-3.4.1/jquery-3.4.1.min.js"></script>
+    <script src="popper-1.15.0/popper.min.js"></script>
+    <script src="bootstrap-4.3.1/dist/js/bootstrap.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+
+</html>

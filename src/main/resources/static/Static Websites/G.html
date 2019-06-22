@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="bootstrap-4.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/G.css">
+    <title>G</title>
+</head>
+
+<body id="G">
+    <div class="container-fluid">
+        <nav class="navbar main-nav navbar-light sticky-top py-0">
+            <a class="navbar-brand" href="/index.html" style="color:white">
+                Főoldal
+            </a>
+        </nav>
+        <section class="section section-skeleton row">
+            <div class="col-1" style="display: flex;align-items:center;height:845px;">
+                <i class="fa fa-chevron-left fa-5x btn-prev" id="question-back-button"></i>
+            </div>
+            <div class="main col">
+                <h1 class="section-header section-skeleton-header text-center rounded p-3"
+                    onclick="window.location.href='index.html';">SZAKELLÁTÁS (KÓRHÁZI, JÁRÓBETEG-SZAKELLÁTÁS),
+                    ALAPELLÁTÁS (HÁZIORVOSI) IGÉNYBEVÉTELE</h1>
+                <div class="meta-div text-center pt-3">
+                    <h4>
+                        <em>
+							A következőkben arról szeretném kérdezni, hogy mennyi időt töltött kórházban. A kórházak
+							minden típusát, valamint a külföldön kórházban töltött időt is vegye figyelembe!
+						</em>
+                    </h4>
+                </div>
+
+                <div class="card question-card border-0">
+                    <div class="row">
+                        <div class="card-body py-4">
+                            <div class="G1-body question-card-body pt-3 pb-5 mt-4" data-order="1" style="display:block">
+                                <!--Ez a lapozható kártya első kérdése,ezeket kell egymás alá rakni a card-bodyn belül.-->
+                                <div class="border p-3 m-3">
+                                    <div class="question-header G1-question-header mb-3 pt-2">
+                                        <h2 style="text-align: center">Az elmúlt 12 HÓNAPBAN volt-e Ön legalább egy
+                                            éjszakát kórházban fekvőbetegként?
+                                        </h2>
+                                    </div>
+                                    <div class="G1-answer-div answerdiv" style="text-align: center">
+                                        <select name="H01A" id="H01A">
+											<option selected disabled hidden style="display:none"></option>
+											<option value="1">igen</option>
+											<option value="2">nem</option>
+											<option value="8">nem tudom</option>
+											<option value="9">nem kívánok válaszolni</option>
+										</select>
+                                    </div>
+                                    <div class="G1-card-footer my-3 rounded p-3">
+                                        <h5 class="question-hint" id="hint-G5">Mindenféle kórházat vegyél figyelembe, a kórházak pszichiátriai osztályát is! Csak az ápolási otthonok és a tanulási nehézségekkel küzdőkről gondoskodó intézetek nem tartoznak ide!</h5>
+                                    </div>
+                                </div>
+
+                                <div class="border p-3 m-3">
+                                    <div class="question-header G2-question-header mb-3 pt-2">
+                                        <h2 style="text-align: center">Az elmúlt 12 HÓNAPBAN összesen hány éjszakát
+                                            töltött Ön fekvőbetegként kórházban?
+                                        </h2>
+                                    </div>
+                                    <div class="G2-answer-div answerdiv" style="text-align: center">
+                                        <div class="radio-container" id="H01B">
+                                            <div class="radio-label-div">
+                                                <input type="radio" class="text-radio" name="H01B" id="H01B" value="">
+                                                <input type="text" class="radio-text-field" id="H01B">
+                                                <label for="H01B">éjszakák</label>
+                                            </div>
+                                            <div class="radio-label-div"><input type="radio" class="non-text-radio"
+                                                    name="H01B" value="888" id="H01B_8">
+                                                <label for="H01B">nem tudom</label>
+                                            </div>
+                                            <div class="radio-label-div"><input type="radio" class="non-text-radio"
+                                                    name="H01B" value="999" id="H01B_9">
+                                                <label for="H01B">nem kívánok válaszolni</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Itt van vége az első kérdésnek, ez alá kell rakni a többi kérdést ugyanígy a fenti formában,style="display:none"-nal.-->
+
+                            <div class="G3-body question-card-body pt-3 pb-5 mt-4" data-order="2" style="display:none">
+                                <!--Ez a lapozható kártya első kérdése,ezeket kell egymás alá rakni a card-bodyn belül.-->
+                                <div class="border p-3 m-3">
+                                    <div class="question-header G3-question-header mb-5 pt-4">
+                                        <h2 style="text-align: center">Az elmúlt 12 HÓNAPBAN volt-e Ön kórházban vagy
+                                            más egészségügyi intézményben egynapos ellátáson, tehát úgy, hogy felvették,
+                                            befektették a kórházba/intézménybe diagnosztizálás, kezelés, műtét vagy más
+                                            típusú egészségügyi
+                                            ellátás céljából, de nem kellett bent töltenie az éjszakát?
+                                        </h2>
+                                    </div>
+
+                                    <div class="G3-answer-div answerdiv" style="text-align: center">
+                                        <select name="H02A" id="H02A">
+                                            <option selected disabled hidden style="display:none"></option>
+                                            <option value="1">igen</option>
+                                            <option value="2">nem</option>
+                                            <option value="8">nem tudom</option>
+                                            <option value="9">nem kívánok válaszolni</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="border p-3 m-3">
+                                    <div class="question-header G4-question-header mb-5 pt-4">
+                                        <h2 style="text-align: center">Az elmúlt 12 HÓNAPBAN hány alkalommal részesült
+                                            Ön ilyen egynapos ellátásban?
+                                        </h2>
+                                    </div>
+                                    <div class="G4-answer-div answerdiv" style="text-align: center">
+                                        <div class="radio-container" id="H02B">
+                                            <div class="radio-label-div">
+                                                <input type="radio" class="text-radio" name="H02B" id="H02B" value="">
+                                                <input type="text" class="radio-text-field" id="H02B">
+                                                <label for="H02B">éjszakák</label>
+                                            </div>
+                                            <div class="radio-label-div"><input type="radio" class="non-text-radio"
+                                                    name="H02B" value="888" id="H02B_8">
+                                                <label for="H02B">nem tudom</label>
+                                            </div>
+                                            <div class="radio-label-div"><input type="radio" class="non-text-radio"
+                                                    name="H02B" value="999" id="H02B_9">
+                                                <label for="H02B">nem kívánok válaszolni</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--Itt van vége az első kérdésnek, ez alá kell rakni a többi kérdést ugyanígy a fenti formában,style="display:none"-nal.-->
+
+                            <div class="G5-body question-card-body pt-3 pb-5 mt-4" data-order="3" style="display:none">
+                                <!--Ez a lapozható kártya első kérdése,ezeket kell egymás alá rakni a card-bodyn belül.-->
+                                <div class="border p-3 m-3">
+                                    <div class="question-header G5-question-header mb-5 pt-4">
+                                        <h2 style="text-align: center">Mikor járt utoljára fogorvosnál, fogszabályozó
+                                            szakorvosnál saját egészsége érdekében (tehát úgy, hogy nem gyermekét vagy
+                                            házastársát stb. kísérte el)?
+                                        </h2>
+                                    </div>
+
+                                    <div class="G5-answer-div answerdiv" style="text-align: center">
+                                        <select name="AM1" id="AM1">
+                                            <option selected disabled hidden style="display:none"></option>
+                                            <option value="1">az elmúlt 6 hónapban</option>
+                                            <option value="2">több mint 6 hónapja, de kevesebb mint 12 hónapja</option>
+                                            <option value="3">12 hónapja vagy régebben</option>
+                                            <option value="4">soha nem járt még fogorvosnál</option>
+                                            <option value="8">nem tudom</option>
+                                            <option value="9">nem kívánok válaszolni</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Itt van vége az első kérdésnek, ez alá kell rakni a többi kérdést ugyanígy a fenti formában,style="display:none"-nal.-->
+
+                            <div class="G7-body question-card-body pt-3 pb-5 mt-4" data-order="4" style="display:none">
+                                <!--Ez a lapozható kártya első kérdése,ezeket kell egymás alá rakni a card-bodyn belül.-->
+                                <div class="border p-3 m-3">
+                                    <div class="question-header G6-question-header mb-5 pt-4">
+                                        <h2 style="text-align: center">Mikor találkozott vagy lépett kapcsolatba
+                                            utoljára háziorvosával saját egészsége érdekében?
+                                        </h2>
+                                    </div>
+
+                                    <div class="G6-answer-div answerdiv" style="text-align: center">
+                                        <select name="AM2" id="AM2">
+                                            <option selected disabled hidden style="display:none"></option>
+                                            <option value="1">az elmúlt 12 hónapban</option>
+                                            <option value="2">12 hónapja vagy régebben</option>
+                                            <option value="3">soha</option>
+                                            <option value="8">nem tudom</option>
+                                            <option value="9">nem kívánok válaszolni</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="border p-3 m-3">
+                                    <div class="question-header G7-question-header mb-5 pt-4">
+                                        <h2 style="text-align: center">Az elmúlt 4 HÉTBEN hány alkalommal találkozott
+                                            vagy lépett kapcsolatba háziorvosával saját egészsége érdekében?
+                                        </h2>
+                                    </div>
+
+                                    <div class="G7-answer-div answerdiv" style="text-align: center">
+                                        <div class="radio-container" id="AM3">
+                                            <div class="radio-label-div">
+                                                <input type="radio" class="text-radio" name="AM3" id="AM3" value="">
+                                                <input type="text" class="radio-text-field" id="AM3">
+                                                <label for="AM3">alkalommal</label>
+                                            </div>
+                                            <div class="radio-label-div"><input type="radio" class="non-text-radio"
+                                                    name="AM3" value="88" id="AM3_8">
+                                                <label for="AM3">nem tudom</label>
+                                            </div>
+                                            <div class="radio-label-div"><input type="radio" class="non-text-radio"
+                                                    name="AM3" value="99" id="AM3_9">
+                                                <label for="AM3">nem kívánok válaszolni</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!--Itt van vége az első kérdésnek, ez alá kell rakni a többi kérdést ugyanígy a fenti formában,style="display:none"-nal.-->
+
+                            <div class="G8-body question-card-body pt-3 pb-5 mt-4" data-order="5" style="display:none">
+                                <!--Ez a lapozható kártya első kérdése,ezeket kell egymás alá rakni a card-bodyn belül.-->
+                                <div class="border p-3 m-3">
+                                    <div class="question-header G8-question-header mb-5 pt-4">
+                                        <h2 style="text-align: center">Mikor találkozott vagy lépett kapcsolatba
+                                            utoljára háziorvosával saját egészsége érdekében?
+                                        </h2>
+                                    </div>
+
+                                    <div class="G8-answer-div answerdiv" style="text-align: center">
+                                        <select name="AM4" id="AM4">
+											<option selected disabled hidden style="display:none"></option>
+											<option value="1">az elmúlt 12 hónapban</option>
+											<option value="2">12 hónapja vagy régebben</option>
+											<option value="3">soha</option>
+											<option value="8">nem tudom</option>
+											<option value="9">nem kívánok válaszolni</option>
+										</select>
+                                    </div>
+                                    <div class="G8-card-footer my-1 rounded p-3">
+                                        <h5 class="question-hint" id="hint-G8">Nem tartozik ide a fogorvosi ellátás igénybevétele, de ide tartoznak a szájsebészeti kezelések.</h5>
+                                    </div>
+                                </div>
+
+                                <div class="border p-3 m-3">
+                                    <div class="question-header G9-question-header mb-4 pt-3">
+                                        <h2 style="text-align: center">Az elmúlt 4 HÉTBEN hány alkalommal találkozott vagy lépett kapcsolatba szakorvossal saját egészsége érdekében?
+                                        </h2>
+                                    </div>
+
+                                    <div class="G9-answer-div answerdiv" style="text-align: center">
+                                        <div class="radio-container" id="AM5">
+                                            <div class="radio-label-div">
+                                                <input type="radio" class="text-radio" name="AM5" id="AM5" value="">
+                                                <input type="text" class="radio-text-field" id="AM3">
+                                                <label for="AM5">alkalommal</label>
+                                            </div>
+                                            <div class="radio-label-div"><input type="radio" class="non-text-radio" name="AM5" value="88" id="AM5_8">
+                                                <label for="AM5">nem tudom</label>
+                                            </div>
+                                            <div class="radio-label-div"><input type="radio" class="non-text-radio" name="AM5" value="99" id="AM5_9">
+                                                <label for="AM5">nem kívánok válaszolni</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Itt van vége az első kérdésnek, ez alá kell rakni a többi kérdést ugyanígy a fenti formában,style="display:none"-nal.-->
+
+                            <div class="G10-body question-card-body pt-3 pb-5 mt-4" data-order="6" style="display:none">
+                                <!--Ez a lapozható kártya első kérdése,ezeket kell egymás alá rakni a card-bodyn belül.-->
+                                <div class="border p-3 m-3">
+                                    <div class="question-header G10-question-header mb-5 pt-4">
+                                        <h2 style="text-align:center">Az elmúlt 12 HÓNAPBAN felkeresett-e Ön a saját egészsége érdekében … ?</h2>
+                                        <br>
+                                        <h3 class="reszkerdesek">a. gyógytornászt, mozgásterapeutát, kiropraktőrt, gyógymasszőrt vagy csontkovácsot</h3>
+
+                                    </div>
+
+                                    <div class="G10-answer-div answerdiv" style="text-align: left">
+                                        <select name="AM6A" id="AM6A">
+											<option selected disabled hidden style="display:none"></option>
+											<option value="1">igen</option>
+											<option value="2">nem</option>
+											<option value="8">nem tudom</option>
+											<option value="9">nem kívánok válaszolni</option>
+										</select>
+                                    </div>
+
+                                    <div class="question-header G10-question-header mb-5 pt-4">
+                                        <h3 class="reszkerdesek">b. pszichológust, pszichoterapeutát vagy pszichiátert
+                                        </h3>
+                                    </div>
+
+                                    <div class="G10-answer-div answerdiv" style="text-align: left">
+                                        <select name="AM6B" id="AM6B">
+											<option selected disabled hidden style="display:none"></option>
+											<option value="1">igen</option>
+											<option value="2">nem</option>
+											<option value="8">nem tudom</option>
+											<option value="9">nem kívánok válaszolni</option>
+										</select>
+                                    </div>
+
+                                    <div class="question-header G10-question-header mb-5 pt-4">
+                                        <h3 class="reszkerdesek">c. dietetikust, táplálkozási tanácsadót
+                                        </h3>
+                                    </div>
+
+                                    <div class="G10-answer-div answerdiv" style="text-align: left">
+                                        <select name="AM6C" id="AM6C">
+											<option selected disabled hidden style="display:none"></option>
+											<option value="1">igen</option>
+											<option value="2">nem</option>
+											<option value="8">nem tudom</option>
+											<option value="9">nem kívánok válaszolni</option>
+										</select>
+                                    </div>
+
+                                    <div class="question-header G10-question-header mb-5 pt-4">
+                                        <h3 class="reszkerdesek">d. természetgyógyászt, homeopátiás szakembert
+                                        </h3>
+                                    </div>
+
+                                    <div class="G10-answer-div answerdiv" style="text-align: left">
+                                        <select name="AM6D" id="AM6D">
+											<option selected disabled hidden style="display:none"></option>
+											<option value="1">igen</option>
+											<option value="2">nem</option>
+											<option value="8">nem tudom</option>
+											<option value="9">nem kívánok válaszolni</option>
+										</select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--Itt van vége az első kérdésnek, ez alá kell rakni a többi kérdést ugyanígy a fenti formában,style="display:none"-nal.-->
+
+                            <div class="G11-body question-card-body pt-3 pb-5 mt-4" data-order="7" style="display:none">
+                                <!--Ez a lapozható kártya első kérdése,ezeket kell egymás alá rakni a card-bodyn belül.-->
+                                <div class="border p-3 m-3">
+                                    <div class="question-header G11-question-header mb-5 pt-4">
+                                        <h2 style="text-align:center">Az elmúlt 12 HÓNAPBAN igénybe vett-e Ön saját maga számára otthoni szakápolási szolgáltatást?</h2>
+                                    </div>
+
+                                    <div class="G11-answer-div answerdiv" style="text-align: center">
+                                        <select name="AM7A" id="AM7A">
+											<option selected disabled hidden style="display:none"></option>
+											<option value="1">igen</option>
+											<option value="2">nem</option>
+											<option value="8">nem tudom</option>
+											<option value="9">nem kívánok válaszolni</option>
+										</select>
+                                    </div>
+                                </div>
+
+                                <div class="border p-3 m-3">
+                                    <div class="question-header G12-question-header mb-5 pt-4">
+                                        <h2 style="text-align:center">Az elmúlt 12 HÓNAPBAN igénybe vett-e Ön saját maga számára házi segítségnyújtási szolgáltatást?</h2>
+                                    </div>
+
+                                    <div class="G12-answer-div answerdiv" style="text-align: center">
+                                        <select name="AM7B" id="AM7B">
+											<option selected disabled hidden style="display:none"></option>
+											<option value="1">igen</option>
+											<option value="2">nem</option>
+											<option value="8">nem tudom</option>
+											<option value="9">nem kívánok válaszolni</option>
+										</select>
+                                    </div>
+                                </div>
+
+                                <div class="border p-3 m-3">
+                                    <div class="question-header G13-question-header mb-5 pt-4">
+                                        <h2 style="text-align:center">Mi volt a fő oka annak, hogy nem vett igénybe házi segítségnyújtási szolgáltatást?</h2>
+                                    </div>
+
+                                    <div class="G13-answer-div answerdiv" style="text-align: center">
+                                        <select name="AM7B" id="AM7B">
+											<option selected disabled hidden style="display:none"></option>
+											<option value="1">nem volt szüksége ilyen segítségre</option>
+											<option value="2">családtag, barát, szomszéd segítségét igénybe tudta venni</option>
+											<option value="3">anyagi okok</option>
+											<option value="4">nem ismeri az igénybe vehető szolgáltatásokat</option>
+											<option value="5">nehezen hozzáférhető a szolgáltatás (a településen nem elérhető)</option>
+											<option value="6">hivatalosan igényelte, de nem kapott</option>
+											<option value="7">szégyelli a segítségkérést</option>
+											<option value="?">egyéb okok</option>
+											<option value="8">nem tudom</option>
+											<option value="9">nem kívánok válaszolni</option>
+										</select>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1" style="display: flex;align-items: center;">
+                <i class="fa fa-chevron-right fa-5x btn-next" id="question-fwd-button"></i>
+            </div>
+
+        </section>
+    </div>
+    <footer class="page-footer fixed-bottom border-top">
+        <div class="footer-copyright text-center py-3">© 2019 Copyright:
+            <a href="#"> Ksh.hu</a>
+        </div>
+    </footer>
+    <script src="jquery-3.4.1/jquery-3.4.1.min.js"></script>
+    <script src="popper-1.15.0/popper.min.js"></script>
+    <script src="bootstrap-4.3.1/dist/js/bootstrap.min.js"></script>
+    <script src="js/common.js"></script>
+
+</body>
+
+</html>

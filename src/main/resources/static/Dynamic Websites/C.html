@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="bootstrap-4.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/C.css">
+    <title>Section-Skeleton</title>
+</head>
+
+<body id='C'>
+    <div class="container-fluid">
+        <nav class="navbar main-nav navbar-light sticky-top py-0">
+            <a class="navbar-brand" href="/index.html" style="color:white">
+                Főoldal
+            </a>
+            <button onclick="getAllData()">klik</button>
+        </nav>
+        <section class="section section-skeleton row">
+            <div class="col-1 backbutton" style="display: flex;align-items: center;height:845px;">
+                <i class="fa fa-chevron-left fa-5x btn-prev" id="question-back-button"></i>
+            </div>
+            <div class="main col">
+                <h1 class="section-header section-skeleton-header text-center rounded p-3"
+                    onclick="window.location.href = 'index.html';">KORLÁTOZOTTSÁG</h1>
+                <div class="meta-div text-center pt-3">
+                    <h4><em>A következő kérdések az Ön általános fizikai állapotára fognak vonatkozni, azzal
+                            összefüggésben, hogy ez mennyire befolyásolja az Ön mindennapi tevékenységeit. Kérem, hogy
+                            tartós problémákra gondoljon, átmeneti problémákat ne vegyen figyelembe!</em></h4>
+                </div>
+                <div class="card question-card border-0">
+                    <div class="row">
+                        <div class="card-body py-5">
+                            <div class="question-card-body" data-order="1" style="display:block">
+                                <div class="card-item C1-body">
+                                    <div class="question-header C1-question-header mb-5">
+                                        <h2>Hord-e Ön szemüveget vagy kontaktlencsét?</h2>
+                                    </div>
+                                    <div class="C1-answer-div answerdiv">
+                                        <select name="PL1" id="PL1" class="form-control" data-id="PL1">
+                                            <option selected disabled hidden style="display: none">válasszon</option>
+                                            <option value="1">igen</option>
+                                            <option value="2">nem</option>
+                                            <option value="3">vak vagy egyáltalán nem lát</option>
+                                            <option value="8">nem tudom</option>
+                                            <option value="9">nem kívánok válaszolni</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="card-item C2-body">
+                                    <div class="question-header C2-question-header mb-5" id="1-PL2">
+                                        <h2>Nehézséget okoz-e Önnek tisztán, élesen látni szemüveg vagy kontaktlencse
+                                            segítségével?</h2>
+                                    </div>
+                                    <div class="question-header C2-question-header mb-5" id="2-PL2">
+                                        <h2>Nehézséget okoz-e Önnek tisztán, élesen látni?</h2>
+                                    </div>
+                                    <div class="C2-answer-div answerdiv">
+                                        <select name="PL2" id="PL2" class="form-control" data-id="PL2">
+                                            <option selected disabled hidden style="display: none">válasszon</option>
+                                            <option value="1">nem okoz nehézséget</option>
+                                            <option value="2">kisebb nehézséget okoz</option>
+                                            <option value="3">nagy nehézséget okoz</option>
+                                            <option value="4">egyáltalán nem lát élesen</option>
+                                            <option value="8">nem tudom</option>
+                                            <option value="9">nem kívánok válaszolni</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="C1-card-footer my-5 rounded p-3">
+                                    <h3 id="hint-C1"></h3>
+                                </div>
+                            </div>
+                            <div class="question-card-body" data-order="2" style="display:none">
+                                <div class="card-item C3-body">
+                                    <div class="question-header C3-question-header mb-5">
+                                        <h2>Használ-e Ön hallókészüléket?</h2>
+                                    </div>
+                                    <div class="C3-answer-div answerdiv">
+                                        <select name="PL3" id="PL3" class="form-control" data-id="PL3">
+                                            <option selected disabled hidden style="display: none">válasszon</option>
+                                            <option value="1">igen</option>
+                                            <option value="2">nem</option>
+                                            <option value="3">teljesen siket</option>
+                                            <option value="8">nem tudom</option>
+                                            <option value="9">nem kívánok válaszolni</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="card-item C4-body">
+                                    <div class="question-header C4-question-header mb-5" id="4-1-PL3">
+                                        <h2>Nehézséget okoz-e Önnek, hogy jól hallja beszélgetőpartnerét egy csendes
+                                            szobában
+                                            még hallókészülék
+                                            segítségével is?</h2>
+                                    </div>
+                                    <div class="question-header C4-question-header mb-5" id="4-2-PL3">
+                                        <h2>Nehézséget okoz-e Önnek, hogy jól hallja beszélgetőpartnerét egy csendes
+                                            szobában?
+                                        </h2>
+                                    </div>
+                                    <div class="C4-answer-div answerdiv">
+                                        <select name="PL4" id="PL4" class="form-control" data-id="PL4">
+                                            <option selected disabled hidden style="display: none">válasszon</option>
+                                            <option value="1">nem okoz nehézséget</option>
+                                            <option value="2">kisebb nehézséget okoz</option>
+                                            <option value="3">nagy nehézséget okoz</option>
+                                            <option value="4">egyáltalán nem hallja jól</option>
+                                            <option value="8">nem tudom</option>
+                                            <option value="9">nem kívánok válaszolni</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="card-item C5-body">
+                                    <div class="question-header C5-question-header mb-5" id="5-1-PL3">
+                                        <h2>Nehézséget okoz-e Önnek, hogy jól hallja beszélgetőpartnerét egy zajosabb
+                                            szobában
+                                            még hallókészülék
+                                            segítségével is?</h2>
+                                    </div>
+                                    <div class="question-header C5-question-header mb-5" id="5-2-PL3">
+                                        <h2>Nehézséget okoz-e Önnek, hogy jól hallja beszélgetőpartnerét egy zajosabb
+                                            szobában?
+                                        </h2>
+                                    </div>
+                                    <div class="C5-answer-div answerdiv">
+                                        <select name="PL5" id="PL5" class="form-control" data-id="PL5">
+                                            <option selected disabled hidden style="display: none">válasszon</option>
+                                            <option value="1">nem okoz nehézséget</option>
+                                            <option value="2">kisebb nehézséget okoz</option>
+                                            <option value="3">nagy nehézséget okoz</option>
+                                            <option value="4">egyáltalán nem hallja jól</option>
+                                            <option value="8">nem tudom</option>
+                                            <option value="9">nem kívánok válaszolni</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="question-card-body C6-body" data-order="3" style="display:none">
+                                <div class="card-item">
+
+                                    <div class="question-header C6-question-header mb-5">
+                                        <h2>Nehézséget okoz-e Önnek 500 métert gyalgolni sík területen segédeszköz vagy
+                                            személyes segítség nélkül?
+                                        </h2>
+                                    </div>
+                                    <div class="C6-answer-div answerdiv">
+                                        <select name="PL6" id="PL6" class="form-control" data-id="PL6">
+                                            <option value="" selected="selected" hidden="hidden">Kérem válasszon!
+                                            </option>
+                                            <option value="1">nem okoz nehézséget</option>
+                                            <option value="2">kisebb nehézséget okoz</option>
+                                            <option value="3">nagy nehézséget okoz</option>
+                                            <option value="4">egyáltalán nem képes rá</option>
+                                            <option value="8">nem tudom</option>
+                                            <option value="9">nem kívánok válaszolni</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="question-card-body C7-body" data-order="7" style="display:none">
+
+                                <div class="card-item">
+                                    <div class="question-header C7-question-header mb-5">
+                                        <h2>Nehézséget okoz-e Önnek le- vagy felmenni 12 lépcsőfokon?</h2>
+                                    </div>
+                                    <div class="C7-answer-div answerdiv">
+                                        <select name="PL7" id="PL7" class="form-control" data-id="PL7">
+                                            <option value="" selected="selected" hidden="hidden">Kérem válasszon!
+                                            </option>
+                                            <option value="1">nem okoz nehézséget</option>
+                                            <option value="2">kisebb nehézséget okoz</option>
+                                            <option value="3">nagy nehézséget okoz</option>
+                                            <option value="4">egyáltalán nem képes rá</option>
+                                            <option value="8">nem tudom</option>
+                                            <option value="9">nem kívánok válaszolni</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="question-card-body C8-body" data-order="8" style="display:none">
+                                <div class="card-item">
+
+                                    <div class="question-header C8-question-header mb-5">
+                                        <h2>Nehézséget okoz-e Önnek az emlékezés vagy a koncentrálás?</h2>
+                                    </div>
+                                    <div class="C8-answer-div answerdiv">
+                                        <select name="PL8" id="PL8" class="form-control" data-id="PL8">
+                                            <option value="" selected="selected" hidden="hidden">Kérem válasszon!
+                                            </option>
+                                            <option value="1">nem okoz nehézséget</option>
+                                            <option value="2">kisebb nehézséget okoz</option>
+                                            <option value="3">nagy nehézséget okoz</option>
+                                            <option value="4">egyáltalán nem képes rá</option>
+                                            <option value="8">nem tudom</option>
+                                            <option value="9">nem kívánok válaszolni</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="question-card-body C9-body" data-order="9" style="display:none">
+
+                                <div class="card-item">
+                                    <div class="question-header C9-question-header mb-5">
+                                        <h2>Nehézséget okoz-e Önnek kemény ételre (pl. friss almára) ráharapni vagy azt
+                                            megrágni?</h2>
+                                    </div>
+                                    <div class="C9-answer-div answerdiv">
+                                        <select name="PL9" id="PL9" class="form-control" data-id="PL9">
+                                            <option value="" selected="selected" hidden="hidden">Kérem válasszon!
+                                            </option>
+                                            <option value="1">nem okoz nehézséget</option>
+                                            <option value="2">kisebb nehézséget okoz</option>
+                                            <option value="3">nagy nehézséget okoz</option>
+                                            <option value="4">egyáltalán nem képes rá</option>
+                                            <option value="8">nem tudom</option>
+                                            <option value="9">nem kívánok válaszolni</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <script src="js/C.js"></script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1 fwdbutton" style="display: flex;align-items: center;">
+                <i class="fa fa-chevron-right fa-5x btn-next" id="question-fwd-button"></i>
+            </div>
+        </section>
+    </div>
+    <footer class="page-footer fixed-bottom border-top">
+        <div class="footer-copyright text-center py-3">© 2019 Copyright:
+            <a href="#"> Ksh.hu</a>
+        </div>
+    </footer>
+    <script src="jquery-3.4.1/jquery-3.4.1.min.js"></script>
+    <script src="popper-1.15.0/popper.min.js"></script>
+    <script src="bootstrap-4.3.1/dist/js/bootstrap.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="bootstrap-4.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/A.css?version=3.2">
+    <title>A</title>
+</head>
+
+<body id="A">
+    <div class="container-fluid">
+        <nav class="navbar main-nav navbar-light sticky-top py-0">
+            <a class="navbar-brand" href="/index.html" style="color:white">
+                Főoldal
+            </a>
+        </nav>
+        <section class="section section-skeleton row">
+            <div class="col-1" style="display: flex;align-items:
+					center;height:845px;">
+                <i class="fa fa-chevron-left fa-5x btn-prev" id="question-back-button"></i>
+            </div>
+            <div class="main col">
+                <h1 class="section-header section-skeleton-header text-center rounded p-3"
+                    onclick="window.location.href='index.html';">A HÁZTARTÁSBAN ÉLŐK FONTOSABB ADATAI</h1>
+                <div class="meta-div text-center pt-3">
+                    <h4>
+                        <em>
+							A kérdőív kitöltéséhez szükséges, hogy információt kapjunk az Ön háztartásában élő személyekről. Ismételten szeretném arról
+                            biztosítani, hogy az információkat szigorúan bizalmasan kezeljük. Az Ön háztartásában együtt élő személyeknek azokat tekintjük,
+                            akikkel egy lakásban él, részben vagy egészben közös jövedelemből gazdálkodik, akár rokonok, akár nem. Kérem, vegye számba azokat is, akik egészségi állapotuk, tanulmányaik vagy
+							munkájuk miatt jelenleg távol vannak (pl. kórházban, kollégiumban, albérletben vagy külföldön).
+						</em>
+                    </h4>
+                </div>
+                <div class="card question-card border-0">
+                    <div class="row">
+                        <div class="card-body py-4">
+                            <div class="A1-body question-card-body border pt-3 pb-5 mt-4" data-order="1"
+                                style="display:block">
+                                <!--Ez a lapozható kártya első kérdése,ezeket kell egymás alá rakni a card-bodyn belül.-->
+                                <div class="question-header A1-question-header mb-5 pt-4">
+                                    <h2 style="text-align: center">Önt is beleértve hányan élnek az Ön háztartásában?
+                                    </h2>
+                                </div>
+                                <div class="A1-answer-div answerdiv" style="text-align: center">
+                                    <input type="text" id="HH_1" min="1" max="16"
+                                        onkeydown="focusnext(event, 'HH_2_1');">
+                                </div>
+                            </div>
+                            <!--Itt van vége az első kérdésnek, ez alá kell rakni a többi kérdést ugyanígy a fenti formában,style="display:none"-nal.-->
+                            <div class="A2-body question-card-body border tablazat" data-order="2" style="display:none">
+                                <!--Ez a lapozható kártya második kérdése,ezeket kell egymás alá rakni a card-bodyn belül.-->
+                                <div class="question-header A1-question-header mb-5 tablazat">
+                                    <h2 style="text-align: center">Most a háztartás tagjaira vonatkozóan teszek fel néhány kérdést. Kérem, mondja el nekem az Önök háztartásában élő minden személy keresztnevét, nemét, ha rokonok, akkor az Önhöz fűződő rokoni kapcsolat típusát, születési
+                                        idejét, iskolai végzettségét, gazdasági aktivitását. Kezdjük Önnel a sort, majd folytassuk a háztartás többi tagjával!</h2>
+                                </div>
+                                <div class="A2-answer-div answerdiv tablazat" style="text-align: center">
+
+                                    <table id="table-a">
+                                        <tr>
+                                            <th width="10%">Keresztneve</th>
+                                            <th width="10%">Neme</th>
+                                            <th width="20%">Önhöz viszonyított családi szerepe</th>
+                                            <th width="15%">Születési ideje</th>
+                                            <th width="25%">Legmagasabb befejezett iskolai végzettsége</th>
+                                            <th width="20%">Gazdasági aktivitása</th>
+                                        </tr>
+                                        <tr>
+                                            <td width="10%">
+                                                <input type="text" name="HH_2_1" id="HH_2_1" class="elso">
+                                            </td>
+                                            <td width="10%">
+                                                <select name="HH_3_1" id="HH_3_1" class="masodik">
+													<option selected disabled hidden style="display: none">válasszon</option>
+													<option value="1">férfi</option>
+													<option value="2">nő</option>
+												</select>
+                                            </td>
+                                            <td width="20%">01</td>
+                                            <td width="15%">
+                                                <input type="date" name="HH_5_1" id="HH_5_1" class="negyedik">
+                                            </td>
+                                            <td width="25%">
+                                                <select name="HH_6_1" id="HH_6_1" class="otodik">
+													<option selected disabled hidden style="display: none">válasszon</option>
+													<option value="00">általános iskola 4. évfolyamánál kevesebb</option>
+													<option value="01">általános iskola 4-7. évfolyama</option>
+													<option value="02">általános iskola 8. évfolyama</option>
+													<option value="03">szakiskolai (szakmunkásképző iskolai)szakképesítést igazoló bizonyítvány</option>
+													<option value="04">befejezett középiskola (szakközép, gimnázium) érettségi nélkül</option>
+													<option value="05">szakközépiskolai szakképesítést igazoló érettségi</option>
+													<option value="06">középiskolai (gimnáziumi, szakközépiskolai) általános érettségi</option>
+													<option value="07">középiskolai végzettséget (érettségit) követő képzésben szerzett szakképesítést igazoló bizonyítvány</option>
+													<option value="08">iskolai rendszerű felsőfokú (felsőoktatási) szakképzésben szerzett bizonyítvány</option>
+													<option value="09">főiskolai oklevél vagy felsőfokú alapképzésben (BA/BSc) szerzett oklevél</option>
+													<option value="10">egyetemi diploma, vagy felsőfokú mesterképzésben (MA/MSc) szerzett oklevél</option>
+													<option value="11">doktori (PhD/DLA) fokozatot igazoló oklevél</option>
+													<option value="88">nem tudom</option>
+													<option value="99">nem kívánok válaszolni</option>
+												</select>
+                                            </td>
+                                            <td width="20%">
+                                                <select name="HH_7_1" id="HH_7_1" class="hatodik">
+													<option selected disabled hidden style="display: none">válasszon</option>
+													<option value="01">teljes munkaidős alkalmazásban álló</option>
+													<option value="02">részmunkaidős alkalmazásban álló</option>
+													<option value="03">egyéni, társas vállalkozó és segítő családtag teljes munkaidőben</option>
+													<option value="04">egyéni, társas vállalkozó és segítő családtag részmunkaidőben</option>
+													<option value="05">alkalmi munkás, napszámos teljes munkaidőben </option>
+													<option value="06">alkalmi munkás, napszámos részmunkaidőben</option>
+													<option value="07">munkanélküli</option>
+													<option value="08">öregségi vagy özvegyi nyugdíjas, korhatár előtti ellátásban részesülő</option>
+													<option value="09">fogyatékos és/vagy munkaképtelen egészségi okból, rokkantsági vagy rehabilitációs ellátásban részesülő</option>
+													<option value="10">nappali tagozaton tanul</option>
+													<option value="11">gyermekgondozási ellátáson van (pl. csed, gyed, gyes, gyet, gyod stb.)</option>
+													<option value="12">háztartásbeli, ill. családját látja el</option>
+													<option value="13">egyéb inaktív</option>
+													<option value="88">nem tudom</option>
+													<option value="99">nem kívánok válaszolni</option>
+												</select>
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                    <table id="table-a2">
+
+                                    </table>
+
+                                    <button class="btn" id="btn-addRow"></button>
+                                </div>
+                            </div>
+                            <!--Itt van vége a második kérdésnek, ez alá kell rakni a többi kérdés ugyanígy a fenti formában,style="display:none "-nal.-->
+                            <div class="A3-body question-card-body" data-order="3" style="display:none">
+                                <!--Ez a lapozható kártya harmadik kérdése,ezeket kell egymás alá rakni a card-bodyn belül.-->
+                                <div class="border p-3 m-3">
+                                    <div class="question-header A3-question-header mb-3 pt-2">
+                                        <h2 style="text-align: center">Melyik országban lakott az édesanyja az Ön
+                                            születésekor? </h2>
+                                    </div>
+                                    <div class="A3-answer-div answerdiv" style="text-align: center">
+                                        <select name="BIRTHPLACE" id="BIRTHPLACE" onchange="isItHungaryCountry()"
+                                            onkeydown="focusnext(event, 'other-country');">
+                                            <option selected disabled hidden style="display:none"></option>
+                                            <option value="1">Magyarországon (HU)</option>
+                                            <option value="2">Másik országban, éspedig ...</option>
+                                            <option value="88">nem tudom</option>
+                                            <option value="99">nem kívánok válaszolni</option>
+                                        </select>
+                                        <div class="hidden-country ml-5" style="float: right; display:none">
+                                            <label for="other-country">Másik ország:</label>
+                                            <input id="other-country" onkeydown="focusnext(event, 'BIRTHPLACE');">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="border p-3 m-3">
+                                    <div class="question-header A4-question-header mb-3 pt-2">
+                                        <h2 style="text-align: center">Az Ön (elsődleges) állampolgársága …?</h2>
+                                    </div>
+                                    <div class="A4-answer-div answerdiv" style="text-align: center">
+                                        <select name="CITIZEN" id="CITIZEN" onchange="isItHungaryCitizen()"
+                                            onkeydown="focusnext(event, 'other-citizen');">
+                                            <option selected disabled hidden style="display:none"></option>
+                                            <option value="1">Magyarország állampolgára (HU)</option>
+                                            <option value="2">Másik ország állampolgára, éspedig...</option>
+                                            <option value="8">nem tudom</option>
+                                            <option value="9">nem kívánok válaszolni</option>
+                                        </select>
+                                        <div class="hidden-citizen ml-5" style="float: right; display:none">
+                                            <label for="other-citizen">Másik ország:</label>
+                                            <input id="other-citizen" onkeydown="focusnext(event,'BIRHTPLACEFATH');">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="border p-3 m-3">
+                                    <div class="question-header A5-question-header mb-3 pt-2">
+                                        <h2 style="text-align: center">Melyik országban lakott az apai nagyanyja az Ön
+                                            édesapja születésekor?</h2>
+                                    </div>
+                                    <div class="A5-answer-div answerdiv" style="text-align: center">
+                                        <select name="BIRHTPLACEFATH" id="BIRHTPLACEFATH"
+                                            onchange="isItHungaryBirthplacefath()()"
+                                            onkeydown="focusnext(event, 'BIRHTPLACEMOTH');">
+                                            <option selected disabled hidden style="display:none"></option>
+                                            <option value="1">Magyarországon (HU)</option>
+                                            <option value="2">Másik országban, éspedig ...</option>
+                                            <option value="888">nem tduom</option>
+                                            <option value="999">nem kívánok válaszolni</option>
+                                        </select>
+                                        <div class="hidden-birthplacefath ml-5" style="float: right; display:none">
+                                            <label for="other-birthplacefath">Másik ország:</label>
+                                            <input id="other-birthplacefath"
+                                                onkeydown="focusnext(event, 'BIRHTPLACEMOTH');">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="border p-3 m-3">
+                                    <div class="question-header A6-question-header mb-3 pt-2">
+                                        <h2 style="text-align: center">Melyik országban lakott az anyai nagyanyja az Ön
+                                            édesanyja születésekor?
+                                        </h2>
+                                    </div>
+                                    <div class="A6-answer-div answerdiv" style="text-align: center">
+                                        <select name="BIRHTPLACEMOTH" id="BIRHTPLACEMOTH"
+                                            onchange="isItHungaryBirthplacemonth()"
+                                            onkeydown="focusnext(event, 'HH9');">
+                                            <option selected disabled hidden style="display:none"></option>
+                                            <option value="1">Magyarországon (HU)</option>
+                                            <option value="2">Másik országban, éspedig ...</option>
+                                            <option value="888">nem tudom</option>
+                                            <option value="999">nem kívánok válaszolni</option>
+                                        </select>
+                                        <div class="hidden-birthplacemonth ml-5" style="float: right; display:none"
+                                            onkeydown="focusnext(event, 'HH9');">
+                                            <label for="other-birthplacemonth">Másik ország:</label>
+                                            <input id="other-birthplacemonth">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Itt van vége a 6. kérdésnek, ez alá kell rakni a többi kérdés ugyanígy a fenti formában,style="display:none "-nal.-->
+                            <div class="A7-body question-card-body" data-order="4" style="display:none">
+                                <!--Ez a lapozható kártya 7. kérdése,ezeket kell egymás alá rakni a card-bodyn belül.-->
+                                <div class="border p-3 m-3">
+                                    <div class="question-header A7-question-header mb-3 pt-2">
+                                        <h2 style="text-align: center">Mely nemzetiséghez tartozónak érzi magát?
+                                        </h2>
+                                    </div>
+                                    <div class="A7-answer-div answerdiv" style="text-align: center">
+                                        <select name="HH9" id="HH9" onkeydown="focusnext(event, 'HH10');">
+                                            <option selected disabled hidden style="display:none"></option>
+                                            <option value="01">Magyar (01)</option>
+                                            <option value="02">Bolgár (02)</option>
+                                            <option value="03">Cigány (roma) (03)</option>
+                                            <option value="04">Görög (04)</option>
+                                            <option value="05">Horvát (05)</option>
+                                            <option value="06">Lengyel (06)</option>
+                                            <option value="07">Német (07)</option>
+                                            <option value="08">Örmény (08)</option>
+                                            <option value="09">Román (09)</option>
+                                            <option value="10">Ruszin (10)</option>
+                                            <option value="11">Szerb (11)</option>
+                                            <option value="12">Szlovák (12)</option>
+                                            <option value="13">Szlovén (13)</option>
+                                            <option value="14">Ukrán (14)</option>
+                                            <option value="15">Arab (15)</option>
+                                            <option value="16">Kínai (16)</option>
+                                            <option value="17">Orosz (17)</option>
+                                            <option value="18">Vietnámi (18)</option>
+                                            <option value="19">Egyéb (19)</option>
+                                            <option value="99">nem kívánok válaszolni</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="border p-3 m-3">
+                                    <div class="question-header A8-question-header mb-3 pt-2">
+                                        <h2 style="text-align: center">Az előzőn kívül tartozik-e még más nemzetiséghez
+                                            is?
+                                        </h2>
+                                    </div>
+                                    <div class="A8-answer-div answerdiv" style="text-align: center">
+                                        <select name="HH10" id="HH10" onkeydown="focusnext(event, 'HH11');">
+                                            <option selected disabled hidden style="display:none"></option>
+                                            <option value="00">Nem tartozik más nemzetiséghez (0)</option>
+                                            <option value="01">Magyar (01)</option>
+                                            <option value="02">Bolgár (02)</option>
+                                            <option value="03">Cigány (roma) (03)</option>
+                                            <option value="04">Görög (04)</option>
+                                            <option value="05">Horvát (05)</option>
+                                            <option value="06">Lengyel (06)</option>
+                                            <option value="07">Német (07)</option>
+                                            <option value="08">Örmény (08)</option>
+                                            <option value="09">Román (09)</option>
+                                            <option value="10">Ruszin (10)</option>
+                                            <option value="11">Szerb (11)</option>
+                                            <option value="12">Szlovák (12)</option>
+                                            <option value="13">Szlovén (13)</option>
+                                            <option value="14">Ukrán (14)</option>
+                                            <option value="15">Arab (15)</option>
+                                            <option value="16">Kínai (16)</option>
+                                            <option value="17">Orosz (17)</option>
+                                            <option value="18">Vietnámi (18)</option>
+                                            <option value="19">Egyéb (19)</option>
+                                            <option value="99">nem kívánok válszolni</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="border p-3 m-3">
+                                    <div class="question-header A9-question-header mb-3 pt-2">
+                                        <h2 style="text-align: center">Mi az Ön hivatalos családi állapota?</h2>
+                                    </div>
+                                    <div class="A9-answer-div answerdiv" style="text-align: center">
+                                        <select name="HH11" id="HH11" onkeydown="focusnext(event, 'HH12');">
+                                            <option selected disabled hidden style="display:none"></option>
+                                            <option value="1">nőtlen/hajadon</option>
+                                            <option value="2">házas és együtt is élnek (beleértve az azonos neműek
+                                                bejegyzett élettársi kapcsolatát is)</option>
+                                            <option value="3">házas, de külön élnek (beleértve az azonos neműek
+                                                bejegyzett élettársi kapcsolatát is)</option>
+                                            <option value="4">özvegy (beleértve, ha bejegyzett élettársa meghalt)
+                                            </option>
+                                            <option value="5">elvált (beleértve a jogilag megszüntetett élettársi
+                                                kapcsolatot is)</option>
+                                            <option value="19">Egyéb (19)</option>
+                                            <option value="8">nem tudom</option>
+                                            <option value="9">nem kívánok válaszolni</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Itt van vége a 9. kérdésnek, ez alá kell rakni a többi kérdés ugyanígy a fenti formában,style="display:none "-nal.-->
+
+                            <div class="A10-body question-card-body" data-order="5" style="display:none">
+                                <!--Ez a lapozható kártya 10. kérdése,ezeket kell egymás alá rakni a card-bodyn belül.-->
+                                <div class="border p-3 m-3">
+                                    <div class="question-header A10-question-header mb-3 pt-2">
+                                        <h2 style="text-align: center">Volt-e Önnek valaha fizetett munkája?</h2>
+                                    </div>
+                                    <div class="A10-answer-div answerdiv" style="text-align: center">
+                                        <select name="HH12" id="HH12" onkeydown="focusnext(event, 'HH13');">
+                                            <option selected disabled hidden style="display:none"></option>
+                                            <option value="1">igen</option>
+                                            <option value="2">nem</option>
+                                            <option value="8">nem tudom</option>
+                                            <option value="9">nem kívánok válaszolni</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="border p-3 m-3">
+                                    <div class="question-header A11-question-header mb-3 pt-2">
+                                        <h2 style="text-align: center">Milyen típusú munkaszerződése van/volt?</h2>
+                                    </div>
+                                    <div class="A11-answer-div answerdiv" style="text-align:center">
+                                        <select name="HH13" id="HH13" onkeydown="focusnext(event, 'HH_14SZ');">
+                                            <option selected disabled hidden style="display:none"></option>
+                                            <option value="1">határozatlan idejű munkaszerződés</option>
+                                            <option value="2">határozott idejű munkaszerződés</option>
+                                            <option value="3">nincs munkaszerződése, szóbeli megállapodás alapján
+                                                dolgozik/dolgozott</option>
+                                            <option value="8">nem tudom</option>
+                                            <option value="9">nem kívánok válaszolni</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Itt van vége a 11. kérdésnek, ez alá kell rakni a többi kérdés ugyanígy a fenti formában,style="display:none "-nal.-->
+
+                            <div class="A12-body question-card-body" data-order="6" style="display:none">
+                                <!--Ez a lapozható kártya harmadik kérdése,ezeket kell egymás alá rakni a card-bodyn belül.-->
+                                <div class="border p-3 m-3">
+                                    <div class="question-header A12-question-header mb-5">
+                                        <h2 style="text-align: center">Mi az Ön foglalkozása, munkaköre?</h2>
+                                    </div>
+                                    <div class="A12-answer-div answerdiv" style="text-align:center">
+                                        <label for="HH_14SZ" id="lab">a. Foglalkozása:</label><br>
+                                        <textarea id="HH_14SZ" name="work" rows="4" cols="100%"
+                                            onkeydown="focusnext(event, 'HH_14R');"
+                                            onkeydown="focusnext(event, 'HH_14R');"></textarea><br>
+                                        <label for="HH_14R" id="lab">b. Mondja el részletesen, hogy miből áll/állt a
+                                            munkája:</label><br>
+                                        <textarea id="HH_14R" name="work" rows="4" cols="100%"
+                                            onkeydown="focusnext(event, 'HH_14SZ');"
+                                            onkeydown="focusnext(event, 'HH15');"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Itt van vége a 12. kérdésnek, ez alá kell rakni a többi kérdés ugyanígy a fenti formában,style="display:none "-nal.-->
+
+                            <div class="A13-body question-card-body" data-order="7" style="display:none">
+                                <!--Ez a lapozható kártya 13 kérdése,ezeket kell egymás alá rakni a card-bodyn belül.-->
+                                <div class="border p-3 m-3">
+                                    <div class="question-header A13-question-header mb-5">
+                                        <h2 style="text-align: center">Van-e/volt-e beosztottja/alkalmazottja? Ha igen,
+                                            akkor hány fő?</h2>
+                                    </div>
+                                    <div class="A13-answer-div answerdiv" style="text-align:center">
+                                        <select name="HH15" id="HH15" onkeydown="focusnext(event, 'HH16SZ');">
+                                            <option selected disabled hidden style="display:none"></option>
+                                            <option value="1">nincs</option>
+                                            <option value="2">1-2 fő</option>
+                                            <option value="3">3-9 fő</option>
+                                            <option value="4">10 vagy annál több fő</option>
+                                            <option value="8">nem tudom</option>
+                                            <option value="9">nem kívánok válaszolni</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="border p-3 m-3">
+                                    <div class="question-header A14-question-header mb-5">
+                                        <h2 style="text-align: center">Milyen tevékenységet végez/végzett az a cég, ahol
+                                            Ön dolgozik/dolgozott (pl. ipari tevékenység, vendéglátás, egészségügyi vagy
+                                            szociális ellátás, kereskedelem, üzleti tevékenység stb.)?</h2>
+                                    </div>
+                                    <div class="A14-answer-div answerdiv" style="text-align:center">
+                                        <textarea id="HH16SZ" name="work" rows="4" cols="100%"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--Itt van vége a 14. kérdésnek, ez alá kell rakni a többi kérdés ugyanígy a fenti formában,style="display:none "-nal.-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1" style="display: flex;align-items: center;">
+                <i class="fa fa-chevron-right fa-5x btn-next" id="question-fwd-button"></i>
+            </div>
+        </section>
+    </div>
+    <footer class="page-footer fixed-bottom border-top">
+        <div class="footer-copyright text-center py-3">© 2019 Copyright:
+            <a href="#"> Ksh.hu</a>
+        </div>
+    </footer>
+    <script src="jquery-3.4.1/jquery-3.4.1.min.js"></script>
+    <script src="popper-1.15.0/popper.min.js"></script>
+    <script src="bootstrap-4.3.1/dist/js/bootstrap.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/A.js"></script>
+</body>
+
+</html>

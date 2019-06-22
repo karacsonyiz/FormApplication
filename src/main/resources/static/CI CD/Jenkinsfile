@@ -1,0 +1,84 @@
+pipeline {
+    agent  {
+       node {
+           label 'master'
+       }
+    }
+
+     environment {
+        DOCKER_REGISTRY = 'kshdevbuild.ksh.hu:8082'
+        APP_NAME        = "idgs-elef"
+        APP_PORT        = 80
+     }
+
+    options {
+        timeout(time: 5, unit: 'MINUTES')
+        buildDiscarder(logRotator(numToKeepStr: '5'))
+        gitLabConnection('gitlab')
+    }
+
+    triggers {
+        gitlab(
+            triggerOnPush: true,
+            triggerOnMergeRequest: false,
+            triggerOpenMergeRequestOnPush: "never",
+            triggerOnNoteRequest: true,
+            noteRegex: "Jenkins please retry a build",
+            skipWorkInProgressMergeRequest: true,
+            ciSkip: false,
+            setBuildDescription: true,
+            addNoteOnMergeRequest: true,
+            addCiMessage: true,
+            addVoteOnMergeRequest: true,
+            acceptMergeRequestOnSuccess: false,
+            branchFilterType: "All")
+    }
+
+    stages {
+        stage('docker build') {
+            steps {
+                sh "chmod +x ./version.sh"
+                sh "./version.sh"
+                sh "docker build -t idgs/elef ."
+            }
+        }
+        stage('docker push') {
+            steps {
+                withCredentials([usernamePassword(credentialsId: 'f8f93c1b-4748-41f2-bbfe-dfe13600225f', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+                    sh "docker tag idgs/elef ${DOCKER_REGISTRY}/idgs/elef"
+                    sh "docker login -u ${USERNAME} -p ${PASSWORD} ${DOCKER_REGISTRY}"
+                    sh "docker push ${DOCKER_REGISTRY}/idgs/elef"
+                    sh "docker logout ${DOCKER_REGISTRY}"
+                }
+            }
+        }
+        stage ('Deploy') {
+            agent  {
+                node {
+                    label 'idgs-app'
+                }
+            }
+            steps {
+                withCredentials([usernamePassword(credentialsId: 'f8f93c1b-4748-41f2-bbfe-dfe13600225f', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+        
+                    sh "docker login -u ${USERNAME} -p ${PASSWORD} ${DOCKER_REGISTRY}"
+                    sh '''#!/bin/bash
+                        set -e
+                        if [ 1$(docker ps -a --filter name=${APP_NAME} --format "{{ .Names }}" | grep -x ${APP_NAME}) == 1${APP_NAME} ]
+                        then
+                            echo "Remove running container: ${APP_NAME}"
+                            docker stop ${APP_NAME}
+                            docker rm ${APP_NAME}
+                        else
+                            echo "Container was not removed"
+                        fi
+                    '''
+                    sh "docker pull ${env.DOCKER_REGISTRY}/idgs/elef"
+                    sh "docker run -itd --name ${env.APP_NAME} --hostname ${env.APP_NAME} -p ${env.APP_PORT}:80 -e TZ=Europe/Budapest --restart unless-stopped ${env.DOCKER_REGISTRY}/idgs/elef"
+                    sh "docker logout ${DOCKER_REGISTRY}"
+                }
+            }
+        }
+
+    }
+}

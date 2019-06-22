@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="bootstrap-4.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <title>Gondoskodás, segítségnyújtás</title>
+</head>
+
+<body id="S">
+    <div class="container-fluid">
+        <nav class="navbar main-nav navbar-light sticky-top py-0">
+            <a class="navbar-brand" href="/index.html" style="color:white">
+                Főoldal
+            </a>
+        </nav>
+        <section class="section section-S row">
+            <div class="col-1 backbutton">
+                <i class="fa fa-chevron-left fa-5x btn-prev" id="question-back-button"></i>
+            </div>
+            <div class="main col">
+                <h1 class="section-header section-skeleton-header text-center rounded"
+                    onclick="window.location.href = 'index.html';">GONDOSKODÁS, SEGÍTSÉGNYÚJTÁS</h1>
+                <div class="meta-div text-center">
+                    <h4><em>A következőkben az egészségi problémákkal küzdőknek nyújtott segítségről fogom
+                            kérdezni.</em></h4>
+                </div>
+                <div class="card question-card border-0">
+                    <div class="row">
+                        <div class="card-body py-1">
+                            <div class="question-card-body S1-body" data-order="1">
+                                <div class="border p-3 m-3">
+                                    <div class="question-header S1-question-header mb-5">
+                                        <h2>S1. Gondoz-e, segít-e legalább hetente egyszer olyan személyt vagy
+                                            személyeket, akik idős koruk, tartós betegségük vagy fogyatékosságuk miatt
+                                            segítségre szorulnak?</h2>
+                                    </div>
+                                    <div class="S1-answer-div answerdiv">
+                                        <select name="IC1" data-id="IC1" class="form-control">
+                                            <option value="" selected="selected" hidden="hidden">Kérem válasszon!
+                                            </option>
+                                            <option value="1">igen, idős kora miatt</option>
+                                            <option value="2">igen, tartós betegsége miatt</option>
+                                            <option value="3">igen, fogyatékossága miatt</option>
+                                            <option value="4">nem</option>
+                                            <option value="8">nem tudom</option>
+                                            <option value="9">nem kívánok válaszolni</option>
+                                        </select>
+                                    </div>
+                                    <div class="S1-card-footer my-5 rounded p-3">
+                                        <h3 class="question-hint" id="hint-S1">A hivatásból adódó ellátás, gondozás nem
+                                            tartozik ide!</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="question-card-body S2-body" data-order="2">
+                                <div class="border p-3 m-3">
+                                    <div class="question-header S2-question-header mb-5">
+                                        <h2>S2. Akinek/akiknek segítséget nyújt...</h2>
+                                    </div>
+                                    <div class="S2-answer-div answerdiv">
+                                        <select name="IC2" data-id="IC2" class="form-control">
+                                            <option value="" selected="selected" hidden="hidden">Kérem válasszon!
+                                            </option>
+                                            <option value="1">családtag.</option>
+                                            <option value="2">nem családtag.</option>
+                                            <option value="8">nem tudom</option>
+                                            <option value="9">nem kívánok válaszolni</option>
+                                        </select>
+                                    </div>
+                                    <div class="S2-card-footer my-5 rounded p-3">
+                                        <h3 class="question-hint" id="hint-S2">Ha több személyt is gondoz, válassza ki
+                                            azt, akivel a legtöbbet törődik, és ennek függvényében válaszoljon!</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="question-card-body S3-body" data-order="3">
+                                <div class="border p-3 m-3">
+                                    <div class="question-header S3-question-header mb-5">
+                                        <h2>S3. Hetente összesen hány órát tölt segítségnyújtással, gondozással?</h2>
+                                    </div>
+                                    <div class="S3-answer-div answerdiv">
+                                        <select name="IC3" data-id="IC3" class="form-control">
+                                            <option value="" selected="selected" hidden="hidden">Kérem válasszon!
+                                            </option>
+                                            <option value="1">kevesebb mint 10 órát</option>
+                                            <option value="2">legalább 10 órát, de kevesebbet mint 20 órát</option>
+                                            <option value="3">20 órát vagy többet</option>
+                                            <option value="8">nem tudom</option>
+                                            <option value="9">nem kívánok válaszolni</option>
+                                        </select>
+                                    </div>
+                                    <div class="S3-card-footer my-5 rounded p-3">
+                                        <h3 class="question-hint" id="hint-S3">Ha több személyt is gondoz, az összes
+                                            gondozással töltött órát vegye figyelembe!</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1 fwdbutton">
+                <i class="fa fa-chevron-right fa-5x btn-next" id="question-fwd-button"></i>
+            </div>
+        </section>
+    </div>
+    <footer class="page-footer fixed-bottom border-top">
+        <div class="footer-copyright text-center">© 2019 Copyright:
+            <a href="#"> ksh.hu</a>
+        </div>
+    </footer>
+    <script src="jquery-3.4.1/jquery-3.4.1.min.js"></script>
+    <script src="popper-1.15.0/popper.min.js"></script>
+    <script src="bootstrap-4.3.1/dist/js/bootstrap.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+
+</html>

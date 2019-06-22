@@ -1,0 +1,27 @@
+.main-nav{
+    line-height: 15px;
+}
+
+.D1-question-div,.D3-question-div {
+    margin-top : 56px;
+}
+.question-meta-text{
+    margin-top : 10px;
+    margin-bottom : 14px;
+}
+
+.question-card-body{
+    background-color : white;
+}
+
+.D1-body{
+    background-color : aliceblue;
+}
+
+.D2-body{
+    background-color : aliceblue;
+}
+
+.D3-body{
+    background-color : aliceblue;
+}

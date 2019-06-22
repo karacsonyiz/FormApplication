@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/common.css">
+    <title>AdminPage</title>
+</head>
+<body>
+<div class="container-fluid">
+    <nav class="navbar main-nav navbar-light sticky-top border">
+        <ul class="mr-auto mb-0 pl-1">
+            <a class="navbar-brand nav-item" href="/index.html" style="color:white">
+                Főoldal
+            </a>
+            <a class="navbar-brand nav-item" style="color:white" href="/worklist.html" id="usermenu"></a>
+            <a class="navbar-brand nav-item" style="color:white" id="username"></a>
+        </ul>
+        <a class="navbar-brand nav-item mb-0" id="skeleton" href="/Skeleton.html" style="color:white">Szkela</a>
+        <a class="navbar-brand nav-item mb-0" id="logbutton" href="/logout" style="color:white">Kijelentkezés</a>
+    </nav>
+    <div class="main row p-3 pt-1">
+        <div class="createuser col-3 rounded p-4 m-2" style="background-color : #4266A1">
+            <h3 style="color : white">Felhasználó létrehozása</h3>
+            <form class="form-detail form-adduser">
+                <div class="form-group">
+                    <div class="form-row">
+                        <input type="text" name="full-name" id="user-name" class="input-text form-control my-1" placeholder="Felhasználónév" required>
+                    </div>
+                    <div class="form-row">
+                        <input type="password" name="password" id="user-password" class="input-text form-control my-1" placeholder="Jelszó" required>
+                    </div>
+                    <div class="form-row-action">
+                        <button name="register" class="register btn btn-success my-2" value="">Felhasználó létrehozása</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="data-adding col-3 rounded p-4 m-2" style="background-color : #4266A1">
+            <h3 style="color : white">JSON hozzáadása</h3>
+            <form class="form-addjson" id="addjson">
+                        <button  id="form-addjson" class="addjson btn btn-info my-2" value="">JSON küldés</button>
+            </form>
+        </div>
+    </div>
+</div>
+    <footer class="page-footer fixed-bottom border-top">
+        <div class="footer-copyright text-center py-3">© 2019 Copyright:
+            <a href="#"> Ksh.hu</a>
+        </div>
+    </footer>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="js/usersettings.js"></script>
+<script src="js/admin.js"></script></body>
+
+</html>

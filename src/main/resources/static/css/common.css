@@ -1,0 +1,141 @@
+.container-fluid {
+    padding: 0;
+}
+
+.main-nav {
+    background-color: #4266A1;
+    margin-bottom: 11px;
+    height: 55px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.main-nav .navbar-brand {
+    color: white;
+}
+
+.main-nav .navbar-brand:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+.backbutton {
+    display: flex;
+    align-items: center;
+    height: 845px;
+}
+
+.fwdbutton {
+    display: flex;
+    align-items: center;
+    height: 845px;
+}
+
+.section {
+    margin-bottom: 60px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.meta-div {
+    padding: 5px;
+    margin: 5px;
+    padding-top: 16px;
+}
+
+.card-body {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.page-footer {
+    background-color: #4266A1;
+    line-height: 12px;
+}
+
+.btn-prev,
+.btn-next {
+    color: #4266A1;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-next:hover {
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.btn-prev:hover {
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+.section-header {
+    background-color: #4266A1;
+    margin-bottom: 0;
+    color: white;
+    margin-bottom: 0px;
+    padding: 16px;
+}
+
+.section-header:hover {
+    cursor: pointer;
+}
+
+.question-header {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.question-text {
+    text-align: left;
+}
+
+.footer-copyright {
+    color: white;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.footer-copyright a {
+    color: white;
+}
+
+.question-card {
+    margin-top: 5px;
+}
+
+.answerdiv {
+    font-size: 23px;
+    text-align: left;
+}
+
+.answerdiv option {
+    font-size: 23px;
+}
+
+.question-card-body:first-of-type {
+    display: block;
+    /* background-color: #f0f8ff;*/
+}
+
+.question-card-body {
+    display: none;
+    margin-bottom: 20px;
+    /*background-color: #f0f8ff;*/
+}
+
+.radio-container {
+    display: flex;
+    flex-flow: column;
+}
+
+.radio-label-div {
+    display: flex;
+    align-content: flex-start;
+    font-size: 25px;
+}
+
+.radio-label-div>* {
+    margin: 0.5vh;
+}

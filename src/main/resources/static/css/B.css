@@ -1,0 +1,55 @@
+thead th {
+    width: 25%;
+}
+
+.basic-row-B9 td {
+    width: 25%;
+}
+
+thead th:first-child {
+    width: 25%;
+}
+
+.B14-answer-div {
+    display: flex;
+    flex-flow: column;
+}
+
+.subtitle-h4-div {
+    margin: 2% 0;
+}
+
+.subtitle-h4 {
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+}
+
+.B14-answer-div input,
+.B14-answer-div label {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.radio-container {
+    display: flex;
+    flex-flow: column;
+}
+
+.radio-label-div {
+    display: flex;
+    align-content: flex-start;
+}
+
+.radio-label-div>* {
+    margin: 0.5vh;
+}
+
+.question-card-body:first-of-type {
+    display: block;
+}
+
+.question-card-body {
+    display: none;
+    background-color: #f0f8ff;
+}

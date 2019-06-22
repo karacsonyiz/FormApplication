@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="bootstrap-4.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/E.css">
+    <title>E részleg</title>
+</head>
+
+<body id="E">
+    <div class="container-fluid">
+        <nav class="navbar main-nav navbar-light sticky-top">
+            <a class="navbar-brand" href="/index.html">
+                Főoldal
+            </a>
+        </nav>
+        <section class="section section-E row">
+            <div class="col-1 backbutton">
+                <i class="fa fa-chevron-left fa-5x btn-prev" id="question-back-button"></i>
+            </div>
+            <div class="main col">
+                <h1 class="section-header section-E-header text-center rounded p-3"
+                    onclick="window.location.href = 'index.html';"> A HÁZTARTÁSSAL KAPCSOLATOS TEVÉKENYSÉGEK</h1>
+                <div class="meta-div text-center pt-3">
+                    <h4><em>Most a háztartással kapcsolatos mindennapi tevékenységekről fogom kérdezni. Adok egy listát
+                            ezekről a tevékenységekről. Ismét megkérem, ne pillanatnyi, hanem tartós problémákra
+                            gondoljon!</em></h4>
+                </div>
+                <div class="card question-card border-0">
+                    <div class="row">
+                        <div class="card-body py-1">
+                            <div class="E1-body question-card-body px-5 pb-3 pt-3 border rounded" data-order="1">
+                                <div class="question-header E1-question-header mb-3">
+                                    <h2>Általában nehézséget okoz-e Önnek a következő tevékenységek közül bármelyik
+                                        elvégzése segítség nélkül?</h2>
+                                </div>
+                                <div class="E1-answer-div answerdiv">
+                                    <table class="table mb-0 table-hover">
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row" style="vertical-align:
+                                                        middle">a</th>
+                                                <td style="vertical-align:
+                                                        middle">Főzés, ételek elkészítése
+                                                </td>
+                                                <td><select class="E1-select
+                                                            form-control" data-id="HA1-a"
+                                                        onchange="showTooltipIfTrue()">
+                                                        <option value="" selected disabled hidden>Kérem
+                                                            válasszon</option>
+                                                            <option value="1">nem okoz nehézséget</option>
+                                                            <option value="2">kisebb nehézséget okoz</option>
+                                                            <option value="3">nagy nehézséget okoz</option>
+                                                            <option value="4">egyáltalán nem képes rá</option>
+                                                            <option value="5">nem vonatkozik rá a kérdés</option>
+                                                            <option value="8">Nem tudom</option>
+                                                            <option value="9">Nem kívánok válaszolni</option>
+                                                    </select></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" style="vertical-align:
+                                                        middle">b</th>
+                                                <td style="vertical-align:
+                                                        middle">Telefonálás</td>
+                                                <td><select class="E1-select
+                                                            form-control" data-id="HA1-b"
+                                                        onchange="showTooltipIfTrue()">
+                                                        <option value="" selected disabled hidden>Kérem
+                                                            válasszon</option>
+                                                            <option value="1">nem okoz nehézséget</option>
+                                                            <option value="2">kisebb nehézséget okoz</option>
+                                                            <option value="3">nagy nehézséget okoz</option>
+                                                            <option value="4">egyáltalán nem képes rá</option>
+                                                            <option value="5">nem vonatkozik rá a kérdés</option>
+                                                            <option value="8">Nem tudom</option>
+                                                            <option value="9">Nem kívánok válaszolni</option>
+                                                    </select></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" style="vertical-align:
+                                                        middle">c</th>
+                                                <td style="vertical-align:
+                                                        middle">Bevásárlás</td>
+                                                <td><select class="E1-select
+                                                            form-control" data-id="HA1-c"
+                                                        onchange="showTooltipIfTrue()">
+                                                        <option value="" selected disabled hidden>Kérem
+                                                            válasszon</option>
+                                                            <option value="1">nem okoz nehézséget</option>
+                                                            <option value="2">kisebb nehézséget okoz</option>
+                                                            <option value="3">nagy nehézséget okoz</option>
+                                                            <option value="4">egyáltalán nem képes rá</option>
+                                                            <option value="5">nem vonatkozik rá a kérdés</option>
+                                                            <option value="8">Nem tudom</option>
+                                                            <option value="9">Nem kívánok válaszolni</option>
+                                                    </select></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" style="vertical-align:
+                                                        middle">d</th>
+                                                <td style="vertical-align:
+                                                        middle">Gyógyszeradagolás, szedés
+                                                </td>
+                                                <td><select class="E1-select
+                                                            form-control" data-id="HA1-d"
+                                                        onchange="showTooltipIfTrue()">
+                                                        <option value="" selected disabled hidden>Kérem
+                                                            válasszon</option>
+                                                            <option value="1">nem okoz nehézséget</option>
+                                                            <option value="2">kisebb nehézséget okoz</option>
+                                                            <option value="3">nagy nehézséget okoz</option>
+                                                            <option value="4">egyáltalán nem képes rá</option>
+                                                            <option value="5">nem vonatkozik rá a kérdés</option>
+                                                            <option value="8">Nem tudom</option>
+                                                            <option value="9">Nem kívánok válaszolni</option>
+                                                    </select></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" style="vertical-align:
+                                                        middle">e</th>
+                                                <td style="vertical-align:
+                                                        middle">Könnyű házimunka(pl. mosogatás, vasalás, söprés)</td>
+                                                <td><select class="E1-select
+                                                            form-control" data-id="HA1-e"
+                                                        onchange="showTooltipIfTrue()">
+                                                        <option value="" selected disabled hidden>Kérem
+                                                            válasszon</option>
+                                                            <option value="1">nem okoz nehézséget</option>
+                                                            <option value="2">kisebb nehézséget okoz</option>
+                                                            <option value="3">nagy nehézséget okoz</option>
+                                                            <option value="4">egyáltalán nem képes rá</option>
+                                                            <option value="5">nem vonatkozik rá a kérdés</option>
+                                                            <option value="8">Nem tudom</option>
+                                                            <option value="9">Nem kívánok válaszolni</option>
+                                                    </select></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" style="vertical-align:
+                                                        middle">f</th>
+                                                <td style="vertical-align:
+                                                        middle">Alkalmankénti nehezebb házimunka (pl. nagytakarítás,
+                                                    ablaktisztítás, kerti munkák)
+                                                </td>
+                                                <td><select class="E1-select
+                                                            form-control" data-id="HA1-f"
+                                                        onchange="showTooltipIfTrue()">
+                                                        <option value="" selected disabled hidden>Kérem
+                                                            válasszon</option>
+                                                            <option value="1">nem okoz nehézséget</option>
+                                                            <option value="2">kisebb nehézséget okoz</option>
+                                                            <option value="3">nagy nehézséget okoz</option>
+                                                            <option value="4">egyáltalán nem képes rá</option>
+                                                            <option value="5">nem vonatkozik rá a kérdés</option>
+                                                            <option value="8">Nem tudom</option>
+                                                            <option value="9">Nem kívánok válaszolni</option>
+                                                    </select></td>
+                                            </tr>
+                                            <tr class="border-bottom">
+                                                <th scope="row" style="vertical-align:
+                                                        middle">g</th>
+                                                <td style="vertical-align:
+                                                        middle">Pénzügyek és hétköznapi adminisztrációs ügyek intézése
+                                                </td>
+                                                <td><select class="E1-select
+                                                            form-control" data-id="HA1-g"
+                                                        onchange="showTooltipIfTrue()">
+                                                        <option value="" selected disabled hidden>Kérem
+                                                            válasszon</option>
+                                                            <option value="1">nem okoz nehézséget</option>
+                                                            <option value="2">kisebb nehézséget okoz</option>
+                                                            <option value="3">nagy nehézséget okoz</option>
+                                                            <option value="4">egyáltalán nem képes rá</option>
+                                                            <option value="5">nem vonatkozik rá a kérdés</option>
+                                                            <option value="8">Nem tudom</option>
+                                                            <option value="9">Nem kívánok válaszolni</option>
+                                                    </select></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="E1-card-footer mt-3 rounded p-3"
+                                    style="text-align: center;background-color: #4266A1;display: none;">
+                                    <h3 id="hint-E1" style="color:white;"><u>Ha semmi nem okoz a kérdezettnek gondot,
+                                            tehát ha a fenti táblázat mindegyik sorában 1, 8 vagy 9-es kód szerepel,
+                                            TOVÁBB AZ E1. KÉRDÉSRE!</u></h3>
+                                </div>
+                            </div>
+                            <div class="E2-E3-body question-card-body" data-order="2"
+                                style="display: none;text-align: center">
+                                <div class="E2-body border rounded p-5">
+                                    <div class="question-header E2-question-header mb-5" style="text-align: center">
+                                        <h2 id="e2-question-header-text">Igénybe szokott-e venni segítséget vagy
+                                            használ-e segédeszközt az előbb említett tevékenységek bármelyikének
+                                            elvégzéséhez?</h2>
+                                        <h5 class="py-3"><em id="E2-question-text-1" class="question-meta-text"
+                                                data-toggle="tooltip" data-placement="left" title="Főzés,telefonálás,bevásárlás,gyógyszerszedés,könnyű
+                                            házimunka, alkalmankénti nehezebb
+                                            házimunka, Pénzügyek,
+                                            adminisztrációs ügyek intézése">Most gondoljon az <u>előző</u> kérdés
+                                                tevékenységei közül azokra az önellátással kapcsolatos tevékenységekre,
+                                                amelyek elvégzése segítség nélkül nehézséget okoz!</em></h5>
+                                    </div>
+                                    <div id="E2-answer-div" class="answerdiv">
+                                        <select class="E2-select form-control" data-id="HA2"
+                                            onchange="e3QuestionChooser()">
+                                            <option value="1">igen,legalább egy tevékenységhez</option>
+                                            <option value="2">nem, egyikhez sem</option>
+                                            <option value="8">Nem tudom</option>
+                                            <option value="9">Nem kívánok válaszolni</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="E3-body mt-5 border rounded p-5">
+                                    <div class="question-header E3-question-header mb-5">
+                                        <h2 style="text-align: center;display:block;" id="e3-question-header-text-1"
+                                            data-toggle="tooltip" data-placement="top"
+                                            title="A kérdés ez,mivel a D2 kérdés válasza 1!">Szüksége lenne-e
+                                            <b><u>TÖBB</u></b> segítségre vagy segédeszközre ahhoz, hogy ezeket a
+                                            tevékenységeket elvégezze?</h2>
+                                        <h2 style="text-align: center;display:none;" id="e3-question-header-text-2"
+                                            data-toggle="tooltip" data-placement="top"
+                                            title="A kérdés ez,mivel a D2 kérdés válasza 2,8,9!">Szüksége lenne-e
+                                            segítségre vagy segédeszközre ahhoz, hogy ezeket a tevékenységeket
+                                            elvégezze?</h2>
+                                    </div>
+                                    <div id="E3-answer-div" class="answerdiv">
+                                        <select class="E3-select form-control" data-id="HA3">
+                                                <option value="1">igen,legalább egy tevékenységhez</option>
+                                                <option value="2">nem, egyikhez sem</option>
+                                                <option value="8">Nem tudom</option>
+                                                <option value="9">Nem kívánok válaszolni</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1 fwdbutton">
+                <i class="fa fa-chevron-right fa-5x btn-next" id="question-fwd-button"></i>
+            </div>
+        </section>
+    </div>
+    <footer class="page-footer fixed-bottom border-top">
+        <div class="footer-copyright text-center">© 2019 Copyright:
+            <a href="#"> Ksh.hu</a>
+        </div>
+    </footer>
+    <script src="jquery-3.4.1/jquery-3.4.1.min.js"></script>
+    <script src="popper-1.15.0/popper.min.js"></script>
+    <script src="bootstrap-4.3.1/dist/js/bootstrap.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/E.js"></script>
+</body>
+
+</html>

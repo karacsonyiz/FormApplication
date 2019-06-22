@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>EGÉSZSÉGI ÁLLAPOT</title>
+    <link rel="stylesheet" href="bootstrap-4.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/B.css">
+</head>
+
+<body id="B">
+    <div class="container-fluid">
+        <nav class="navbar main-nav navbar-light sticky-top py-0">
+            <a class="navbar-brand" href="/index.html" style="color:white">
+                Főoldal
+            </a>
+        </nav>
+        <section class="section section-B row">
+            <div class="col-1 backbutton" style="display: flex;align-items: center;height:845px;">
+                <i class="fa fa-chevron-left fa-5x btn-prev" id="question-back-button"></i>
+            </div>
+            <div class="main col">
+                <h1 class="section-header section-skeleton-header text-center rounded p-3"
+                    onclick="window.location.href = 'index.html';">EGÉSZSÉGI ÁLLAPOT</h1>
+                <div class="meta-div text-center pt-3">
+                    <h4><em>Most az egészségéről szeretnék feltenni néhány kérdést.</em></h4>
+                </div>
+                <div class="card question-card border-0">
+                    <div class="row">
+                        <div class="card-body py-1">
+                            <div class="question-card-body B1-body p-3 border rounded" data-order="1">
+                                <div class="question-header B1-question-header mb-5">
+                                    <h2>B1. Milyen az Ön egészsége általában?</h2>
+                                </div>
+                                <div class="B1-answer-div answerdiv">
+                                    <select name="HS1" id="HS1" class="form-control">
+                                        <option value="" selected="selected" hidden="hidden">Kérem válasszon!</option>
+                                        <option value="1">nagyon jó</option>
+                                        <option value="2">jó</option>
+                                        <option value="3">kielégítő</option>
+                                        <option value="4">rossz</option>
+                                        <option value="5">nagyon rossz</option>
+                                        <option value="8">nem tudom</option>
+                                        <option value="9">nem kívánok válaszolni</option>
+                                    </select>
+                                </div>
+                                <div class="B1-card-footer my-5 rounded p-3">
+                                    <h3 class="question-hint" id="hint-B1"></h3>
+                                </div>
+                            </div>
+                            <div class="question-card-body B2-body p-3 border rounded" data-order="2">
+                                <div class="question-header B2-question-header mb-5">
+                                    <h2>B2. Véleménye szerint Ön mennyit tehet az egészségéért?</h2>
+                                </div>
+                                <div class="B2-answer-div answerdiv">
+                                    <select name="HSU1" id="HSU1" class="form-control">
+                                        <option value="" selected="selected" hidden="hidden">Kérem válasszon!</option>
+                                        <option value="1">nagyon sokat</option>
+                                        <option value="2">sokat</option>
+                                        <option value="3">keveset</option>
+                                        <option value="4">semmit sem</option>
+                                        <option value="8">nem tudom</option>
+                                        <option value="9">nem kívánok válaszolni</option>
+                                    </select>
+                                </div>
+                                <div class="B2-card-footer my-5 rounded p-3">
+                                    <h3 class="question-hint" id="hint-B2"></h3>
+                                </div>
+                            </div>
+                            <div class="question-card-body B3-body p-3 border rounded" data-order="3">
+                                <div class="question-header B3-question-header mb-5">
+                                    <h2>B3. Van-e Önnek hosszantartó betegsége vagy egészségi problémája?</h2>
+                                </div>
+                                <div class="B3-answer-div answerdiv">
+                                    <select name="HS2" id="HS2" class="form-control">
+                                        <option value="" selected="selected" hidden="hidden">Kérem válasszon!</option>
+                                        <option value="1">igen</option>
+                                        <option value="2">nem</option>
+                                        <option value="8">nem tudom</option>
+                                        <option value="9">nem kívánok válaszolni</option>
+                                    </select>
+                                </div>
+                                <div class="B3-card-footer my-5 rounded p-3">
+                                    <h3 id="hint-B3">Hosszantartónak tekintünk egy betegséget, egészségi problémát, ha
+                                        legalább 6 hónapja tart, vagy várhatóan legalább 6 hónapig fog tartani.</h3>
+                                </div>
+                            </div>
+                            <div class="question-card-body B4-body p-3 border rounded" data-order="4">
+                                <div class="question-header B4-question-header mb-5">
+                                    <h2>B4. Korlátozza-e Önt valamilyen egészségi probléma a mindennapi tevékenységek
+                                        elvégzésében?</h2>
+                                </div>
+                                <div class="B4-answer-div answerdiv">
+                                    <select name="HS3A" id="HS3A" class="form-control">
+                                        <option value="" selected="selected" hidden="hidden">Kérem válasszon!</option>
+                                        <option value="1">igen</option>
+                                        <option value="2">nem</option>
+                                        <option value="8">nem tudom</option>
+                                        <option value="9">nem kívánok válaszolni</option>
+                                    </select>
+                                </div>
+                                <div class="B4-card-footer my-5 rounded p-3">
+                                    <h3 class="question-hint" id="hint-B4"></h3>
+                                </div>
+                            </div>
+                            <div class="question-card-body B5-body p-3 border rounded" data-order="5">
+                                <div class="question-header B5-question-header mb-5">
+                                    <h2>B5. Fennáll-e legalább 6 hónapja ez a korlátozás?</h2>
+                                </div>
+                                <div class="B5-answer-div answerdiv">
+                                    <select name="HS3B" id="HS3B" class="form-control">
+                                        <option value="" selected="selected" hidden="hidden">Kérem válasszon!</option>
+                                        <option value="1">igen</option>
+                                        <option value="2">nem</option>
+                                        <option value="8">nem tudom</option>
+                                        <option value="9">nem kívánok válaszolni</option>
+                                    </select>
+                                </div>
+                                <div class="B5-card-footer my-5 rounded p-3">
+                                    <h3 class="question-hint" id="hint-B5"></h3>
+                                </div>
+                            </div>
+                            <div class="question-card-body B6-body p-3 border rounded" data-order="6">
+                                <div class="question-header B6-question-header mb-5">
+                                    <h2>B6. Általában véve hogyan értékelné fogainak, szájüregének egészségét?</h2>
+                                </div>
+                                <div class="B6-answer-div answerdiv">
+                                    <select name="CD2" id="CD2" class="form-control">
+                                        <option value="" selected="selected" hidden="hidden">Kérem válasszon!</option>
+                                        <option value="1">nagyon jó</option>
+                                        <option value="2">jó</option>
+                                        <option value="3">kielégítő</option>
+                                        <option value="4">rossz</option>
+                                        <option value="5">nagyon rossz</option>
+                                        <option value="8">nem tudom</option>
+                                        <option value="9">nem kívánok válaszolni</option>
+                                    </select>
+                                </div>
+                                <div class="B6-card-footer my-5 rounded p-3">
+                                    <h3 class="question-hint" id="hint-B6"></h3>
+                                </div>
+                            </div>
+                            <div class="question-card-body B7-body p-3 border rounded" data-order="7">
+                                <div class="question-header B7-question-header mb-5">
+                                    <h2>B7. Igazak-e Önre a következő állítások?</h2>
+                                </div>
+                                <div class="B7-answer-div answerdiv">
+                                    <table class="table mb-0 table-hover">
+                                        <tbody class="tbody-B7">
+                                            <tr>
+                                                <td>Van szuvas/lyukas foga</td>
+                                                <td><select name="HSU3_A" id="HSU3_A" class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Van tömött foga</td>
+                                                <td><select name="HSU3_B" id="HSU3_B" class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Fogmosáskor vérzik a fogínye</td>
+                                                <td><select name="HSU3_C" id="HSU3_C" class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Vannak laza(mozgó) fogai</td>
+                                                <td><select name="HSU3_D" id="HSU3_D" class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Húzták már ki a fogát fogszuvasodás vagy kilazulás miatt</td>
+                                                <td><select name="HSU3_E" id="HSU3_E" class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Van koronája, hídja, protézise vagy más típusú fogpótlása</td>
+                                                <td><select name="HSU3_F" id="HSU3_F" class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Van hiányzó foga fogpótlás nélkül(bölcsességfogakat nem számítva)
+                                                </td>
+                                                <td><select name="HSU3_G" id="HSU3_G" class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="B7-card-footer my-5 rounded p-3">
+                                    <h3 class="question-hint" id="hint-B7"></h3>
+                                </div>
+                            </div>
+                            <div class="question-card-body B8-body p-3 border rounded" data-order="8">
+                                <div class="question-header B8-question-header mb-5">
+                                    <h2>B8. Hány foga hiányzik Önnek?</h2>
+                                </div>
+                                <div class="B8-answer-div answerdiv">
+                                    <select name="HSU4" id="HSU4" class="form-control">
+                                        <option value="" selected="selected" hidden="hidden">Kérem válasszon!</option>
+                                        <option value="1">egy sem</option>
+                                        <option value="2">1-5 fog</option>
+                                        <option value="3">6-9 fog</option>
+                                        <option value="4">10-19 fog</option>
+                                        <option value="5">20 vagy több fog</option>
+                                        <option value="8">nem tudom</option>
+                                        <option value="9">nem kívánok válaszolni</option>
+                                    </select>
+                                </div>
+                                <div class="B8-card-footer my-5 rounded p-3">
+                                    <h3 class="question-hint" id="hint-B8">A bölcsességfogakat és a fogszabályozás miatt
+                                        kihúzott fogakat nem,
+                                        viszont a fogpótlást bele kell számítani.</h3>
+                                </div>
+                            </div>
+                            <div class="question-card-body B9-body p-3 border rounded" data-order="9">
+                                <div class="question-header B9-question-header mb-5">
+                                    <h2>B9. Az elmúlt 12 hónapban volt-e Önnek valamilyen betegsége vagy egészségi
+                                        problémája a listán szereplők közül?</h2>
+                                </div>
+                                <div class="B9-answer-div answerdiv">
+                                    <table class="table mb-0 table-hover">
+                                        <thead>
+                                            <tr class="header-row">
+                                                <th colspan="2">Betegség</th>
+                                                <th>Orvos állapította meg?</th>
+                                                <th>Orvos javaslatára szedett rá gyógyszert?</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="basic-row-B9">
+                                                <td>Asztma</td>
+                                                <td><select name="CD1_A" id="CD1_A" class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                                <td class="bonus-question-td"><select name="CDU1_A" id="CDU1_A"
+                                                        class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                                <td class="bonus-question-td"><select name="CDU2_A" id="CDU2_A"
+                                                        class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                            </tr>
+                                            <tr class="basic-row-B9">
+                                                <td>Krónikus hörghurut, bronchitis, tüdőtágulás</td>
+                                                <td><select name="CD1_B" id="CD1_B" class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                                <td class="bonus-question-td"><select name="CDU1_B" id="CDU1_B"
+                                                        class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                                <td class="bonus-question-td"><select name="CDU2_B" id="CDU2_B"
+                                                        class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                            </tr>
+                                            <tr class="basic-row-B9">
+                                                <td>Szívinfarktus(szívroham) vagy ennek krónikus következményei</td>
+                                                <td><select name="CD1_C" id="CD1_C" class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                                <td class="bonus-question-td"><select name="CDU1_C" id="CDU1_C"
+                                                        class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                                <td class="bonus-question-td"><select name="CDU2_C" id="CDU2_C"
+                                                        class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                            </tr>
+                                            <tr class="basic-row-B9">
+                                                <td>Szívkoszorúér- megbetegedés, angina</td>
+                                                <td><select name="CD1_D" id="CD1_D" class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                                <td class="bonus-question-td"><select name="CDU1_D" id="CDU1_D"
+                                                        class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                                <td class="bonus-question-td"><select name="CDU2_D" id="CDU2_D"
+                                                        class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                            </tr>
+                                            <tr class="basic-row-B9">
+                                                <td>Magasvérnyomás-betegség(hipertónia)</td>
+                                                <td><select name="CD1_E" id="CD1_E" class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                                <td class="bonus-question-td"><select name="CDU1_E" id="CDU1_E"
+                                                        class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                                <td class="bonus-question-td">
+                                                    <select name="CDU2_E" id="CDU2_E" class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr class="basic-row-B9">
+                                                <td>Agyvérzés(szélütés,gutaütés,stroke agyérgörcs) vagy ennek krónikus
+                                                    következményei</td>
+                                                <td><select name="CD1_F" id="CD1_F" class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                                <td class="bonus-question-td"><select name="CDU1_F" id="CDU1_F"
+                                                        class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                                <td class="bonus-question-td"><select name="CDU2_F" id="CDU2_F"
+                                                        class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                            </tr>
+                                            <tr class="basic-row-B9">
+                                                <td>Arthrosis, ízületi porc kopása</td>
+                                                <td><select name="CD1_G" id="CD1_G" class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                                <td class="bonus-question-td"><select name="CDU1_G" id="CDU1_G"
+                                                        class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                                <td class="bonus-question-td"><select name="CDU2_G" id="CDU2_G"
+                                                        class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                            </tr>
+                                            <tr class="basic-row-B9">
+                                                <td>Derék- ,vagy hátfájás, vagy egyéb krónikus derék vagy hátgerinc
+                                                    probléma</td>
+                                                <td><select name="CD1_H" id="CD1_H" class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                                <td class="bonus-question-td"><select name="CDU1_H" id="CDU1_H"
+                                                        class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                                <td class="bonus-question-td"><select name="CDU2_H" id="CDU2_H"
+                                                        class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                            </tr>
+                                            <tr class="basic-row-B9">
+                                                <td>Nyaki fájdalom vagy egyéb krónikus nyaki gerincprobléma</td>
+                                                <td><select name="CD1_I" id="CD1_I" class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                                <td class="bonus-question-td"><select name="CDU1_I" id="CDU1_I"
+                                                        class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                                <td class="bonus-question-td"><select name="CDU2_I" id="CDU2_I"
+                                                        class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                            </tr>
+                                            <tr class="basic-row-B9">
+                                                <td>Cukorbetegség</td>
+                                                <td><select name="CD1_J" id="CD1_J" class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                                <td class="bonus-question-td"><select name="CDU1_J" id="CDU1_J"
+                                                        class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                                <td class="bonus-question-td"><select name="CDU2_J" id="CDU2_J"
+                                                        class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                            </tr>
+                                            <tr class="basic-row-B9">
+                                                <td>Allergia: szénanátha, ekcéme, ételallergia, egyéb</td>
+                                                <td><select name="CD1_K" id="CD1_K" class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                                <td class="bonus-question-td"><select name="CDU1_K" id="CDU1_K"
+                                                        class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                                <td class="bonus-question-td"><select name="CDU2_K" id="CDU2_K"
+                                                        class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                            </tr>
+                                            <tr class="basic-row-B9">
+                                                <td>Gyomor- vagy nyombélfekély</td>
+                                                <td><select name="CD1_L" id="CD1_L" class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                                <td class="bonus-question-td"><select name="CDU1_L" id="CDU1_L"
+                                                        class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                                <td class="bonus-question-td"><select name="CDU2_L" id="CDU2_L"
+                                                        class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                            </tr>
+                                            <tr class="basic-row-B9">
+                                                <td>Májcirrózis, májzsugorodás</td>
+                                                <td><select name="CD1_M" id="CD1_M" class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                                <td class="bonus-question-td"><select name="CDU1_M" id="CDU1_M"
+                                                        class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                                <td class="bonus-question-td"><select name="CDU2_M" id="CDU2_M"
+                                                        class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                            </tr>
+                                            <tr class="basic-row-B9">
+                                                <td>Rosszindulatú daganat(leukémia és nyirokcsomó-daganat is)</td>
+                                                <td><select name="CD1_N" id="CD1_N" class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                                <td class="bonus-question-td"><select name="CDU1_N" id="CDU1_N"
+                                                        class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                                <td class="bonus-question-td"><select name="CDU2_N" id="CDU2_N"
+                                                        class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                            </tr>
+                                            <tr class="basic-row-B9">
+                                                <td>Erős fejfájás pl.: migrén</td>
+                                                <td><select name="CD1_O" id="CD1_O" class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                                <td class="bonus-question-td"><select name="CDU1_O" id="CDU1_O"
+                                                        class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                                <td class="bonus-question-td"><select name="CDU2_O" id="CDU2_O"
+                                                        class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                            </tr>
+                                            <tr class="basic-row-B9">
+                                                <td>Inkontinencia, vizelettartási zavarok</td>
+                                                <td><select name="CD1_P" id="CD1_P" class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                                <td class="bonus-question-td"><select name="CDU1_P" id="CDU1_P"
+                                                        class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                                <td class="bonus-question-td"><select name="CDU2_P" id="CDU2_P"
+                                                        class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                            </tr>
+                                            <tr class="basic-row-B9">
+                                                <td>Krónikus vesebetegségek</td>
+                                                <td><select name="CD1_Q" id="CD1_Q" class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                                <td class="bonus-question-td"><select name="CDU1_Q" id="CDU1_Q"
+                                                        class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                                <td class="bonus-question-td"><select name="CDU2_Q" id="CDU2_Q"
+                                                        class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                            </tr>
+                                            <tr class="basic-row-B9">
+                                                <td>Depresszió</td>
+                                                <td><select name="CD1_R" id="CD1_R" class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                                <td class="bonus-question-td"><select name="CDU1_R" id="CDU1_R"
+                                                        class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                                <td class="bonus-question-td"><select name="CDU2_R" id="CDU2_R"
+                                                        class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                            </tr>
+                                            <tr class="basic-row-B9">
+                                                <td>Egyéb pszichés/mentális problémák</td>
+                                                <td><select name="CD1_S" id="CD1_S" class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                                <td class="bonus-question-td"><select name="CDU1_S" id="CDU1_S"
+                                                        class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                                <td class="bonus-question-td"><select name="CDU2_S" id="CDU2_S"
+                                                        class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                            </tr>
+                                            <tr class="basic-row-B9">
+                                                <td>Magas koleszterin-/vérzsír-/trigliceridszint</td>
+                                                <td><select name="CD1_T" id="CD1_T" class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                                <td class="bonus-question-td"><select name="CDU1_T" id="CDU1_T"
+                                                        class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                                <td class="bonus-question-td"><select name="CDU2_T" id="CDU2_T"
+                                                        class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                            </tr>
+                                            <tr class="basic-row-B9">
+                                                <td>Szabálytalan szívverés, szívritmuszavar, pitvarfibrilláció</td>
+                                                <td><select name="CD1_U" id="CD1_U" class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                                <td class="bonus-question-td"><select name="CDU1_U" id="CDU1_U"
+                                                        class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                                <td class="bonus-question-td"><select name="CDU2_U" id="CDU2_U"
+                                                        class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                            </tr>
+                                            <tr class="basic-row-B9">
+                                                <td>Bármely egyéb szívbetegség</td>
+                                                <td><select name="CD1_V" id="CD1_V" class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                                <td class="bonus-question-td"><select name="CDU1_V" id="CDU1_V"
+                                                        class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                                <td class="bonus-question-td"><select name="CDU2_V" id="CDU2_V"
+                                                        class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                            </tr>
+                                            <tr class="basic-row-B9">
+                                                <td>Csontritkulás</td>
+                                                <td><select name="CD1_W" id="CD1_W" class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                                <td class="bonus-question-td"><select name="CDU1_W" id="CDU1_W"
+                                                        class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                                <td class="bonus-question-td"><select name="CDU2_W" id="CDU2_W"
+                                                        class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                            </tr>
+                                            <tr class="basic-row-B9">
+                                                <td>Egyéb krónikus betegség</td>
+                                                <td><select name="CD1_X" id="CD1_X" class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                                <td class="bonus-question-td"><select name="CDU1_X" id="CDU1_X"
+                                                        class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                                <td class="bonus-question-td"><select name="CDU2_X" id="CDU2_X"
+                                                        class="form-control">
+                                                        <option value="" selected="selected" hidden="hidden">Kérem
+                                                            válasszon!</option>
+                                                        <option value="1">igen</option>
+                                                        <option value="2">nem</option>
+                                                        <option value="8">nem tudom</option>
+                                                        <option value="9">nem kívánok válaszolni</option>
+                                                    </select></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="B9-card-footer my-5 rounded p-3">
+                                    <h3 class="question-hint" id="hint-B9"></h3>
+                                </div>
+                            </div>
+                            <div class="question-card-body B10-body p-3 border rounded" data-order="10">
+                                <div class="question-header B10-question-header mb-5">
+                                    <h2>B10. Az elmúlt 12 hónapban volt-e a felsoroltak közül valamilyen sérüléssel
+                                        járó balesete?</h2>
+                                </div>
+                                <div class="B10-answer-div answerdiv">
+                                    <label for="AC1A">a. Közúti közlekedési balesete</label>
+                                    <select name="AC1A" id="AC1A" class="form-control">
+                                        <option value="" selected="selected" hidden="hidden">Kérem válasszon!</option>
+                                        <option value="1">igen</option>
+                                        <option value="2">nem</option>
+                                        <option value="8">nem tudom</option>
+                                        <option value="9">nem kívánok válaszolni</option>
+                                    </select>
+                                    <label for="AC1B">b. Otthoni balesete</label>
+                                    <select name="AC1B" id="AC1B" class="form-control">
+                                        <option value="" selected="selected" hidden="hidden">Kérem válasszon!</option>
+                                        <option value="1">igen</option>
+                                        <option value="2">nem</option>
+                                        <option value="8">nem tudom</option>
+                                        <option value="9">nem kívánok válaszolni</option>
+                                    </select>
+                                    <label for="AC1C">c. Szabadidős tevékenység közben történt balesete.</label>
+                                    <select name="AC1C" id="AC1C" class="form-control">
+                                        <option value="" selected="selected" hidden="hidden">Kérem válasszon!</option>
+                                        <option value="1">igen</option>
+                                        <option value="2">nem</option>
+                                        <option value="8">nem tudom</option>
+                                        <option value="9">nem kívánok válaszolni</option>
+                                    </select>
+                                </div>
+                                <div class="B10-card-footer my-5 rounded p-3">
+                                    <h3 class="question-hint" id="hint-B10">A munkahelyen, illetve a munkaköri feladatok
+                                        elvégzése során
+                                        történő baleseteket ne vegye figyelembe!</h3>
+                                </div>
+                            </div>
+                            <div class="question-card-body B11-body p-3 border rounded" data-order="11">
+                                <div class="question-header B11-question-header mb-5">
+                                    <h2>B11. A baleset(ei) következményeként igénybe vett-e egészségügyi ellátást?</h2>
+                                </div>
+                                <div class="B11-answer-div answerdiv">
+                                    <select name="AC2" id="AC2" class="form-control">
+                                        <option value="" selected="selected" hidden="hidden">Kérem válasszon!</option>
+                                        <option value="1">igen, kórházban fekvőbetegként</option>
+                                        <option value="2">igen, kórházban nem fekvőbetegként</option>
+                                        <option value="3">igen, orvost, egészségügyi szakdolgozót vagy mentőt</option>
+                                        <option value="4">nem volt szüksége ellátásra vagy beavatkozásra</option>
+                                        <option value="8">nem tudom</option>
+                                        <option value="9">nem kívánok válaszolni</option>
+                                    </select>
+                                </div>
+                                <div class="B11-card-footer my-5 rounded p-3">
+                                    <h3 class="question-hint" id="hint-B11"></h3>
+                                </div>
+                            </div>
+                            <!--Validálás A2 kérdésnél. B12-16-->
+                            <div class="question-card-body B12-body p-3 border rounded" data-order="12">
+                                <div class="question-header B12-question-header mb-5">
+                                    <h2>B12. Az elmúlt 12 hónapban előfordult-e, hogy a saját egészségügyi problémája
+                                        miatt nem tudott dolgozni, és ezért hiányzott a munkahelyéről?</h2>
+                                </div>
+                                <div class="B12-answer-div answerdiv">
+                                    <select name="AW1" id="AW1" class="form-control">
+                                        <option value="" selected="selected" hidden="hidden">Kérem válasszon!</option>
+                                        <option value="1">igen</option>
+                                        <option value="2">nem</option>
+                                        <option value="8">nem tudom</option>
+                                        <option value="9">nem kívánok válaszolni</option>
+                                    </select>
+                                </div>
+                                <div class="B12-card-footer my-5 rounded p-3">
+                                    <h3 class="question-hint" id="hint-B12">Családtag betegsége, vagy a szűrővizsgálatok
+                                        nem számítanak!</h3>
+                                </div>
+                            </div>
+                            <div class="question-card-body B13-body p-3 border rounded" data-order="13">
+                                <div class="question-header B13-question-header mb-5">
+                                    <h2>B13. Az elmúlt 12 hónapban összesen hány napot nem dolgozott a munkahelyén a
+                                        saját egészségi problémái miatt?</h2>
+                                </div>
+                                <div class="B13-answer-div answerdiv">
+                                    <div class="radio-container" id="AW2">
+                                        <div class="radio-label-div">
+                                            <input type="radio" class="text-radio" name="AW2" id="AW2_NUM" value="">
+                                            <input type="text" class="radio-text-field" id="">
+                                            <label for="AW2_NUM">napok száma</label>
+                                        </div>
+                                        <div class="radio-label-div">
+                                            <input type="radio" class="non-text-radio" name="AW2" value="888"
+                                                id="AW2_8">
+                                            <label for="AW2_8">nem tudom</label>
+                                        </div>
+                                        <div class="radio-label-div">
+                                            <input type="radio" class="non-text-radio" name="AW2" value="999"
+                                                id="AW2_9">
+                                            <label for="AW2_9">nem kívánok válaszolni</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="B13-card-footer my-5 rounded p-3">
+                                    <h3 class="question-hint" id="hint-B13">Ha nem emlékszik pontosan, adhat
+                                        hozzávetőleges becslést is.</h3>
+                                </div>
+                            </div>
+                            <div class="question-card-body B14-body p-3 border rounded" data-order="14">
+                                <div class="question-header B14-question-header mb-5">
+                                    <h2>B14. Összesen hány munkaórát hiányzott az elmúlt 1 hónapban a munkahelyéről
+                                        saját egészségi problémái miatt?</h2>
+                                </div>
+                                <div class="B14-answer-div answerdiv">
+                                    <div class="radio-container" id="AWU_1O">
+                                        <div class="radio-label-div">
+                                            <input type="radio" name="AWU_1O" id="AWU_1O_NUM" value="">
+                                            <input type="text" id="AWU_1O_TF">
+                                            <label for="AWU_1O">órák száma</label>
+                                        </div>
+                                        <div class="radio-label-div">
+                                            <input type="radio" class="non-text-radio" name="AWU_1O" value="88"
+                                                id="AWU_1O_8">
+                                            <label for="AWU_1O_8">nem tudom</label>
+                                        </div>
+                                        <div class="radio-label-div">
+                                            <input type="radio" class="non-text-radio" name="AWU_1O" value="99"
+                                                id="AWU_1O_9">
+                                            <label for="AWU_1O_9">nem kívánok válaszolni</label>
+                                        </div>
+                                    </div>
+                                    <div class="subtitle-h4-div">
+                                        <h4 class="subtitle-h4">Ezek a hiányzások hány napot érintettek?</h4>
+                                    </div>
+                                    <div class="radio-container" id="AWU_1N">
+                                        <div class="radio-label-div">
+                                            <input type="radio" name="AWU_1N" id="AWU_1N_NUM" value="">
+                                            <input type="text" id="AWU_1N_TF">
+                                            <label for="AWU_1N_NUM">napok száma</label>
+                                        </div>
+                                        <div class="radio-label-div">
+                                            <input type="radio" class="non-text-radio" name="AWU_1N" value="88"
+                                                id="AWU_1N_8">
+                                            <label for="AWU_1N_8">nem tudom</label>
+                                        </div>
+                                        <div class="radio-label-div">
+                                            <input type="radio" class="non-text-radio" name="AWU_1N" value="99"
+                                                id="AWU_1N_9">
+                                            <label for="AWU_1N_9">nem kívánok válaszolni</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="B14-card-footer my-5 rounded p-3">
+                                    <h3 class="question-hint" id="hint-B14">Egészségi probléma lehet akut vagy krónikus
+                                        betegség, vagy olyan panasz mint például fejfájás, ízületi-mozgásszervi
+                                        fájdalmak (például nyak-, derék-, hát-, láb-, térdfájdalom), stressz, állandó
+                                        fáradtság, levertség, légszomj, stb.</h3>
+                                </div>
+                            </div>
+                            <div class="question-card-body B15-body p-3 border rounded" data-order="15">
+                                <div class="question-header B15-question-header mb-5">
+                                    <h2>B15. Az elmúlt 1 hónapba hányszor fordult elő Önnel, hogy valamely egészségi
+                                        problémája gondot okozott Önnek, de ennek ellenére elvégezte a fizetett munkát?
+                                    </h2>
+                                </div>
+                                <div class="B15-answer-div answerdiv">
+                                    <div class="radio-container" id="AWU_2">
+                                        <div class="radio-label-div">
+                                            <input type="radio" class="text-radio" name="AWU_2" id="AWU_2_NUM" value="">
+                                            <input type="text" class="radio-text-field" id="">
+                                            <label for="AWU_2_NUM">napok száma</label>
+                                        </div>
+                                        <div class="radio-label-div">
+                                            <input type="radio" class="non-text-radio" name="AWU_2" value="8"
+                                                id="AWU_2_8">
+                                            <label for="AWU_2_8">nem tudom</label>
+                                        </div>
+                                        <div class="radio-label-div">
+                                            <input type="radio" class="non-text-radio" name="AWU_2" value="9"
+                                                id="AWU_2_9">
+                                            <label for="AWU_2_9">nem kívánok válaszolni</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="B15-card-footer my-5 rounded p-3">
+                                    <h3 class="question-hint" id="hint-B15"></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1 fwdbutton" style="display: flex;align-items: center;">
+                <i class="fa fa-chevron-right fa-5x btn-next" id="question-fwd-button"></i>
+            </div>
+        </section>
+    </div>
+    <footer class="page-footer fixed-bottom border-top">
+        <div class="footer-copyright text-center py-3">© 2019 Copyright:
+            <a href="#"> ksh.hu</a>
+        </div>
+    </footer>
+    <script src="jquery-3.4.1/jquery-3.4.1.min.js"></script>
+    <script src="popper-1.15.0/popper.min.js"></script>
+    <script src="bootstrap-4.3.1/dist/js/bootstrap.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/B.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+h1 {
+    text-align: center;
+}
+
+.border {
+    background-color: aliceblue;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+    border: 1px solid white;
+    vertical-align: bottom;
+    border-spacing: 2px;
+    border-collapse: separate;
+}
+
+th,
+td {
+    border-bottom: 1px white;
+    border: 2px solid white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.tablazat {
+    background-color: #f0f8ff;
+}
+
+#BIRTHPLACE,
+#CITIZEN,
+#BIRHTPLACEFATH,
+#BIRHTPLACEMOTH,
+#HH9,
+#HH10,
+#HH11,
+#HH12,
+#HH13,
+#HH15 {
+    width: 50%;
+}
+
+#HH_1 {
+    width: 10%;
+}
+
+.elso {
+    width: 90%;
+}
+
+.masodik {
+    width: 90%;
+}
+
+.harmadik {
+    width: 90%;
+}
+
+.negyedik {
+    width: 90%;
+}
+
+.otodik,
+.hatodik {
+    width: 90%;
+}
+
+input[type=text] {
+    width: auto;
+    -webkit-transition: width .35s ease-in-out;
+    transition: width .35s ease-in-out;
+}
+
+input:focus {
+    background-color: white;
+}
+
+select:focus {
+    background-color: white;
+}
+
+input[type=text]:focus {
+    width: auto;
+}
+
+#btn-fwd {
+    color: white;
+    background-color: rgba(136, 182, 255, 0.603);
+}
+
+#btn-bck {
+    color: white;
+    background-color: rgba(136, 182, 255, 0.603);
+}
+
+#lab {
+    text-align: left;
+    font-size: 1.5vw;
+}
+
+.question-card-body:first-of-type {
+    display: block;
+    background-color: #f0f8ff;
+}
+
+.question-card-body {
+    display: none;
+    background-color: white;
+}
