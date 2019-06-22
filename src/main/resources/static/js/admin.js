@@ -5,6 +5,7 @@ window.onload = function() {
     addjson.onclick = handleAddJson;
     console.log(window.sessionStorage);
     updateTable();
+    console.log("itt")
 }
 
 var d = {
