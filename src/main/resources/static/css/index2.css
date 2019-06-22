@@ -1,0 +1,13 @@
+.section-header{
+    margin : 25px;
+    padding : 25px;
+    align="center";
+    height: 200px;
+    width: 30%;
+    font-family: serif;
+}
+p{
+height : 70%;
+text-align: left;
+font-size: 40px;
+}
