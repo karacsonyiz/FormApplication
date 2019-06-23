@@ -1,30 +1,43 @@
 function GeolocationSuccess(position) {
+storage = window.sessionStorage;
     var now = new Date();
     var latitude = position.coords.latitude;
+    storage.setItem("latitude",latitude)
     var longitude = position.coords.longitude;
-    var geolocText = "latitude: " + latitude + "<br>longitude: " + longitude + "<br>";
-    var dateTime = "Most";
+    var geolocText = "latitude: " + latitude + "longitude: " + longitude;
+    var today = new Date();
+    var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    var dateTime = date+' '+time;
     console.log(geolocText + "NOW : " + dateTime)
-    storage = window.sessionStorage;
-    storage.setItem("geolocation",geolocText + "NOW : " + dateTime)
-    console.log(storage)
 
+    storage.setItem("userstring",geolocText + " | " + dateTime)
+    storage.setItem("geolocation",geolocText)
+    storage.setItem("dateTime",dateTime)
 }
+
+
+
+
 
 
 function GeolocationError(error) {
     switch (error.code) {
         case error.PERMISSION_DENIED:
-            Alert("User denied the request for Geolocation.");
+            alert("User denied the request for Geolocation.");
+            console.log("User denied the request for Geolocation.")
             break;
         case error.POSITION_UNAVAILABLE:
-            Alert("Location information is unavailable.");
+            alert("Location information is unavailable.");
+            console.log("Location information is unavailable.");
             break;
         case error.TIMEOUT:
-            Alert("The request to get user location timed out.");
+            alert("The request to get user location timed out.");
+            console.log("The request to get user location timed out.");
             break;
         case error.UNKNOWN_ERROR:
-            Alert("An unknown error occurred.");
+            alert("An unknown error occurred.");
+            console.log("An unknown error occurred.");
             break;
     }
 }
@@ -34,8 +47,11 @@ function getCoordinates() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(GeolocationSuccess, GeolocationError);
     } else {
-        Alert("A böngésző nem támogatja a tartózkodási hely lekérdezését.");
+        alert("A böngésző nem támogatja a tartózkodási hely lekérdezését.");
+        console.log("A böngésző nem támogatja a tartózkodási hely lekérdezését.");
     }
 }
+getCoordinates()
+setInterval(function(){ getCoordinates() }, 60000);
 
-getCoordinates();
+
