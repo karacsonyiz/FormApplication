@@ -32,6 +32,14 @@ public class UserService {
         return user;
     }
 
+    public Optional<User> findUserByID(String id) {
+        Optional<User> user = userDao.findUserByID(id);
+        if(!user.isPresent()){
+            LOGGER.warn("Failed to retrieve user with id: " + id);
+        }
+        return user;
+    }
+
     public Response createUser(User user) {
         if (userDao.findUserByUserName(user.getName()).isPresent()) {
             return new Response(false,"A felhasználónév vagy jelszó foglalt.");

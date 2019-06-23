@@ -49,9 +49,9 @@ public class UserDao {
         }
     }
 
-    public Optional<User> findUserByEmail(String email){
+    public Optional<User> findUserByID(String id){
         try {
-            User user = jdbcTemplate.queryForObject("select id, name, password, enabled, role from users where email = ?", new UserMapper(), email);
+            User user = jdbcTemplate.queryForObject("select id, name, password, enabled, role from users where id = ?", new UserMapper(), id);
             return Optional.of(user);
         } catch (EmptyResultDataAccessException erdae) {
             return Optional.empty();

@@ -23,20 +23,6 @@ public class FormDao {
 	public FormDao(JdbcTemplate jdbcTemplate) {
 		this.jdbcTemplate = jdbcTemplate;
 	}
-	
-
-	public void createForm(Form form) {
-				String uuid = UUID.randomUUID().toString();
-			jdbcTemplate.update(connection -> {
-		        PreparedStatement ps = connection.prepareStatement("insert into form(id,name,osap_num,start_date,end_date) values(?,?,?,?,?)");
-		        	ps.setString(1, uuid);
-					ps.setString(2, form.getName());
-					ps.setString(3, form.getOsap_num());
-					ps.setTimestamp(4, Timestamp.valueOf(form.getStart_date()));
-					ps.setTimestamp(5, Timestamp.valueOf(form.getEnd_date()));
-					return ps;
-			});
-	}
 
 	public void createData(String data) {
 		jdbcTemplate.update(connection -> {
@@ -60,11 +46,29 @@ public class FormDao {
 	public Section getSection(String id){
 		return jdbcTemplate.queryForObject("SELECT id, name, meta, bodytext FROM form_section where id = ?",new SectionMapper(),id);
 	}
+
+	public void createForm(Form form) {
+		String uuid = UUID.randomUUID().toString();
+		jdbcTemplate.update(connection -> {
+			PreparedStatement ps = connection.prepareStatement("insert into form(id,userid,osap_num,start_date,end_date) values(?,?,?,?,?)");
+			ps.setString(1, uuid);
+			ps.setInt(2, form.getUserid());
+			ps.setString(3, form.getOsap_num());
+			ps.setTimestamp(4, Timestamp.valueOf(form.getStart_date()));
+			ps.setTimestamp(5, Timestamp.valueOf(form.getEnd_date()));
+			return ps;
+		});
+	}
 	
 
 	public List<Form> listForms() {
 		return jdbcTemplate.query(
-				"SELECT id, name, osap_num, start_date, end_date FROM form", new FormMapper());
+				"SELECT id, userid, osap_num, start_date, end_date FROM form", new FormMapper());
+	}
+
+	public List<Form> listFormsByUserId(long userId){
+		return jdbcTemplate.query(
+				"SELECT form.id, form.userid, form.osap_num, form.start_date, form.end_date FROM form INNER JOIN userform on form.id = userform.form_id WHERE userform.user_id = ?", new FormMapper(),userId);
 	}
 
 	
@@ -72,11 +76,11 @@ public class FormDao {
 		@Override
 		public Form mapRow(ResultSet resultSet,int i) throws SQLException {
 			String id = resultSet.getString("id");
-			String name = resultSet.getString("name");
+			int userid = resultSet.getInt("userid");
 			String osap_num = resultSet.getString("osap_num");
 			LocalDateTime start_date = resultSet.getTimestamp("start_date").toLocalDateTime();
 			LocalDateTime end_date = resultSet.getTimestamp("end_date").toLocalDateTime();
-			return new Form(id,name,osap_num,start_date,end_date);
+			return new Form(id,userid,osap_num,start_date,end_date);
 		}
 	}
 
@@ -91,8 +95,5 @@ public class FormDao {
 		}
 	}
 
-	public List<Form> listFormsByUserId(long userId){
-		return jdbcTemplate.query(
-				"SELECT form.id, form.name, form.osap_num, form.start_date, form.end_date FROM form INNER JOIN userform on form.id = userform.form_id WHERE userform.user_id = ?", new FormMapper(),userId);
-	}
+
 }

@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 public class Form {
 	
 	private String id;
-	private String name;
+	private int userid;
 	private String osap_num;
 	private LocalDateTime start_date;
 	private LocalDateTime end_date;
@@ -13,9 +13,9 @@ public class Form {
 	public Form() {
 	}
 
-	public Form(String id, String name, String osap_num, LocalDateTime start_date, LocalDateTime end_date) {
+	public Form(String id, int userid, String osap_num, LocalDateTime start_date, LocalDateTime end_date) {
 		this.id = id;
-		this.name = name;
+		this.userid = userid;
 		this.osap_num = osap_num;
 		this.start_date = start_date;
 		this.end_date = end_date;
@@ -29,12 +29,12 @@ public class Form {
 		this.id = id;
 	}
 
-	public String getName() {
-		return name;
+	public int getUserid() {
+		return userid;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setUserid(int userid) {
+		this.userid = userid;
 	}
 
 	public String getOsap_num() {
