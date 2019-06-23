@@ -28,12 +28,7 @@ SET time_zone = "+00:00";
 -- Tábla szerkezet ehhez a táblához `form_section`
 --
 
-CREATE TABLE `form_section` (
-  `id` varchar(255) COLLATE utf8_hungarian_ci NOT NULL,
-  `name` varchar(255) COLLATE utf8_hungarian_ci DEFAULT NULL,
-  `meta` mediumtext COLLATE utf8_hungarian_ci,
-  `bodytext` longtext COLLATE utf8_hungarian_ci
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
+
 
 --
 -- A tábla adatainak kiíratása `form_section`
