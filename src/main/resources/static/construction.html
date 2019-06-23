@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+			initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="bootstrap-4.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Construction</title>
+</head>
+
+<body>
+<div class="container-fluid">
+    <nav class="navbar main-nav navbar-light sticky-top border">
+        <ul class="mr-auto mb-0 pl-1">
+            <a class="navbar-brand nav-item" href="#" style="color:white">
+                Főoldal
+            </a>
+            <a class="navbar-brand nav-item" style="color:white" href="/worklist.html" id="usermenu"></a>
+            <a class="navbar-brand nav-item" style="color:white" id="username"></a>
+            <a class="navbar-brand nav-item" id="adminpagebutton" href="/admin.html"></a>
+        </ul>
+        <a class="navbar-brand nav-item mb-0" id="logbutton" href="/logout" style="color:white">Kijelentkezés</a>
+    </nav>
+    <section class="section section-skeleton row mb-0">
+        <div class="sidebar card col-2 border-0">
+            <div class="card-header">
+                <h4>Állapot</h4>
+            </div>
+            <div class="card-body">
+                <h5>20/9 kész</h5>
+            </div>
+        </div>
+        <div class="main col-5">
+            <h5 class="section-header section-skeleton-header text-center rounded p-3 mb-1"
+                onclick="window.location.href='A.html';" style="background-color : lightblue;">A HÁZTARTÁSBAN ÉLŐK ADATAI</h5>
+            <h5 class="section-header section-skeleton-header text-center rounded p-3 mb-1"
+                onclick="window.location.href='B.html';" style="background-color : lightblue;">EGÉSZSÉGI ÁLLAPOT</h5>
+            <h5 class="section-header section-skeleton-header text-center rounded p-3 mb-1"
+                onclick="window.location.href='Skeleton.html?C'" >KORLÁTOZOTTSÁG</h5>
+            <h5 class="section-header section-skeleton-header text-center rounded p-3 mb-1"
+                onclick="window.location.href='Skeleton.html?D';">AZ ÖNELLÁTÁSSAL KAPCSOLATOS TEVÉKENYSÉGEK</h5>
+            <h5 class="section-header section-skeleton-header text-center rounded p-3 mb-1"
+                onclick="window.location.href='Skeleton.html?E';">A HÁZTARTÁSSAL KAPCSOLATOS TEVÉKENYSÉGEK</h5>
+            <h5 class="section-header section-skeleton-header text-center rounded p-3 mb-1"
+                onclick="window.location.href='F.html';" style="background-color : lightblue;">FIZIKAI FÁJDALMAK, ERŐNLÉT, KEDÉLYÁLLAPOT</h5>
+            <h5 class="section-header section-skeleton-header text-center rounded p-3 mb-1"
+                onclick="window.location.href='G.html';" style="background-color : lightblue;">SZAKELLÁTÁS, ALAPELLÁTÁS IGÉNYBEVÉTELE</h5>
+            <h5 class="section-header section-skeleton-header text-center rounded p-3 mb-1" style="background-color : lightblue;">GYÓGYSZEREK, HASZNÁLATA</h5>
+            <h5 class="section-header section-skeleton-header text-center rounded p-3 mb-1"
+                onclick="window.location.href='I.html'" style="background-color : lightblue;">SZŰRÉSEK
+            </h5>
+            <h5 class="section-header section-skeleton-header text-center rounded p-3 mb-1"
+                onclick="window.location.href='Skeleton.html?J'">ELLÁTÁSI SZÜKSÉGLETEK</h5>
+        </div>
+        <div class="mainketto col-5">
+            <h5 class="section-header section-skeleton-header text-center rounded p-3 mb-1"
+                onclick="window.location.href='Skeleton.html?K';">ELLÁTÁSRA VONATKOZÓ VÉLEMÉNY</h5>
+            <h5 class="section-header section-skeleton-header text-center rounded p-3 mb-1"
+                onclick="window.location.href='Skeleton.html?L'">JÓLLÉT INDEX</h5>
+            <h5 class="section-header section-skeleton-header text-center rounded p-3 mb-1"
+                onclick="window.location.href='M.html'" style="background-color : lightblue;">MAGASSÁG, TESTSÚLY</h5>
+            <h5 class="section-header section-skeleton-header text-center rounded p-3 mb-1"
+                onclick="window.location.href='N.html'" style="background-color : lightblue;">TESTMOZGÁS</h5>
+            <h5 class="section-header section-skeleton-header text-center rounded p-3 mb-1"
+                onclick="window.location.href='O.html'" style="background-color : lightblue;">TÁPLÁLKOZÁSI SZOKÁSOK</h5>
+            <h5 class="section-header section-skeleton-header text-center rounded p-3 mb-1"
+                onclick="window.location.href='Skeleton.html?P'">DOHÁNYZÁS</h5>
+            <h5 class="section-header section-skeleton-header text-center rounded p-3 mb-1"
+                onclick="window.location.href='Skeleton.html?Q'">ALKOHOLFOGYASZTÁS</h5>
+            <h5 class="section-header section-skeleton-header text-center rounded p-3 mb-1"
+                onclick="window.location.href='Skeleton.html?R'">TÁRSAS KAPCSOLATOK</h5>
+            <h5 class="section-header section-skeleton-header text-center rounded p-3 mb-1"
+                onclick="window.location.href='S.html'" style="background-color : lightblue;">GONDOSKODÁS, SEGÍTSÉGNYÚJTÁS</h5>
+            <h5 class="section-header section-skeleton-header text-center rounded p-3 mb-1"
+                onclick="window.location.href='T.html'" style="background-color : lightblue;">A HÁZTARTÁS JÖVEDELME</h5>
+        </div>
+    </section>
+</div>
+<footer class="page-footer fixed-bottom border-top ">
+    <div class="footer-copyright text-center py-3 ">
+        <script src="js/version.js "></script>
+    </div>
+</footer>
+<script src="jquery-3.4.1/jquery-3.4.1.min.js "></script>
+<script src="popper-1.15.0/popper.min.js "></script>
+<script src="bootstrap-4.3.1/dist/js/bootstrap.min.js "></script>
+<script src="js/index.js "></script>
+<script src="js/usersettings.js"></script>
+</body>
+
+</html>
