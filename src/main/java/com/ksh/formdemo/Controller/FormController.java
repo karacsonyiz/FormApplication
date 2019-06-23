@@ -2,6 +2,7 @@ package com.ksh.formdemo.Controller;
 
 import java.util.List;
 
+import com.ksh.formdemo.Service.Response;
 import com.ksh.formdemo.Service.Section;
 import com.ksh.formdemo.Service.UserService;
 import com.ksh.formdemo.model.User;
@@ -36,8 +37,14 @@ public class FormController {
 	}
 
 	@RequestMapping(value = "/api/createform", method = RequestMethod.POST)
-	public void createForm(@RequestBody Form form) {
-		formService.createForm(form);
+	public Response createForm(@RequestBody Form form) {
+		User user = getAuthenticatedUser();
+		if(user == null){
+			return  new Response(false,"Csak bejelentkezett felhasználó kezdhet új Kérdőivet!");
+		} else {
+			formService.createForm(form,user.getId());
+			return  new Response(true,"Sikeres Kérdőiv kreálás!");
+		}
 	}
 
 	@RequestMapping(value = "/api/createdata", method = RequestMethod.POST)

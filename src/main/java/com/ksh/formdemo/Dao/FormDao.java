@@ -47,15 +47,15 @@ public class FormDao {
 		return jdbcTemplate.queryForObject("SELECT id, name, meta, bodytext FROM form_section where id = ?",new SectionMapper(),id);
 	}
 
-	public void createForm(Form form) {
+	public void createForm(Form form,long userId) {
 		String uuid = UUID.randomUUID().toString();
 		jdbcTemplate.update(connection -> {
 			PreparedStatement ps = connection.prepareStatement("insert into form(id,userid,osap_num,start_date,end_date) values(?,?,?,?,?)");
 			ps.setString(1, uuid);
-			ps.setInt(2, form.getUserid());
+			ps.setLong(2, userId);
 			ps.setString(3, form.getOsap_num());
-			ps.setTimestamp(4, Timestamp.valueOf(form.getStart_date()));
-			ps.setTimestamp(5, Timestamp.valueOf(form.getEnd_date()));
+			ps.setTimestamp(4, Timestamp.valueOf(LocalDateTime.now()));
+			ps.setTimestamp(5, Timestamp.valueOf(LocalDateTime.now()));
 			return ps;
 		});
 	}
@@ -68,7 +68,7 @@ public class FormDao {
 
 	public List<Form> listFormsByUserId(long userId){
 		return jdbcTemplate.query(
-				"SELECT form.id, form.userid, form.osap_num, form.start_date, form.end_date FROM form INNER JOIN userform on form.id = userform.form_id WHERE userform.user_id = ?", new FormMapper(),userId);
+				"SELECT id, userid, osap_num, start_date, end_date FROM form  WHERE userid = ?", new FormMapper(),userId);
 	}
 
 	

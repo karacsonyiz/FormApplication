@@ -32,8 +32,8 @@ public class FormService {
 		return formDao.listForms();
 	}
 
-	public void createForm(Form form) {
-		 formDao.createForm(form);
+	public void createForm(Form form,long  userId) {
+		 formDao.createForm(form,userId);
 	}
 
 	public Section getSection(String id) {
