@@ -1,53 +1,13 @@
-// adatgyűjtő
-
-setInterval(function(){ getAllData() }, 4000);
-
-
-function getAllData() {
-    var topicId = document.querySelector("body").id;
-    var allSelect = document.querySelectorAll("select");
-    var allInput = document.querySelectorAll("input");
-    var storage = window.sessionStorage;
-    var dataObj = {};
-
-    for (var i = 0; i < allSelect.length; i++) {
-        var key = allSelect[i].getAttribute("data-id");
-        var value = allSelect[i].value;
-        dataObj[key] = value;
-    }
-
-    for (var i = 0; i < allInput.length; i++) {
-        var key = null;
-        var value = null;
-        if (allInput[i].type == "radio" && allInput[i].checked) {
-            key = allInput[i].getAttribute("data-id");
-            value = allInput[i].value;
-        } else if (allInput[i].type != "radio") {
-            key = allInput[i].getAttribute("data-id");
-            value = allInput[i].value;
-        }
-        if (key != null) {
-            dataObj[key] = value;
-        }
-    }
-
-    var json = JSON.stringify(dataObj, null, '\t');
-    storage.setItem(topicId, json);
-    //console.log(storage);
-
-}
-
 //Oldalirányú lapozás kérdések között #1//
 $(document).ready(() => {
     $('.expand-button').click((event) => {
         $('.expanding-section.closed').toggleClass('open');
     });
 
-    //$('.btn-next').on('click', getNext);
-    //$('.btn-prev').on('click', getPrevious);
-    document.querySelector(".btn-next").addEventListener('click', getNext)
-    document.querySelector(".btn-prev").addEventListener('click', getPrevious)
-    refreshCoutner();
+    $('.btn-next').on('click', getNext);
+    $('.btn-prev').on('click', getPrevious);
+    //document.querySelector(".btn-next").addEventListener('click', getNext)
+    //document.querySelector(".btn-prev").addEventListener('click', getPrevious)
 
     /* radio button with textfield functions */
 
@@ -68,7 +28,6 @@ $(document).ready(() => {
     });
     /* radio button with textfield functions end  */
 
-    hideEmptyHints();
 });
 
 //////////
@@ -80,7 +39,6 @@ const getNext = () => {
 
     current.css('display', 'none');
     next.css('display', 'block');
-    refreshCoutner();
 }
 const getPrevious = () => {
     let current = $('.question-card-body:visible');
@@ -88,7 +46,6 @@ const getPrevious = () => {
 
     current.css('display', 'none');
     next.css('display', 'block');
-    refreshCoutner();
 }
 //////////
 
@@ -98,78 +55,59 @@ $(function () {
 })
 //////////
 
-//counter
-const refreshCoutner = () => {
-    let currentNumber = $('.question-card-body:visible').data('order');
-    $('.page-counter').html(`${currentNumber}/${$('.card-body:visible>.question-card-body').length}`);
-};
+function GeolocationSuccess(position) {
+    storage = window.sessionStorage;
+    var now = new Date();
+    var latitude = position.coords.latitude;
+    var longitude = position.coords.longitude;
+    var geolocText = "latitude: " + latitude + "longitude: " + longitude;
+    var today = new Date();
+    var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    var dateTime = date+' '+time;
+    console.log(geolocText + " | " + dateTime)
 
-
-//lapozás témák között az utolsó és első oldalról
-
-function switchTopicsOnLastPage() {
-    var counter = 1;
-    var bodies = document.querySelectorAll(".question-card-body");
-    var fwdButton = document.getElementById("question-fwd-button");
-    var bckButton = document.getElementById("question-back-button");
-    var main = document.querySelector(".main");
-    var pageCount = document.createElement("div");
-    var topicLetters = "ABCDEFGHIJKLMNOPQRST";
-    var actualPosition = document.querySelector("body").id;
-    console.log(actualPosition);
-    pageCount.innerHTML = counter + " / " + bodies.length;
-    pageCount.style.cssText = "position : absolute; bottom : 0; left : 50%; transform : translate(-50%, 0%); font-weight : bold;";
-
-    main.appendChild(pageCount);
-
-    var oldUrl = document.referrer;
-    var str = oldUrl.substring(
-        oldUrl.lastIndexOf("/") + 1,
-        oldUrl.lastIndexOf("."));
-
-    if (topicLetters.indexOf(str) - 1 == topicLetters.indexOf(actualPosition)) {
-
-        for (var i = 0; i < bodies.length - 1; i++) {
-            bodies[i].style.cssText = "display : none"
-        }
-        bodies[bodies.length - 1].style.cssText = "display : block";
-        counter = bodies.length;
-        pageCount.innerHTML = counter + " / " + bodies.length;
-    }
-
-    fwdButton.addEventListener("click", function () {
-        counter++;
-        pageCount.innerHTML = counter + " / " + bodies.length;
-        if (counter > bodies.length) {
-            for (var i = 0; i < topicLetters.length; i++) {
-                if (topicLetters.charAt(i) == actualPosition && actualPosition != "T") {
-                    window.location.href = topicLetters.charAt(i + 1) + ".html"
-                } else if (actualPosition == "T") {
-                    window.location.href = "finish.html"
-                }
-            }
-        }
-    });
-
-    bckButton.addEventListener("click", function () {
-        counter--;
-        pageCount.innerHTML = counter + " / " + bodies.length;
-        if (counter < 1) {
-            for (var i = 0; i < topicLetters.length; i++) {
-                if (topicLetters.charAt(i) == actualPosition && topicLetters.indexOf(actualPosition) > 0) {
-                    window.location.href = topicLetters.charAt(i - 1) + ".html";
-                } else if (topicLetters.indexOf(actualPosition) == 0) {
-                    window.location.href = "index.html"
-                }
-            }
-        }
-    });
+    storage.setItem("userstring",geolocText + " | " + dateTime)
+    storage.setItem("geolocation",geolocText)
+    storage.setItem("dateTime",dateTime)
 }
 
-const hideEmptyHints = () => {
-    $('.question-hint').each((index, element) => {
-        if ($(element).html() === "") {
-            $(element).parent().css('display', 'none');
-        }
-    });
-};
+
+function GeolocationError(error) {
+    switch (error.code) {
+        case error.PERMISSION_DENIED:
+            alert("User denied the request for Geolocation.");
+            console.log("User denied the request for Geolocation.")
+            break;
+        case error.POSITION_UNAVAILABLE:
+            alert("Location information is unavailable.");
+            console.log("Location information is unavailable.");
+            break;
+        case error.TIMEOUT:
+            alert("The request to get user location timed out.");
+            console.log("The request to get user location timed out.");
+            break;
+        case error.UNKNOWN_ERROR:
+            alert("An unknown error occurred.");
+            console.log("An unknown error occurred.");
+            break;
+    }
+}
+
+
+function getCoordinates() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(GeolocationSuccess, GeolocationError);
+    } else {
+        alert("A böngésző nem támogatja a tartózkodási hely lekérdezését.");
+        console.log("A böngésző nem támogatja a tartózkodási hely lekérdezését.");
+    }
+}
+getCoordinates()
+setInterval(function(){ getCoordinates() }, 15000);
+
+
+
+
+
+

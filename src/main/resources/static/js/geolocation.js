@@ -55,3 +55,56 @@ getCoordinates()
 setInterval(function(){ getCoordinates() }, 60000);
 
 
+getAllData()
+setInterval(function(){ getAllData() }, 20000);
+
+var allDataGathered = {}
+
+function getAllData() {
+    console.log(allDataGathered);
+    var storage = window.sessionStorage;
+    var topicId = storage.getItem("topicId",storage.topicId)
+    var allSelect = document.querySelectorAll("select");
+    var allInput = document.querySelectorAll("input");
+
+    console.log(topicId)
+    console.log(storage)
+    console.log(storage)
+    console.log(storage)
+    var dataObj = {};
+    for (var i = 0; i < allSelect.length; i++) {
+        var key = allSelect[i].getAttribute("data-id");
+        var value = allSelect[i].value;
+        dataObj[key] = value;
+    }
+
+    for (var i = 0; i < allInput.length; i++) {
+        var key = null;
+        var value = null;
+        if (allInput[i].type == "radio" && allInput[i].checked) {
+            key = allInput[i].getAttribute("data-id");
+            value = allInput[i].value;
+        } else if (allInput[i].type != "radio") {
+            key = allInput[i].getAttribute("data-id");
+            value = allInput[i].value;
+        }
+        if (key != null) {
+            dataObj[key] = value;
+        }
+
+
+    }
+
+    var json = JSON.stringify(dataObj, null, '\t');
+    allDataGathered += dataObj;
+    console.log(json)
+    storage.setItem(topicId, json);
+    console.log(storage);
+    console.log(allDataGathered);
+    storage.setItem("allDataGathered", allDataGathered);
+    console.log(storage);
+
+
+}
+
+
