@@ -5,13 +5,8 @@ window.onload = function() {
     console.log(stg);
 }
 
-function showTooltipIfTrue(){
-    console.log("sajt")
-    }
 
-//setInterval(function(){ updateInfo() }, 4000);
-
-setInterval(function(){ getAllData() }, 10000);
+setInterval(function(){ getAllData() }, 2000);
 
 
 function getAllData() {
@@ -44,8 +39,6 @@ function getAllData() {
 
     var json = JSON.stringify(dataObj, null, '\t');
     storage.setItem(topicId, json);
-    console.log(storage);
-
 }
 
 
@@ -63,7 +56,6 @@ function updateTable() {
      stg.setItem("topicId",jsonData.id)
      console.log(stg);
      fillTable(jsonData);
-
      })
      .catch(function(error){
         console.log("failed to retrieve data!",error);

@@ -37,7 +37,6 @@ function setCardAttributes(){
     console.log(card)
 }
 
-console.log("sad")
 
 $(function() {
     $('[data-toggle="tooltip"]').tooltip()

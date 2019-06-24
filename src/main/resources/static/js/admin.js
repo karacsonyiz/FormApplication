@@ -4,22 +4,6 @@ window.onload = function() {
     let addjson = document.querySelector("#form-addjson");
     addjson.onclick = handleAddJson;
     console.log(window.sessionStorage);
-    updateTable();
-}
-
-function updateTable() {
-    //let productIdFromUrl = window.location.href.split('=')[1];
-    let section = "api/getsection/" + "D" ;
-     fetch(section)
-     .then(function(request) {
-        return request.json();
-     })
-     .then(function(jsonData) {
-     console.table(jsonData);
-     })
-     .catch(function(error){
-        console.log("failed to retrieve data!",error);
-     });
 }
 
 function handleAddJson() {
