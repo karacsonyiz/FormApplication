@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="bootstrap-4.3.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/index.css">
-    <title>Construction</title>
+    <link rel="stylesheet" href="css/tiles.css">
+    <title>Index</title>
 </head>
 
 <body>
@@ -19,35 +20,45 @@
                 <a class="navbar-brand nav-item" href="#" style="color:white">
                     Főoldal
                 </a>
-                <a class="navbar-brand nav-item" style="color:white" href="/worklist.html" id="usermenu"></a>
-                <a class="navbar-brand nav-item" style="color:white" id="username"></a>
                 <a class="navbar-brand nav-item" id="adminpagebutton" href="/admin.html"></a>
             </ul>
             <a class="navbar-brand nav-item mb-0" id="logbutton" href="/logout" style="color:white">Kijelentkezés</a>
         </nav>
         <section class="section section-skeleton row mb-0">
-            <div class="sidebar card col-2 border-0">
-                <div class="card-header">
-                    <h4>Bejelentkezés</h4>
+            <div class="sidebar col-2 card border-0 rounded" style="margin-top : 60px;">
+                <div style="background-color : #4266A1;" class="card-header border rounded text-center">
+                    <h4 id="username"></h4>
                 </div>
-                <div class="card-body">
-                    <h5>Felhasználónév</h5>
-                    <input type="text", value="1">
-                    <h5>Jelszó</h5>
-                    <input type="text", value="2">
-                    <button class="btn btn-info">Go</button>
-                </div>
+                <ul class="list-group list-group-flush border">
+                    <li class="list-group-item"><a href="/worklist.html" id="usermenu" style="color: black;height : auto;">MunkaLista</a></li>
+                    <li class="list-group-item"><a href="#" style="color: black;">Admin</a></li>
+                    <li class="list-group-item"><a href="#" style="color: black;">Személyes</a></li>
+                </ul>
             </div>
-            <div class="main col row" style="margin-top : 300px;">
-                <div class="card border-0 sectioncard col">
-                    <div class="card-body p-0" style="background-color : #FF9966;">
-                        <div class="card-body text-center"><h4 class="text-center action" onclick="startNewForm()">Új kérdöiv</h4>
+            <div class="main col-10 row mt-2">
+                <div id="tiles-container">
+                    <div class="tile udt-tile" onclick="startNewForm()">
+                        <div class="tile-content">
+                            <div class=tile-icon>&#128214;</div>
+                            <p>ÚJ KÉRDŐÍV</p>
                         </div>
                     </div>
-                </div>
-                <div class="card border-0 sectioncard col">
-                    <div class="card-body p-0" style="background-color : #4444CC;">
-                        <div class="card-body text-center"><h4 class="text-center action">Kérdőiv betöltés</h4>
+                    <div class="tile msg-tile" onclick="window.location.href ='/worklist.html'">
+                        <div class="tile-content">
+                            <div class=tile-icon>&#x2709;</div>
+                            <a >KÉRDŐÍV FOLYTATÁS</a>
+                        </div>
+                    </div>
+                    <div class="tile mtc-tile">
+                        <div class="tile-content">
+                            <div class=tile-icon>&#9881;</div>
+                            <p>KÉRDŐÍV BETÖLTÉS (fejlesztés alatt)</p>
+                        </div>
+                    </div>
+                    <div class="tile exit-tile" onclick="window.location.href ='/logout'">
+                        <div class="tile-content">
+                            <div class=tile-icon>&#128682;</div>
+                            <p>KILÉPÉS</p>
                         </div>
                     </div>
                 </div>
@@ -62,6 +73,7 @@
     <script src="popper-1.15.0/popper.min.js "></script>
     <script src="bootstrap-4.3.1/dist/js/bootstrap.min.js "></script>
     <script src="js/index.js"></script>
+    <script src="js/usersettings.js"></script>
 </body>
 
 </html>
