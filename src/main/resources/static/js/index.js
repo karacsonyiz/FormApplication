@@ -1,7 +1,9 @@
-function startNewForm(){
+function startNewForm(osap){
+
         let storage = window.sessionStorage;
         console.log(storage)
         let osap_num = "2201"
+        console.log(osap)
         let form = {
                            "osap_num": osap_num
                        }
@@ -17,10 +19,15 @@ function startNewForm(){
                       })
                       .then(function(jsonData) {
                           console.log(jsonData);
+                          window.location.href = "/Elef.html";
                       })
                   .catch(error => console.log(error));
 }
 
 $(function() {
     $('[data-toggle="tooltip"]').tooltip()
+})
+
+$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
 })

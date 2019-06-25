@@ -13,54 +13,66 @@
     <title>Index</title>
 </head>
 
-<body>
+<body style="background-color : aliceblue;">
     <div class="container-fluid">
         <nav class="navbar main-nav navbar-light sticky-top border">
             <ul class="mr-auto mb-0 pl-1">
-                <a class="navbar-brand nav-item" href="#" style="color:white">
+                <a class="navbar-brand nav-item" href="#">
                     Főoldal
                 </a>
                 <a class="navbar-brand nav-item" id="adminpagebutton" href="/admin.html"></a>
             </ul>
-            <a class="navbar-brand nav-item mb-0" id="logbutton" href="/logout" style="color:white">Kijelentkezés</a>
+            <a class="navbar-brand nav-item mb-0" id="logbutton" href="/logout">Kijelentkezés</a>
         </nav>
         <section class="section section-skeleton row mb-0">
-            <div class="sidebar col-2 card border-0 rounded" style="margin-top : 60px;">
+            <div class="sidebar col-2 card border-0 rounded p-0" style="margin-top : 60px;height : auto;background-color : aliceblue;">
                 <div style="background-color : #4266A1;" class="card-header border rounded text-center">
                     <h4 id="username"></h4>
                 </div>
-                <ul class="list-group list-group-flush border">
-                    <li class="list-group-item"><a href="/worklist.html" id="usermenu" style="color: black;height : auto;">MunkaLista</a></li>
-                    <li class="list-group-item"><a href="#" style="color: black;">Admin</a></li>
-                    <li class="list-group-item"><a href="#" style="color: black;">Személyes</a></li>
+                <ul class="list-group list-group-flush border" style="background-color : aliceblue;">
+                    <li class="list-group-item"><a href="/worklist.html" id="usermenu" style="color: black;background-color : white;">MunkaLista</a></li>
                 </ul>
             </div>
             <div class="main col-10 row mt-2">
                 <div id="tiles-container">
-                    <div class="tile udt-tile" onclick="startNewForm()">
-                        <div class="tile-content">
-                            <div class=tile-icon>&#128214;</div>
-                            <p>ÚJ KÉRDŐÍV</p>
+                    <button  type="button" class="" data-toggle="modal" data-target="#exampleModal"style="background-color : forestgreen;">
+                        <div class="tile udt-tile" >
+                            <div class="tile-content">
+                                <div class=tile-icon>&#128214;</div>
+                                <p>ÚJ KÉRDŐÍV</p>
+                            </div>
+                        </div>
+                    </button>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Kérdöiv tipsok<br></h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    ELEF<br>
+                                    Mezőgazdasi (Fejlesztés alatt!)<br>
+                                    Népességszámlálás (Fejlesztés alatt!)
+                                </div>
+                                <div class="modal-footer text-left">
+                                    <button type="button" class="btn btn-success" onclick="startNewForm('2201')">Elef</button>
+                                    <button type="button" class="btn btn-primary">Mezőgazdasi</button>
+                                    <button type="button" class="btn btn-primary">Népességszámlálás</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="tile msg-tile" onclick="window.location.href ='/worklist.html'">
-                        <div class="tile-content">
-                            <div class=tile-icon>&#x2709;</div>
-                            <a >KÉRDŐÍV FOLYTATÁS</a>
+                    <button onclick="window.location.href ='/logout'" style="background-color : firebrick;">
+                        <div class="tile exit-tile" >
+                            <div class="tile-content">
+                                <div class=tile-icon>&#128682;</div>
+                                <p>KILÉPÉS</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="tile mtc-tile">
-                        <div class="tile-content">
-                            <div class=tile-icon>&#9881;</div>
-                            <p>KÉRDŐÍV BETÖLTÉS (fejlesztés alatt)</p>
-                        </div>
-                    </div>
-                    <div class="tile exit-tile" onclick="window.location.href ='/logout'">
-                        <div class="tile-content">
-                            <div class=tile-icon>&#128682;</div>
-                            <p>KILÉPÉS</p>
-                        </div>
-                    </div>
+                    </button>
                 </div>
             </div>
         </section>

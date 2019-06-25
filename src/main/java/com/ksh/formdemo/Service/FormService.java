@@ -32,9 +32,15 @@ public class FormService {
 		return formDao.listForms();
 	}
 
-	public void createForm(Form form,long  userId) {
-		 formDao.createForm(form,userId);
+	public Response createForm(Form form,long  userId) {
+
+		LOGGER.warn(form.getOsap_num() + " form created by" + form.getUserid() + "at :" + form.getStart_date());
+	    formDao.createForm(form,userId);
+
+		return new Response(true,"Sikeres Kérdőiv kreálás!");
 	}
+
+
 
 	public Section getSection(String id) {
 		return formDao.getSection(id);
