@@ -11,17 +11,23 @@ function getUser() {
                 console.log(jsonData);
                 storage = window.sessionStorage;
                 storage.setItem("username", jsonData.name);
-                setUserName(jsonData);
-            }).catch(error => console.log(error));
+                setUserMenu(jsonData);
+            }).catch(error => setGuestMenu());
+}
+function setGuestMenu(){
+    let username = document.querySelector("#username");
+    username.innerHTML = "Hello Vendég";
 }
 
-function setUserName(jsonData){
-    showAdminMenu(jsonData);
+function setUserMenu(jsonData){
     let username = document.querySelector("#username");
-    username.innerHTML = "Üdvözöllek, " + jsonData.name + "!";
     let usermenu = document.querySelector("#usermenu");
-    usermenu.innerHTML = "Munkalista";
-    showAdminMenu(jsonData);
+        if(jsonData.role === "ROLE_ADMIN"){
+        document.querySelector("#adminpagebutton").innerHTML = "Admin Felület";
+    } else if(jsonData.role === "ROLE_USER" ){
+        username.innerHTML = "Hello, " + jsonData.name + "!";
+        usermenu.innerHTML = "Munkalista";
+    }
 }
 
 function showAdminMenu(jsonData){

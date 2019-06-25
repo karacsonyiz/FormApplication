@@ -43,7 +43,9 @@ function setWorkList(jsonData){
         let card = document.createElement("div");
             card.setAttribute("class","card col-3 p-4 m-4 bg-info  rounded-pill");
             card.setAttribute("style","max-width : 400px;transform: scale(1.1);cursor: pointer;");
-            card.onclick = ("click",navigate);
+            card.addEventListener("click", function(){
+                navigate(jsonData[i].id);
+            }, false);
         let header = document.createElement("div");
             header.setAttribute("class","card-header p-1 bg-transparent border-0");
             let headertext = document.createElement("h5");
@@ -61,6 +63,6 @@ function setWorkList(jsonData){
     }
 }
 
-function navigate(){
-    console.log("ja")
+function navigate(id){
+    window.location.assign("/ELEF.html" + "?" + id)
     }

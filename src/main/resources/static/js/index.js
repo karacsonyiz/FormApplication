@@ -19,7 +19,7 @@ function startNewForm(osap){
                       })
                       .then(function(jsonData) {
                           console.log(jsonData);
-                          window.location.href = "/Elef.html";
+                          window.location.href = "/worklist.html";
                       })
                   .catch(error => console.log(error));
 }

@@ -20,28 +20,20 @@
                 <a class="navbar-brand nav-item" href="#">
                     Főoldal
                 </a>
+                <a class="navbar-brand nav-item" style="color:white" href="/worklist.html" id="usermenu"></a>
+                <a class="navbar-brand nav-item" style="color:white" id="username"></a>
                 <a class="navbar-brand nav-item" id="adminpagebutton" href="/admin.html"></a>
             </ul>
             <a class="navbar-brand nav-item mb-0" id="logbutton" href="/logout">Kijelentkezés</a>
         </nav>
         <section class="section section-skeleton row mb-0">
-            <div class="sidebar col-2 card border-0 rounded p-0" style="margin-top : 60px;height : auto;background-color : aliceblue;">
-                <div style="background-color : #4266A1;" class="card-header border rounded text-center">
-                    <h4 id="username"></h4>
-                </div>
-                <ul class="list-group list-group-flush border" style="background-color : aliceblue;">
-                    <li class="list-group-item"><a href="/worklist.html" id="usermenu" style="color: black;background-color : white;">MunkaLista</a></li>
-                </ul>
-            </div>
-            <div class="main col-10 row mt-2">
+            <div class="main col-3 row mt-2">
                 <div id="tiles-container">
                     <button  type="button" class="" data-toggle="modal" data-target="#exampleModal"style="background-color : forestgreen;">
-                        <div class="tile udt-tile" >
                             <div class="tile-content">
                                 <div class=tile-icon>&#128214;</div>
                                 <p>ÚJ KÉRDŐÍV</p>
                             </div>
-                        </div>
                     </button>
                     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document">
@@ -53,27 +45,31 @@
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    ELEF<br>
-                                    Mezőgazdasi (Fejlesztés alatt!)<br>
-                                    Népességszámlálás (Fejlesztés alatt!)
+                                    Egészségügyi Felmérés (Fejlesztés alatt!)<br>
+                                    Mezőgazdasági (2020.03 - tól)<br>
+                                    Népességszámlálás (2022.01 - től) <br>
                                 </div>
                                 <div class="modal-footer text-left">
-                                    <button type="button" class="btn btn-success" onclick="startNewForm('2201')">Elef</button>
-                                    <button type="button" class="btn btn-primary">Mezőgazdasi</button>
-                                    <button type="button" class="btn btn-primary">Népességszámlálás</button>
+                                    <button type="button" class="btn btn-success" onclick="startNewForm('2201')">Egészségügyi(ELEF)</button>
+                                    <button type="button" class="btn btn-warning">Mezőgazdasági</button>
+                                    <button type="button" class="btn btn-warning">Népességszámlálás</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <button onclick="window.location.href ='/logout'" style="background-color : firebrick;">
-                        <div class="tile exit-tile" >
+                    <button style="background-color : orange">
                             <div class="tile-content">
                                 <div class=tile-icon>&#128682;</div>
-                                <p>KILÉPÉS</p>
+                                <p>BETÖLTÉS (fejlesztés alatt)</p>
                             </div>
-                        </div>
                     </button>
                 </div>
+            </div>
+            <div class="sidebar col-9 card border-0 rounded p-0" style="margin-top : 60px;height : auto;background-color : aliceblue;">
+                <ul class="list-group list-group-flush border" style="background-color : aliceblue;">
+                    <li class="list-group-item"><a href="/worklist.html" style="color: black;background-color : white;">Jó napot kívánok, ... vagyok, az Európai Lakossági Egészségfelmérés kérdezője.<br>A felmérést a Központi Statisztikai Hivatal végzi. Megkapta-e Ön a tájékoztató levelünket?<br><br><center><b>MUTASD MEG A TÁJÉKOZTATÓ LEVELET!</b></center><br><b>HA NEM KAPTA MEG</b>: Kérd meg, olvassa el, majd az alábbiak szerint folytasd a tájékoztatást.<br><b>HA MEGKAPTA</b>:<br>Bizonyára olvasta, hogy miért fontos számunkra éppen az Ön véleménye. Ahhoz, hogy valóban a teljes magyar népesség egészségét feltérképezhessük, arra van szükségünk, hogy különböző lakossági csoportokba tartozóktól, így az Önéhez hasonló helyzetű emberek egészségéről is kapjunk információt ebben a vizsgálatban. Ezért az Ön válaszai más társadalmi helyzetű emberek válaszaival nem pótolhatók.<br><br>Ahogy a levélben olvashatta, a felmérésben részt vevők személyiségi jogait védelmező törvényi előírásoknak megfelelően válaszait titkosan kezeljük, az adatokba kizárólag a kutatásban részt vevő szakemberek nyerhetnek betekintést.<br><br>A felmérésben való részvétel önkéntes. Ha vállalja a részvételt, akkor is bármikor jelezheti, ha egy kérdésre nem kíván válaszolni.<br><br>Kérem, a legjobb tudása szerint válaszoljon a kérdésekre! Előfordulhat, hogy egy kérdés nem pontosan érthető az Ön számára, vagy nem tudja egyértelműen eldönteni, mit válaszoljon. Ebben az esetben kérem, ne találomra válaszoljon, inkább kérdezzen meg engem, és én igyekszem minden kérdést érthetően megfogalmazni!<br><br>Ha nem tud válaszolni egy kérdésre vagy valamire nem emlékszik pontosan, kérem, jelezze. Ezzel segíti a munkánkat, mert így el tudjuk kerülni a félreértéseket.<br><br>A kérdőív kitöltése körülbelül <b>1 órát</b> vesz igénybe.<br>Van-e Önnek a kérdezéssel vagy a felméréssel kapcsolatban bármilyen <b>további kérdése</b>?<br>"
+                    </a></li>
+                </ul>
             </div>
         </section>
     </div>
