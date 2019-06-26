@@ -5,6 +5,7 @@ import java.util.List;
 import com.ksh.formdemo.Service.Response;
 import com.ksh.formdemo.Service.Section;
 import com.ksh.formdemo.Service.UserService;
+import com.ksh.formdemo.model.Answer;
 import com.ksh.formdemo.model.User;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -29,7 +30,15 @@ public class FormController {
 	public List<Form> listForms() {
 		return formService.listForms();
 	}
-
+	@RequestMapping(value = "/api/createanswer", method = RequestMethod.POST)
+	public Response createAnswer(@RequestBody Answer answer) {
+		User user = getAuthenticatedUser();
+		if(user == null){
+			return  new Response(false,"Be se vagy jelentkezve...");
+		} else {
+			return formService.createAnswer(answer,user.getId());
+		}
+	}
 
 	@RequestMapping(value = "/api/getsection/{id}", method = RequestMethod.GET)
 	public Section findProductById(@PathVariable String id){

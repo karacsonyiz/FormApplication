@@ -2,7 +2,6 @@ window.onload = function() {
     storage = window.sessionStorage
     console.log(storage);
     showAnswers(storage);
-    AddAnswers(storage)
 }
 
 function showAnswers(storage) {
@@ -10,20 +9,32 @@ function showAnswers(storage) {
     answerh1.innerHTML = "";
     if(storage.getItem("topicId") !== null){
         topic = storage.getItem("topicId")
-        answerh1.innerHTML +=  topic + " : <br>" + storage.getItem(topic)
+        answerh1.innerHTML +=  topic + " : <br>" + storage.getItem(topic);
     }
     console.log("sajt");
     console.log(answerh1);
 }
 
 function AddAnswers() {
-            console.log(storage);
-             fetch("api/createdata", {
+            let storage = window.sessionStorage;
+            console.log(storage)
+            let FormIdFromUrl = window.location.href.split('?')[1];
+            let answertext = document.querySelector("#elefanswers").innerHTML;
+            let usertext = storage.getItem("userstring")
+
+
+            let answer = {
+                                        "form_id" : FormIdFromUrl,
+                                        "answertext" : answertext,
+                                        "usertext" : usertext
+                                        }
+            console.log(answer)
+            fetch("api/createanswer", {
                          method: "POST",
                          headers: {
                              "Content-Type": "application/json; charset=utf-8"
                                  },
-                         body: JSON.stringify(storage)
+                         body: JSON.stringify(answer)
                 }).then(function(response) {
                            return response.json();
                        })
@@ -43,11 +54,20 @@ function showall(){
         if(storage.getItem(sections[i]) !== null){
                 topicAnswer = storage.getItem(sections[i])
                 answerh1.innerHTML += sections[i] + "<br>" + topicAnswer + "<br>";
+
         }
     }
 
     storage.getItem(topic)
-    }
+}
+
+function refresh(){
+    console.log("jejej")
+    sessionStorage.clear();
+}
+
+
+
 
 $(function() {
     $('[data-toggle="tooltip"]').tooltip()

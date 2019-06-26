@@ -43,22 +43,28 @@ function setWorkList(jsonData){
         let card = document.createElement("div");
             card.setAttribute("class","card col-3 p-4 m-4 bg-info  rounded-pill");
             card.setAttribute("style","max-width : 400px;transform: scale(1.1);cursor: pointer;");
-            card.addEventListener("click", function(){
-                navigate(jsonData[i].id);
-            }, false);
         let header = document.createElement("div");
             header.setAttribute("class","card-header p-1 bg-transparent border-0");
             let headertext = document.createElement("h5");
-            headertext.setAttribute("class","mb-0 headertext text-center");
+            headertext.setAttribute("class","mb-0 headertext text-center justify-content-center");
             headertext.innerHTML = jsonData[i].osap_num + " (ELEF)";
                     header.appendChild(headertext);
                     card.appendChild(header);
             let body = document.createElement("div");
             body.setAttribute("class","card-body rounded p-1 bg-transparent");
             let bodytext = document.createElement("p");
-                bodytext.innerHTML = "Elkezdve: " + jsonData[i].start_date + "<br>" + "User :" + jsonData[i].userid + "<br>" + "azonositó : <br>" + jsonData[i].id;
+                startdate = jsonData[i].start_date.replace("T", " ")
+                bodytext.innerHTML = "Elkezdve: <br>" + startdate + "<br>" +"Azonositó : <br>" + jsonData[i].id;
+                console.log(jsonData[i].id);
                     body.appendChild(bodytext);
+                    let a = document.createElement("a");
+                    a.setAttribute("class","btn btn-success")
+                    a.setAttribute("style","right : 50px")
+                    a.innerHTML = "Start";
+                    a.href = "/ELEF.html" + "?" + jsonData[i].id;
+                    body.appendChild(a)
                     card.appendChild(body);
+
     formbar.appendChild(card);
     }
 }

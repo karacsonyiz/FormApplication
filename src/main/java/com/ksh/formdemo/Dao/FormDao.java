@@ -8,7 +8,9 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.UUID;
 
+import com.ksh.formdemo.Service.Response;
 import com.ksh.formdemo.Service.Section;
+import com.ksh.formdemo.model.Answer;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
@@ -58,6 +60,20 @@ public class FormDao {
 			ps.setTimestamp(5, Timestamp.valueOf(LocalDateTime.now()));
 			return ps;
 		});
+	}
+
+	public Response createAnswer(Answer answer,long userId) {
+		String uuid = UUID.randomUUID().toString();
+		jdbcTemplate.update(connection -> {
+			PreparedStatement ps = connection.prepareStatement("insert into form_answer(id,form_id,userid,answertext,usertext) values(?,?,?,?,?)");
+			ps.setString(1, uuid);
+			ps.setString(2, answer.getForm_id());
+			ps.setLong(3,userId);
+			ps.setString(4, answer.getAnswertext());
+			ps.setString(5, answer.getUsertext());
+			return ps;
+		});
+		return new Response(true,"Sikeres mentés!");
 	}
 	
 

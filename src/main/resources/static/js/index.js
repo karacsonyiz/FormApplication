@@ -1,7 +1,7 @@
 function startNewForm(osap){
-
         let storage = window.sessionStorage;
         console.log(storage)
+        sessionStorage.clear();
         let osap_num = "2201"
         console.log(osap)
         let form = {

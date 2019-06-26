@@ -21,8 +21,8 @@
             <a class="navbar-brand nav-item" href="/index.html" style="color:white">
                 Főoldal
             </a>
-            <a class="navbar-brand nav-item" style="color:white" href="/worklist.html" id="usermenu"></a>
-            <a class="navbar-brand nav-item" style="color:white" id="username"></a>
+            <a class="navbar-brand nav-item" style="color:white" href="/worklist.html">Munkalista</a>
+            <a class="navbar-brand nav-item" style="color:white" id="username">Udv osszeiro1</a>
             <a class="navbar-brand nav-item" id="adminpagebutton" href="/admin.html"></a>
         </ul>
         <a class="navbar-brand nav-item mb-0" id="logbutton" href="/logout" style="color:white">Kijelentkezés</a>
@@ -30,10 +30,11 @@
     <div class="wrapper row">
             <div class="sidebar card col-3 border-0 ml-3">
                 <div class="card-header bg-white">
-                    <h3>Válaszok :</h3>
+                    <h3>Válaszok :</h3><a href="#" class="btn btn-info my-1" onclick="AddAnswers()">Küldés</a>
+                    <a href="#" class="btn btn-success my-1" onclick="showall()">Összes</a>
+                    <a href="#" class="btn btn-success my-1" onclick="refresh()">Refresh</a>
                 </div>
                 <div class="card-body bg-white" id="answerbody">
-                    <a href="#" class="btn btn-success my-1" onclick="showall()">Összes</a>
                     <h4 id="elefanswers"></h4>
                 </div>
             </div>

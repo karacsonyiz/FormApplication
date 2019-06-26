@@ -7,6 +7,7 @@ import java.util.List;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
+import com.ksh.formdemo.model.Answer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -40,7 +41,10 @@ public class FormService {
 		return new Response(true,"Sikeres Kérdőiv kreálás!");
 	}
 
-
+	public Response createAnswer(Answer answer, long userId) {
+		LOGGER.info(answer.toString());
+		return formDao.createAnswer(answer,userId);
+	}
 
 	public Section getSection(String id) {
 		return formDao.getSection(id);
