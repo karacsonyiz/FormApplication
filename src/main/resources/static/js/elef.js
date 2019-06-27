@@ -1,8 +1,10 @@
 window.onload = function() {
     storage = window.sessionStorage
+    //let currentForm = storage.getItem("formId");
     let formId  = window.location.href.split('?formId=')[1];
-    document.querySelector("#formId").innerHTML = formId
-    storage.setItem("formId",formId)
+    if(typeof window.location.href.split('?formId=')[1] !== 'undefined'){
+        storage.setItem("formId",formId)
+    }
     showAnswers(storage);
 }
 
@@ -20,13 +22,13 @@ function showAnswers(storage) {
 function AddAnswers() {
             var storage = window.sessionStorage;
             console.log(storage)
-            let FormIdFromUrl = window.location.href.split('?')[1];
+            let FormId = storage.getItem("formId");
             let answertext = document.querySelector("#elefanswers").innerHTML;
             let usertext = storage.getItem("userstring")
 
 
             let answer = {
-                                        "form_id" : FormIdFromUrl,
+                                        "form_id" : FormId,
                                         "answertext" : answertext,
                                         "usertext" : usertext
                                         }
