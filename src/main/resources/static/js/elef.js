@@ -1,6 +1,8 @@
 window.onload = function() {
     storage = window.sessionStorage
-    console.log(storage);
+    let formId  = window.location.href.split('?formId=')[1];
+    document.querySelector("#formId").innerHTML = formId
+    storage.setItem("formId",formId)
     showAnswers(storage);
 }
 
@@ -16,7 +18,7 @@ function showAnswers(storage) {
 }
 
 function AddAnswers() {
-            let storage = window.sessionStorage;
+            var storage = window.sessionStorage;
             console.log(storage)
             let FormIdFromUrl = window.location.href.split('?')[1];
             let answertext = document.querySelector("#elefanswers").innerHTML;
@@ -39,6 +41,7 @@ function AddAnswers() {
                            return response.json();
                        })
                        .then(function(jsonData) {
+
                            console.log(jsonData);
                        })
                        .catch(error => console.log(error));

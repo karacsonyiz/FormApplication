@@ -38,6 +38,8 @@ function setWorkList(jsonData){
     let formbar = document.querySelector(".formbar");
     console.log(formbar);
     console.log(jsonData);
+    storage = window.sessionStorage;
+
     for(i in jsonData){
     console.log(jsonData[i]);
         let card = document.createElement("div");
@@ -61,14 +63,10 @@ function setWorkList(jsonData){
                     a.setAttribute("class","btn btn-success")
                     a.setAttribute("style","right : 50px")
                     a.innerHTML = "Start";
-                    a.href = "/ELEF.html" + "?" + jsonData[i].id;
+                    a.href = "/ELEF.html" + "?formId=" + jsonData[i].id;
+                    a.setAttribute("id",jsonData[i].id)
                     body.appendChild(a)
                     card.appendChild(body);
-
     formbar.appendChild(card);
     }
 }
-
-function navigate(id){
-    window.location.assign("/ELEF.html" + "?" + id)
-    }

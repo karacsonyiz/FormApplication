@@ -30,6 +30,7 @@
     <div class="wrapper row">
             <div class="sidebar card col-3 border-0 ml-3">
                 <div class="card-header bg-white">
+                    <h2 id="formId">form id : </h2>
                     <h3>Válaszok :</h3><a href="#" class="btn btn-info my-1" onclick="AddAnswers()">Küldés</a>
                     <a href="#" class="btn btn-success my-1" onclick="showall()">Összes</a>
                     <a href="#" class="btn btn-success my-1" onclick="refresh()">Refresh</a>
@@ -42,8 +43,8 @@
                 <div class="col-sm-4">
                     <div class="card border-0 sectioncard">
                         <div class="card-body p-0">
-                            <div class="section-header section-skeleton-header text-left rounded p-3 mb-1 col py-5"
-                                 onclick="window.location.href='Skeleton.html?C'"><h3 class="sectionnum text-left">C.</h3>
+                            <div id="C" class="section-header section-skeleton-header text-left rounded p-3 mb-1 col py-5"
+                                 onclick="window.location.href='Skeleton.html?C';"><h3 class="sectionnum text-left">C.</h3>
                                 <div class="card-body text-center"><h4 class="text-center section-name">KORLÁTOZOTTSÁG</h4>
                                 </div>
                             </div>
@@ -54,7 +55,7 @@
                 <div class="col-sm-4">
                     <div class="card border-0 sectioncard">
                         <div class="card-body p-0">
-                            <div class="section-header section-skeleton-header text-left rounded p-3 mb-1 col py-5"
+                            <div id="D" class="section-header section-skeleton-header text-left rounded p-3 mb-1 col py-5"
                                  onclick="window.location.href='Skeleton.html?D';"><h3 class="sectionnum text-left doublerow">D.</h3>
                                 <div class="card-body  text-center"><h4 class="text-center section-name longertext" style="top : -50px; position: relative;">AZ ÖNELLÁTÁS TEVÉKENYSÉGEI</h4>
                                 </div>

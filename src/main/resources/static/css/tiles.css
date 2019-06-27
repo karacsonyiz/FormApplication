@@ -1,22 +1,19 @@
 #tiles-container {
-    display: grid;
+    display: flex;
     padding: 50px;
-    min-width: 400px;
-    max-width: 1024px;
+    width: auto;
     align-items: center;
     justify-content: center;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .tile {
     border-radius: 5px;
-    min-width: 300px;
+    min-width: 200px;
     justify-content: center;
     position: relative;
     width: 50%;
     background: aliceblue;
     margin: 4px;
-
 }
 
 .tile:after {
@@ -31,6 +28,7 @@
     font-weight: bold;
     text-align: center;
     transition: transform .2s;
+    size: auto;
 }
 
 .tile-content:hover {
