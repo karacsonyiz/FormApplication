@@ -19,11 +19,11 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @SpringBootApplication
 @EnableWebSecurity
 
-public class DemoApplication extends WebSecurityConfigurerAdapter {
+public class FormApplication extends WebSecurityConfigurerAdapter {
 	
 
 	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
+		SpringApplication.run(FormApplication.class, args);
 	}
 	
 	protected void configure(HttpSecurity http) throws Exception {
