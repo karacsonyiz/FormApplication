@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.UUID;
 
 import com.ksh.formdemo.Service.Response;
-import com.ksh.formdemo.Service.Section;
+import com.ksh.formdemo.model.Section;
 import com.ksh.formdemo.model.Answer;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;

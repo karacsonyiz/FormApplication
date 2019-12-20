@@ -3,7 +3,7 @@ package com.ksh.formdemo.Controller;
 import java.util.List;
 
 import com.ksh.formdemo.Service.Response;
-import com.ksh.formdemo.Service.Section;
+import com.ksh.formdemo.model.Section;
 import com.ksh.formdemo.Service.UserService;
 import com.ksh.formdemo.model.Answer;
 import com.ksh.formdemo.model.User;

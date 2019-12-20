@@ -1,4 +1,4 @@
-package com.ksh.formdemo.Service;
+package com.ksh.formdemo.model;
 
 public class Section {
 

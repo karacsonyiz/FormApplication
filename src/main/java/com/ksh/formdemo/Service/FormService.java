@@ -1,22 +1,15 @@
 package com.ksh.formdemo.Service;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.gson.Gson;
 import com.ksh.formdemo.model.Answer;
+import com.ksh.formdemo.model.Section;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import com.ksh.formdemo.Dao.FormDao;
 import com.ksh.formdemo.model.Form;
-
-import org.json.*;
-
 
 
 @Service
