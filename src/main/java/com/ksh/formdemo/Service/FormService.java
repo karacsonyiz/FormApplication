@@ -1,5 +1,6 @@
 package com.ksh.formdemo.Service;
 
+import java.util.Date;
 import java.util.List;
 
 import com.ksh.formdemo.model.Answer;
@@ -27,11 +28,9 @@ public class FormService {
 	}
 
 	public Response createForm(Form form,long  userId) {
-
-		LOGGER.warn(form.getOsap_num() + " form created by" + form.getUserid() + "at :" + form.getStart_date());
-	    formDao.createForm(form,userId);
-
-		return new Response(true,"Sikeres Kérdőiv kreálás!");
+		LOGGER.info(form.getOsap_num() + " form created by user : " + userId + " at " + new Date());
+	    return formDao.createForm(form,userId);
+		//return new Response(true,"Sikeres Kérdőiv kreálás!");
 	}
 
 	public Response createAnswer(Answer answer, long userId) {

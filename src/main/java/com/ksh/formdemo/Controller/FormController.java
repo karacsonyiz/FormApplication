@@ -34,7 +34,7 @@ public class FormController {
 	public Response createAnswer(@RequestBody Answer answer) {
 		User user = getAuthenticatedUser();
 		if(user == null){
-			return  new Response(false,"Be se vagy jelentkezve...");
+			return  new Response(false,"You are not logged in!");
 		} else {
 			return formService.createAnswer(answer,user.getId());
 		}

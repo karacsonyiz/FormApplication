@@ -49,7 +49,7 @@ public class FormDao {
 		return jdbcTemplate.queryForObject("SELECT id, name, meta, bodytext FROM form_section where id = ?",new SectionMapper(),id);
 	}
 
-	public void createForm(Form form,long userId) {
+	public Response createForm(Form form,long userId) {
 		String uuid = UUID.randomUUID().toString();
 		jdbcTemplate.update(connection -> {
 			PreparedStatement ps = connection.prepareStatement("insert into form(id,userid,osap_num,start_date,end_date) values(?,?,?,?,?)");
@@ -60,6 +60,7 @@ public class FormDao {
 			ps.setTimestamp(5, Timestamp.valueOf(LocalDateTime.now()));
 			return ps;
 		});
+		return new Response(true,"Form created by : " + userId + " at : " + form.getStart_date());
 	}
 
 	public Response createAnswer(Answer answer,long userId) {
